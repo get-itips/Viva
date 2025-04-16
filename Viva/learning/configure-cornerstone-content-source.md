@@ -2,19 +2,17 @@
 title: Configure Cornerstone OnDemand as a content source for Microsoft Viva Learning
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 06/28/2023
+ms.date: 11/25/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
-  - Tier1
-localization_priority: medium
+ms.localizationpriority: medium
 description: Learn how to configure Cornerstone OnDemand as a learning content source for Microsoft Viva Learning.
 ---
 
@@ -86,11 +84,11 @@ A Microsoft Viva Suite or Viva Learning license is required to add Cornerstone O
   1. **Display Name**: This carousel lists the Cornerstone learning content for your organization in Viva Learning. If you don’t enter a name, the name “Cornerstone OnDemand” displays.
      > [!NOTE]
      > The display name is the name of the carousel that lists Cornerstone learning content for your organization in Viva Learning. If you don't enter a name, the default name "Cornerstone OnDemand" displays.
-  1. **Client's Host URL**: This is the Base URL gathered from Cornerstone portal in step 8. If the Base URL is "https://integration-stg.csod.com", then the Client’s Host URL is "integration-stg.csod.com".
-  1. **Client ID**: This is the Client ID gathered from Cornerstone portal in step 8.
-  1. **Client Secret**: This is the Client Secret gathered from Cornerstone portal in step 8.
+  1. **Client's Host URL**: The Base URL gathered from Cornerstone portal in step 8. If the Base URL is "https://integration-stg.csod.com", then the Client’s Host URL is "integration-stg.csod.com"
+  1. **Client ID**: The Client ID gathered from Cornerstone portal in step 8.
+  1. **Client Secret**: The Client Secret gathered from Cornerstone portal in step 8.
 
-1. Select **Save** to activate Cornerstone content in Viva Learning. It may take up to 24 hours for the content to display in the Viva Learning app.
+1. Select **Save** to activate Cornerstone content in Viva Learning. It can take up to 24 hours for the content to display in the Viva Learning app.
    - Once configured, Cornerstone configured providers list Cornerstone automatically. You can track the sync status and export sync log. 
    - You can edit or delete the configuration directly from manage provider as well. 
 
@@ -111,7 +109,7 @@ A Microsoft Viva Suite or Viva Learning license is required to add Cornerstone O
 Check **Enable Learner Record Sync** to enable assignments and course completion records to sync from the learning management system to Viva Learning. Users from your organization can see their assigned and completed courses from your LMS within Viva Learning.  
 
 > [!NOTE]
-> Ensure that user mappings between Cornerstone and AAD are accurately configured, linking each user's identity correctly. 
+> Ensure that user mappings between Cornerstone and Microsoft Entra ID are accurately configured, linking each user's identity correctly. 
 
 By enabling Learner record sync, you allow Viva Learning to fetch user information, user assignments, and completed courses. The user information from the LMS is used only for user mapping and doesn't remain in storage. Only mapping-related information is deduced. Viva Learning fetches the following fields from the LMS:
 

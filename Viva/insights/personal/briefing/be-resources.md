@@ -1,14 +1,13 @@
 ---
 
-ms.date: 05/13/2020
+ms.date: 04/2/2025
 title: Downloadable resources
 description: Downloadable resources available for admins who are rolling out the Briefing email to new users
 author: madehmer
 ms.author: helayne
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 ms.collection: 
 - M365-analytics
 - viva-insights-personal

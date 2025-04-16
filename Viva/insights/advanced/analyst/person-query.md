@@ -1,14 +1,16 @@
 ---
-ms.date: 08/18/2023
+ms.date: 11/07/2024
 title: Person query
 description: Learn how to run a custom person query in the Microsoft Viva Insights advanced insights app
-author: lrolason
+author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: how-to
 ms.localizationpriority: medium 
-ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.collection: 
+- viva-insights-advanced 
+- viva-copilot
+- magic-ai-copilot
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: abelubetk
@@ -17,9 +19,10 @@ audience: Admin
 
 # Create a custom person query
 
->[!Tip]
+> [!Tip]
 > You can find a demo video, download sample results, and go through a **Show me how** explanation while you’re building your query. Select these options just above **Query setup**.
-:::image type="content" source="../images/person-query-setup-help.png" alt-text="Setup help with links to video, sample, and walk-through above Query setup":::
+>
+> :::image type="content" alt-text="Setup help with links to video, sample, and walk-through above Query setup." source="../images/person-query-setup-help.png" lightbox="../images/person-query-setup-help.png":::
 
 ## Overview
 
@@ -38,6 +41,8 @@ To run a person query, you'll follow five basic steps:
 
 In this article, we talk about how to complete each of these steps, and also give some important background information about how metrics, conditions, and attributes work.
 
+> [!VIDEO c85598e6-46f2-4833-b713-76f2e07a0c8c]
+
 ## Set up your query
 
 *Section: **Query setup***
@@ -45,36 +50,43 @@ In this article, we talk about how to complete each of these steps, and also giv
 
 The following steps are optional. We describe default values below.
 
-1. Under **Query setup**:
-   1. Name your query. Queries are assigned a default name, which follows this format: Query type, user ID, date, and time. Make sure the name is unique.
-   1. Select a **Time period**. This field defaults to **Last 3 months**, but you can select another time period you want your query to analyze. Pick from **Last 1 year**, **Last 6 months**, **Last 1 month**, or a **Custom** date range. If you choose a **Custom** date range, use the date picker to select the range.
-   1. Set the query to automatically update by selecting the **Auto-Refresh** box. When you select the auto-refresh option, your query automatically runs and computes a new result every time Viva Insights gets updated collaboration data for licensed people. This option is deselected by default, but you can select it on any query where the **Time period** isn’t customized.
-   
-      >[!Note]
-      >If the organizational data used in an auto-refreshing query changes (for example, an attribute name is altered or an attribute is removed), you might see an error when you run the query.
-      
-   1. Type a **Description**.
-   
-   1. Set how the query is grouped. By default, custom person queries are grouped by **Month**. To change this setting to **Week**, select **More Settings** beneath the **Description** box.
+Under **Query setup**:
 
-       Selecting **More Settings** brings you to the **More Settings** pane. Along with **Group by**, this pane shows the metric rules that apply to your query. To find out more about metric rules that apply to your query, select **See metric rule details**.
+1. Name your query. Queries are assigned a default name, which follows this format: Query type, user ID, date, and time. Make sure the name is unique.
+1. Select a **Time period**. This field defaults to **Last 3 months**, but you can select another time period you want your query to analyze. Pick from **Last 1 year**, **Last 6 months**, **Last 1 month**, or a **Custom** date range. If you choose a **Custom** date range, use the date picker to select the range.
+1. Set the query to automatically update by selecting the **Auto-Refresh** box. When you select the auto-refresh option, your query automatically runs and computes a new result every time Viva Insights gets updated collaboration data for licensed people. This option is deselected by default, but you can select it on any query where the **Time period** isn’t customized.
+
+    >[!Note]
+    >If the organizational data used in an auto-refreshing query changes (for example, an attribute name is altered or an attribute is removed), you might see an error when you run the query.
+      
+1. Type a **Description**.
+   
+1. Set how the query is grouped. By default, custom person queries are grouped by **Month**. To change this setting to **Week** or **Day**, select **More Settings** beneath the **Description** box.
+
+    Selecting **More Settings** brings you to the **More Settings** pane. Along with **Group by**, this pane shows the metric rules that apply to your query. To find out more about metric rules that apply to your query, select **See metric rule details**.
        
-       >[!Note]
-       > Metrics are criteria used to measure the productivity and wellbeing of employees, and metric rules are rules Viva Insights uses to improve the accuracy of your query results.
-       >
-       > To learn more about metrics used in Viva Insights, refer to [Metric definitions](../reference/metrics.md). To learn more about metric rules, refer to [Metric rules](./metric-rules.md).
+    >[!Note]
+    >Metrics are criteria used to measure the productivity and wellbeing of employees, and metric rules are rules Viva Insights uses to improve the accuracy of your query results.
+>
+> To learn more about metrics used in Viva Insights, refer to [Metric definitions](../reference/metrics.md). To learn more about metric rules, refer to [Metric rules](./metric-rules.md).
 
 ### Add metrics 
 
 *Section: **Select metrics for what you want to know about your employees***
 
+> [!VIDEO 99ddedd4-ee46-4f08-8fc0-228101a74e9b]
+
 1. Under **Select metrics for what you want to know about your employees**, select the **Add metrics** button.
 
-1. The **Add metrics** button brings you to the **Select metrics** pane. Using the check marks and the tools described later in this section (filter, search, and groupings) select the metrics you want to use in the query, then select **Add to query**.
+1. The **Add metrics** button brings you to the **Select metrics** pane. Using the check marks and the tools described later in this section (filter, search, and groupings) select the metrics you want to use in the query, then select **Add to query**. [Learn more about advanced insights metrics](../../advanced/reference/metrics.md).
    
    The **Add to query** button adds these metrics into your query and takes you back to the setup screen. The metrics you selected appear as tags in the box beneath the section description. 
    
-   :::image type="content" source="../images/person-query-selected-metrics-tags.png" alt-text="Select metrics section, with selected metrics appearing as tags":::
+   :::image type="content" alt-text="Select metrics section, with selected metrics appearing as tags" source="../images/person-query-selected-metrics-tags.png" lightbox="../images/person-query-selected-metrics-tags.png":::
+
+3. You can also add Microsoft 365 Copilot metrics to your custom person query. These metrics provide insights about how employees are using Microsoft 365 Copilot or Copilot for Sales in Microsoft 365 apps, and they’re part of your .csv output file.
+
+    Learn more about the [Microsoft 365 Copilot metrics](../../advanced/reference/metrics.md#microsoft-365-copilot-metrics) and the [Copilot for Sales metrics](../../advanced/reference/metrics.md#copilot-for-sales-metrics)  that you can use for your query.
 
 #### About metrics
 
@@ -101,7 +113,7 @@ To find out more about a metric, hover over its information icon.
 
 1. Underneath the predefined "Is Active" filter, select the **Add condition button**, then select **Organizational data**.
 
-   :::image type="content" source="../images/person-query-add-conditions.png" alt-text="Screenshot that shows the Add condition button.":::
+   :::image type="content" alt-text="Screenshot that shows the Add condition button." source="../images/person-query-add-conditions.png" lightbox="../images/person-query-add-conditions.png":::
 
 2. Using conditions and condition groups, add one or multiple filters to narrow your analysis of employees.
 
@@ -113,7 +125,7 @@ To find out more about a metric, hover over its information icon.
 
 A condition is a statement about one attribute you want to analyze in your query. A condition only extracts rows from your organizational data that meet certain criteria, which you specify in the condition statement. For example, if your condition statement read, “Organization = Contoso.com,” the query would only extract rows that equal Contoso.com” under the **Organization** column. A condition group is a combination of conditions connected with a conjunction ("and" or "or"). In the following image, the condition group is in the block to the right of the conjunction "or."
 
-:::image type="content" source="../images/person-query-condition-group.png" alt-text="Condition group":::
+:::image type="content" alt-text="Condition group" source="../images/person-query-condition-group.png" lightbox="../images/person-query-condition-group.png":::
 
 To learn more about filters and conditions, refer to our [Filters](filters.md) article.
 
@@ -136,9 +148,9 @@ To move a condition or condition group, take the following actions:
 1. Select the six-dot icon to the right.
 1. Drag the six-dot icon above or below other conditions or groups.
   
-To delete a condition or condition group, select the trashcan icon to the right.
-
-:::image type="content" source="../images/meeting-query-move-condition.png" alt-text="Screenshot that shows selected metrics in the box beneath Select metrics for what you want to know about your meetings.":::
+   To delete a condition or condition group, select the trashcan icon to the right.
+    
+   :::image type="content" source="../images/meeting-query-move-condition.png" alt-text="Screenshot that shows selected metrics in the box beneath Select metrics for what you want to know about your meetings.":::
 
 ### Add employee attributes
 

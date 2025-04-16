@@ -1,67 +1,151 @@
 ---
-title: Communications setup in Program Summary of Viva Glint
-description: Learn how to notify employees about upcoming surveys, the window for taking a survey, and providing the survey in their preferred language is key.
+title: Viva Glint survey Communications setup
+description: Notifying employees about a survey's start and sending reminders throughout the survey window are essential for improving survey participation.
 ms.author: JudithWeiner
 author: JudyWeiner
-manager: mbarry
+manager: MelissaBarry
 audience: admin
 f1.keywords: NOCSH
-keywords: reminders, reminder times, additional languages, notifications 
+keywords: reminders, reminder times, additional languages, notifications, survey invite, disable survey email, disable survey invite
 ms.collection: 
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: install-set-up-deploy
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/13/2023
+ms.date: 04/08/2025
 ---
 
-# Communications setup in Program Summary
+# Viva Glint survey Communications setup
 
-Setting up notifications and providing translations to your programs happen in this section of Program Summary.
+Notifying employees about a survey's start and sending reminders throughout the survey window are essential for improving survey participation. 
 
->[!NOTE]
-> If you are configuring an Always-On program, you'll not have to complete this step.
+:::image type="content" source="../../media/glint/setup/program-summary-comms-intro.png" alt-text="Screenshot of where to access Communications setup from Program Summary." lightbox="../../media/glint/setup/program-summary-comms-intro.png":::
 
-## Understand the fields for setup
+> [!NOTE]
+> Always-On programs don't include a Communications section. Skip this step.
 
-**Change Reminder Times**: Reminders are sent after the survey invitation has been sent and at different intervals while the survey is live. Reminder times are set according to the default time zone for your account.
+There are four sections to set up, depending on your Viva Glint configuration:
 
-**Language**: English is the default language for all programs initially, but the default language can be changed to any of the languages in the dropdown menu.
+- Notification Timing
+- Channels
+- Email Settings
+- Configure Notifications
 
-**Best Practice**: _Ensure that the questions (items) selected for use in your survey are available in the default language._
+## Notification Timing
 
-**Pencil Icon**: Personalize the message that goes along with any reminder you'd like to include.
+:::image type="content" source="../../media/glint/setup/program-summary-comms-notification-timing.png" alt-text="Screenshot of the Notifications Timing section in Communications setup.":::
 
-## Procedure to set up communications
-
-1. Select the desired **Notification Timing** to send invites and reminders. Be sure to select AM or PM.
-2. In **Configure Notifications**, you'll see a list of predetermined email notifications and the dates the emails will be delivered. To add more notifications, select **Add Survey Reminder**.
-   >[!TIP]
-   > Send at least two reminders a week.
-3. Select the desired notification to preview or edit.
-4. In the slider panel, select the **pencil** symbol to edit the notification.
-5. Enter the number **of days after survey start** to send the notification.
-6. If you have **Additional Languages**, select the Language dropdown, and add languages.
-7. Select **Save Changes** and then **X** to close the slider panel.
-8. Repeat the process for each other language required and for each notification.
-9. Select the **Survey End** pencil symbol to preview or edit what survey takers see.
-   1. Turn **ON** to send notification.
-   2. In the **Send** field, enter the number of days after the survey ends to send the notification.
-       >[!NOTE]
-       >Reporting Access configured on the Reporting page must manually be switched to "Live Access" at least 48 hours before the scheduled Survey End notification date. Survey End notification will not be delivered if access is not switched over.
-   3. If desired, select the **pencil** symbol to edit the Survey End Notification. Make the necessary changes and repeat the process for each extra language being used.
-   4. Select **Save Changes** and then **X** to close the slider panel.
-
-## Understand the results notification email
-
-The results notification email is a one-time notification to let users know that results are available to them. The email goes out to those users in roles with **live** reporting access 24-hours prior to the time of the email to all others (including phased access). Best practice is to make sure that roles are programmed and aligned before survey closes. 
+Send survey invites and reminders between the times that you select. Your organization's default time zone is selected in [General Settings](manage-general-settings.md#company-information). If your organization chooses to [send emails based on users' time zones](time-zones.md), the text in this setting reflects that.
 
 > [!IMPORTANT]
-> Access must be turned live 24 hours before the results notification email is scheduled to be sent.
+> Viva Glint can successfully process 10,000 - 15,000 surveys and email invites per hour. Factor in these processing limitations and the number of employees in your distribution list when selecting a delivery window. 
+>
+> For example, if your organization plans to send invites to 100,000 employees, extend your delivery window to 10 hours to allow all emails to deliver on the survey start day.
+>
+> For large organizations and distribution lists (more than 250,000 employees), some emails may be pushed to the following day.
 
-## Related topics
+## Channels
 
-[Set up Program Summary pages for a Viva Glint survey](program-summary-overview.md)
+When Microsoft Teams is enabled for Viva Glint notifications, choose to send survey invites and reminders in emails or also in Teams. [Learn more](glint-teams.md).
+
+## Email Settings
+
+Use the Email Settings section to determine email addresses used to contact users and whether to use multiple languages in email templates.
+
+:::image type="content" source="../../media/glint/setup/email-settings.png" alt-text="Screenshot of the Email Settings section in Communications setup.":::
+
+### Choose where email notifications are sent
+
+When [personal email](send-employee-attributes.md#optional-system-attributes) is set up as an optional system attribute, this email option becomes visible. Select **Company email and personal email** to better contact exiting employees.
+
+### Send survey notifications in multiple languages in a single email
+
+If your organization has employees in areas where local guidelines require you to communicate in multiple languages, consider switching this toggle to **On** and [setting up emails in multiple languages](multi-lang-emails.md).
+
+## Configure Notifications
+
+The following sections display as setup actions and each field can be edited by selecting the **pencil symbol** that displays when selecting a row.
+
+:::image type="content" source="../../media/glint/setup/survey-comms-config.png" alt-text="Screenshot of the Configure Notifications section in Communications setup.":::
+
+### Editing the survey invitation
+
+Select **Survey Start** to activate the **Survey Invitation** slider window.
+
+Check **Send notification** to ensure that the date is correct.
+
+### Disabling the survey invitation
+
+If you want to include content that Viva Glint emails don't support - like links, HTML, images, or videos - toggle the **Send Notifications** setting to **Off** and use your own email service for survey notifications.
+
+> [!TIP]
+> Always send your organization a survey invite! Participation is essential for uncovering useful feedback.
+
+:::image type="content" source="../../media/glint/setup/comms-invite-slider.png" alt-text="Screenshot of the Survey Invitation slider window for the Communications setup page.":::
+
+### Use Reminders
+
+To encourage users to participate, use the first, second, third, and final reminder email templates during the survey window.
+
+> [!NOTE]
+> Survey takers only receive reminders when their surveys aren't completed. 
+
+Use the **Pencil** symbol to open the window and then:
+
+- Change reminder email dates, which are preset.
+- Preview your reminder. You can change the language and preview the message in other languages.
+
+### Add survey reminders
+
+The dropdown menu from the **Add survey Reminder** button lets admins add reminders. Reminders display on the Communications page with an alarm symbol.
+
+:::image type="content" source="../../media/glint/setup/program-summary-comms-add-reminder.png" alt-text="Screenshot of the Add Survey Reminder dropdown menu for the Communications setup page.":::
+
+### Customize email content
+
+Use this email [customization guidance](email-content-customization.md) to add custom text to your Viva Glint survey emails.
+
+## Notifications when survey results are available
+
+The results notification email is a one-time notification to let users know that survey results are available. The email sends to users in roles with **live** reporting access. 
+
+> [!IMPORTANT]
+> - The email is sent only to users whose roles are included in the **Reporting** section of **Program Summary.**
+> - Release the results to users with Phased access at least 48 hours before the Survey End email is scheduled to send. [Follow these guidelines](/../../viva/glint/setup/live-versus-phased-access#change-from-live-to-phased-access)
+
+
+To set up the results notification email:
+
+1. From the admin dashboard, go to **Configuration** and choose **Survey Programs**.
+1. Select a survey and go to the **Communications** section in **Program Summary**.
+1. Select the **Edit & Preview** option on the **Survey End** email.
+   - This email is turned off by default.
+1. In the edit pane that appears, switch **Send notification** to **On**.
+2. In the **Send** field, enter days after the survey end date to send the email.
+   - The default is three (3) and the maximum is 30 days.
+2. Select **Save Changes** in the top right of the edit pane.
+
+
+> [!NOTE]
+> To edit **Team Conversations** notifications, [follow this guidance](/viva/glint/reports/team-conversations-administrator-setup).
+
+## Configure Nudges
+
+Set up who in your organization receives [Nudges](/viva/glint/communicate/communicate-with-nudges) to promote continued action on feedback. 
+
+:::image type="content" source="../../media/glint/setup/program-summary-comms-nudges-button.png" alt-text="Screenshot of the Configure Nudges button on the Communications setup page.":::
+
+Select **Configure Nudges** to open the **Nudges** setup page. Follow the in-platform guidance.
+
+:::image type="content" source="../../media/glint/setup/program-summary-comms-nudge-configuration.png" alt-text="Screenshot of the Nudges setup page on the admin dashboard.":::
+
+## Final saving of communication edits 
+
+After adding or editing reminder dates, select the **right facing arrow** and then **Save and Continue**.
+
+## Next Step
+
+> [!div class="nextstepaction"]
+> [Coaching setup in Program Summary](program-summary-coaching.md).

@@ -1,9 +1,9 @@
 ---
-title: Grant Live versus Phased access in Viva Glint reporting
+title: Release feedback results to User Roles
 description: Grant live or phased access to determine when managers have access to survey results.
-ms.author: SarahBerg
-author: SarahAnneBerg
-manager: pamgreen
+ms.author: JudithWeiner
+author: JudyWeiner
+manager: MelissaBarry
 audience: admin
 f1.keywords: NOCSH
 keywords: report access
@@ -11,33 +11,47 @@ ms.collection:
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: how-to
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/10/2023
+ms.date: 03/20/2025
 ---
 
-# Grant Live versus Phased access in Viva Glint reporting
+# Release feedback results to User Roles
 
-## Levels of reporting access
+To determine when leaders get access to Recurring or Ad Hoc survey results, grant Live or Phased access to User Roles. Access status can't be switched while a survey is live.
 
-The following are the two levels of reporting access in Microsoft Viva Glint:
+- **Live access**: Reporting access is readily available, in real time, as surveys are completed. Admins always have *Live* access and can't be included in *Phased* access rollout.
+  
+- **Phased access**:  Recommended for managers and HRBPs (Human Resources Business Partners) for action planning, tracking, and reviewing feedback results for completed surveys.
+  - Excludes this role group from real-time, live survey results
+  - Is configured at the program level but occurs at the cycle level
+  - Allows users access to historical cycles
+  - Prohibits reporting access during that cycle until the survey ends and the admin grants access 
 
-- **Live access**: Reporting access is readily available, in real time, as surveys are completed. Admins always have live access and can't be included in phased access rollout.
-- **Phased access**:  Recommended for managers and HRBPs (Human Resources Business Partners) for action planning, tracking, and reviewing feedback results for completed surveys, excluding this role group from real-time, live survey results. Phased access is configured at the program level but occurs at the cycle level.
+> [!TIP]
+> Keep survey results classified while the survey is *Live*, among just a small group of leaders. Incomplete results may lead to unintended and inaccurate conclusions. Feedback results aren't final until all results are considered.
+ 
+## Grant user access for a completed cycle
 
-## Phased access is recommended for managers
+1. Switch to the **Completed** view and hover over the survey cycle. 
+2. In the **Reporting view** column for the desired survey, view reporting access. In this example, the **Reporting view** shows that *7 of 8 Roles* currently see reports and by hovering over the hyperlink, the User Roles with their current access display. The hyperlink could indicate *Fully Released**.
 
-Keeping survey results classified while the survey is live, among just a small group of leaders, is often prudent. Incomplete results may lead to unintended and inaccurate conclusions. Feedback results aren't final until all results have been considered.
+   :::image type="content" source="../../media/glint/setup/access-view.png" alt-text="Screenshot of the Reporting view access display.":::
 
-## Change from Live access to Phased access
+3. Now select the hyperlink in the **Reporting view** column and then select **Grant Access**.
+   
+   :::image type="content" source="../../media/glint/setup/grant-access.png" alt-text="Screenshot of the Grant Access button to release results.":::
 
-1. Switch to the **Completed** view and hover over the survey cycle.
-2. Select the content in the **Reporting Access** column in that row.
-3. The Program Summary page will display, and then Reporting Access.
-4. Select **Grant Access**.
-5. Check the box of the roles you wish to grant access to. Once access is granted, it can't be revoked.
-6. Select **Provide Access**. *Visible to All Reporting Roles and Release Completed* is displayed.
+4. In the **Grant Report Access**, check the box of any role that requires access. Once access is granted, it can't be revoked.
+5. Select **Provide Access**.
+   
+   :::image type="content" source="../../media/glint/setup/grant-report-access-2.png" alt-text="Screenshot of the Grant Report Access dialog box.":::
 
-Once the next program cycle begins, and if the last cycle has Phased access, the access would default back to Live.
+6. Now the **Reporting view** column for this survey reads *Fully Released* and is visible to all roles with permissions. 
+
+   :::image type="content" source="../../media/glint/setup/fully-released.png" alt-text="Screenshot of the Fully Released reporting view.":::
+
+> [!IMPORTANT]
+> When a new program cycle begins, reporting from the previous cycle is automatically released to all users with permissions to see the results. This release occurs even when the admin hasn't updated all roles to **Live** status.
+ 

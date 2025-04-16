@@ -1,14 +1,13 @@
 ---
-ms.date: 06/16/2023
+ms.date: 03/18/2025
 title: Assign licenses
 description: Assign Viva Insights licenses to users in your organization
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: how-to
 ms.localizationpriority: medium 
 ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: anirudhbajaj
@@ -16,10 +15,6 @@ audience: Admin
 ---
 
 # Assign licenses for Viva Insights
-
-![global admin](../images/applies-to-m365-admin.png) *Applies to: Microsoft 365 global admin*
-
-:::image type="content" source="../images/setup-licenses-1.png" alt-text="Image alt text." lightbox="../images/setup-licenses-1.png":::
 
 >[!Note]
 >Viva Insights is licensed as an add-on to existing Microsoft 365 subscriptions. For more details, refer to [Environment requirements](environment-requirements.md).
@@ -36,7 +31,7 @@ The license-assignment process for Viva Insights has two main steps:
 
 ## Determine the analyzed population
 
-Before you can assign licenses, the Microsoft 365 global admin, the Viva Insights sponsor, and the Insights Administrator work together to identify the analyzed population. This population consists of the people in your company—called *measured employees*—whose Microsoft 365 collaboration activity you want to analyze. Some organizations choose to analyze the entire population, while others use population subsets for specific analysis scenarios. If you want to get insights that reflect all people in the company, you'll need to assign everyone a license.
+Before you can assign licenses, the Microsoft 365 Global Administrator, the Viva Insights sponsor, and the Insights Administrator work together to identify the analyzed population. This population consists of the people in your company—called *measured employees*—whose Microsoft 365 collaboration activity you want to analyze. Some organizations choose to analyze the entire population, while others use population subsets for specific analysis scenarios. If you want to get insights that reflect all people in the company, you'll need to assign everyone a license.
 
 >[!Note]
 >Employees in your organization who aren't licensed for analysis—but might collaborate with your measured employees through meetings, email, unscheduled calls, or Teams chats—are called *other internal collaborators*. You might encounter this term while using Viva Insights.
@@ -47,7 +42,10 @@ For more information on licensing and user configuration, refer to [Configure pe
 
 ## Assign licenses
 
-After you've identified the population in scope, you as the Microsoft 365 global admin assign Viva Insights licenses to users in that population.
+After you've identified the population in scope, the license admin or user admin assign Viva Insights licenses to users in that population.
+
+>[!Note]
+>A minimum of 50 licenses is required to be assigned in order for data processing to kick off. Data processing takes an estimated 3-5 days from license assignment.
 
 Viva Insights licenses are assigned just like other Microsoft 365 product licenses. Assign licenses by using one of these options:
 
@@ -60,7 +58,7 @@ Viva Insights licenses are assigned just like other Microsoft 365 product licens
 
 ### If mailboxes are not fully migrated to Microsoft 365 Exchange Online
 
-If your organization hasn't fully migrated to Microsoft 365 Exchange Online, you might encounter mailboxes that are hosted using Exchange on-premises. Your Azure Active Directory (AD) [Global Admin](/azure/active-directory/roles/permissions-reference#global-administrator) or [Exchange admin](/azure/active-directory/roles/permissions-reference#exchange-administrator) can help to determine if you will encounter this scenario, and assist you with migrating these mailboxes to Microsoft 365 Exchange Online. 
+If your organization hasn't fully migrated to Microsoft 365 Exchange Online, you might encounter mailboxes that are hosted using Exchange on-premises. Your Microsoft Entra ID [Exchange admin](/azure/active-directory/roles/permissions-reference#exchange-administrator) can help to determine if you will encounter this scenario, and assist you with migrating these mailboxes to Microsoft 365 Exchange Online.
 
 ## When newly licensed users show up in data
 
@@ -69,7 +67,7 @@ The data that the advanced insights app uses refreshes once a week, during the f
 * The user is represented in the user counts that are shown in **Organizational data > Data quality**.
 * When analysts run [queries](../analyst/person-query.md), results include data about this user's activities.
 
-The Microsoft admin center and Azure Active Directory (AD) tell you whether a user is licensed. After a user is assigned a license, that user shows up in Azure AD and the Microsoft admin center, but not in Viva Insights until the next data-refresh cycle is complete during the first part of the following week.
+The Microsoft admin center and Microsoft Entra tell you whether a user is licensed. After a user is assigned a license, that user shows up in Microsoft Entra ID and the Microsoft admin center, but not in Viva Insights until the next data-refresh cycle is complete during the first part of the following week.
 
 ### When users show up in query results
 
@@ -87,7 +85,3 @@ Let's say an employee was licensed from January 1 through March 31. Here are thr
 
 > [!div class="nextstepaction"]
 > [Assign user roles](./assign-user-roles.md)
-
-*Applies to: Microsoft 365 global admin or Privileged Role Administrator*
-
-

@@ -2,25 +2,23 @@
 title: Overview of language in Viva Language 
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 06/08/2023
+ms.date: 03/31/2025
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: concept-article
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
-  - Tier1
-localization_priority: medium
-description: Learn how Viva Learning handles language so you can customize the application.
+ms.localizationpriority: medium
+description: Learn how Viva Learning handles language so you can customize the application for the needs of your organization and users.
 ---
 
 # Overview of Language in Viva Learning
 
-Learn how Viva Learning handles language so you can customize the application.
+Learn how Viva Learning handles language so you can customize the application for your organization's needs.
 
 ## Introduction
 
@@ -42,23 +40,17 @@ For more information, review the list of Viva Learning [supported languages](/vi
 
 ## Display language
 
-Display language refers to the language in which Viva Learning is accessed. It refers to the language that the navigation names display. This includes **Home**, **My Learning**, and **Manage**, as well as actions like **Share**, **Add to calendar**, and **Rate it**. Notifications in Teams also display in the same language. 
+Display language refers to the language in which Viva Learning is accessed. It refers to the language that the navigation names display. This navigation includes **Home**, **My Learning**, and **Manage**, as well as actions like **Share**, **Add to calendar**, and **Rate it**. Notifications in Teams also display in the same language. 
 
-### In the Teams app
+### In the Teams app or web app
 
-When using Viva Learning in Microsoft Teams. Viva Learning display language is set through the Language setting in Microsoft Teams.
+When using Viva Learning in Microsoft Teams or in the Browser. Viva Learning display language is set through the Language setting within Viva Learning.
 
-Select the three dots on the top right. Then go to **Settings** > **General** > **Language** > **App Language**. 
-
-Update your Microsoft Teams language setting to use Viva Learning in a different Language.
-
-### In the web app
-
-When using Viva Learning in the browser, the Viva Learning display language is set through the **Language** setting in the browser. To use Viva Learning in a different language, update the browser language setting.
+Open Viva Learning app > Select the three dots on the top right in header. Then go to **Settings** > **Language** > **Select a Language > Save & Refresh**. 
 
 > [!NOTE]
-> Viva Learning supports 60 languages. Viva Learning may or may not support the Teams or browser language.
-> In case the user’s Teams or browser language is not supported, Viva learning falls back to the next related language as per Microsoft Corporate, External, and Legal Affairs guidelines taking language sentiments and sensitivities into consideration.
+> User language is currently in preview. Languages shown in Language setting in Viva Learning are as per the [Available language setting](/viva/learning/language-preferences/#available-languages). To add or modify the language options, use the available language setting. 
+> If you're not participating in the User language preview, the display language defaults to the Microsoft Teams or browser language.
 
 ## Content language
 
@@ -94,7 +86,7 @@ The following spaces display content only based on user action or preference. Th
 
 ## FAQs
 
-- **Why does Viva Learning show English content at all spaces even if my Teams language is not English?**
+- **Why does Viva Learning show English content at all spaces even if my Viva learning language is not English?**
 
     By default, Viva Learning shows content from two languages: the display language and **English (US)**(default language).
 
@@ -106,19 +98,18 @@ The following spaces display content only based on user action or preference. Th
 
     For example, if a user is using Viva Learning in Deutsch (Deutschland) – (de-DE), Viva Learning loads all content having language attribute as either (de-DE) or (de).
     
- - **Viva Learning is loading in a different language of my Teams or browser. Is it expected?**
+ - **Viva Learning is loading in a different language in PC and mobile device. Is it expected?**
  
-    Viva Learning supports [60 languages](/viva/learning/viva-learning-supported-languages). If your teams or browser language isn't supported in this list, Viva Learning falls back to a more suitable supported language as per Microsoft legal guidelines.
-    If your teams or browser language is supported but Viva Learning is loading in a wrong language, please create a support ticket.
+    Viva Learning in mobile opens in the language of the mobile device. User Language setting is implemented for mobile in the upcoming releases.
 
  - **We are not able to see a specific language content of a provider or LMS.**
     
-    Check the documentation of each provider integration to know the supported languages or reach out to the support executive to know the supported languages in each provider or LMS.
+    Check the documentation of each provider integration to know the supported languages. You can also reach out to the support executive to know the supported languages in each provider or learning management system (LMS).
 
 - **In which language are assignments shown to users in Viva Learning?**
 
     The language of assignments is set as follows: **Display language** > **English (US)**
 
-    The assignment is loaded in the display language of the User. If the assignment isn't available in display language, then it's loaded in English (US).  We are working on including Default language in this fallback process. 
+    The assignment is loaded in the display language of the User. If the assignment isn't available in display language, then it's loaded in English (US). We're working on including Default language in this fallback process. 
 
 

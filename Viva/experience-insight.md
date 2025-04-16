@@ -1,20 +1,19 @@
 ---
-ms.date: 11/11/2022
+ms.date: 5/08/2024
 title: "Support productivity and wellbeing with actionable insights"
 ms.reviewer: 
 ms.author: loreenl
 author: LoreenLa
-manager: pamgreen
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-localization_priority: Priority
+ms.topic: integration
+ms.service: viva-suite
+ms.localizationpriority: medium
 ms.collection:
   - M365initiative-viva
   - highpri
-  - Tier1
 search.appverid:
 - MET150
 

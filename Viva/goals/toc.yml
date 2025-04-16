@@ -5,19 +5,13 @@ items:
       href: intro-to-ms-viva-goals.md
     - name: Get to know OKRs
       href: get-to-know-okrs.md
-    - name: Determine your rollout plan
-      href: determine-your-rollout-plan.md
-  
-    - name: Viva Goals trials
-      items:
-      - name: Start a trial overview
-        href: viva-goals-trials.md
-      - name: IT admin-led trials
-        href: it-admin-trials.md
-      - name: Self-service trials
-        href: self-service-trials.md
-      - name: Trial checklist
-        href: trials-checklist.md
+
+- name: Retirement
+  items:
+    - name: Viva Goals Retirement
+      href: goals-retirement.md
+    - name: FAQs
+      href: goals-retirement-faq.md
   
 - name: Administration
   items:
@@ -25,8 +19,8 @@ items:
       href: viva-goals-deployment-guide.md
     - name: Viva Goals admin portal
       href: viva-goals-admin-portal.md
-    - name: Navigate the admin dashboard
-      href: navigate-admin-dashboard.md
+    - name: Mandate team assignment for OKRs
+      href: mandate-okr-team-assignment.md
     - name: Viva Goals language and region support
       href: viva-goals-language-support.md
     - name: Viva Goals security, privacy, and compliance
@@ -47,26 +41,40 @@ items:
   
   - name: Organization setup
     items:
+    - name: Organization admin dashboard
+      href: navigate-admin-dashboard.md
     - name: Understand organizations and teams
       href: understand-orgs-and-teams.md
-    - name: Log in, create, and join organizations in Viva Goals
+    - name: Company-wide organizations
+      href: company-wide-organization.md
+    - name: Log in to Viva Goals and get started with organizations
       href: log-in-create-and-join-organizations.md
     - name: Restrict organization creation permissions
       href: restrict-organization-creation-permissions.md
     - name: Configure help and support for your organization
       href: configure-support.md
-    - name: Configure check-in reminders and notifications
+    - name: Configure check-in reminders, notifications, and templates
       href: check-in-reminders.md
     - name: Configure your OKR model in Viva Goals
       href: configure-okr-model.md
     - name: Managing Viva Goals members 
       href: managing-team-members.md
+    - name: Approval Workflow
+      href: approval-workflows.md  
 
-  - name: Team setup
+  - name: Create and edit teams
     items:
-    - name: Define your team
-      href: define-your-team.md
-    - name: Create and edit teams
+    - name: Introduction to Viva Goals teams
+      href: viva-goals-teams-intro.md
+    - name: Microsoft 365 group-connected teams
+      items:
+      - name: Create a Viva Goals team from a Microsoft 365 group
+        href: create-viva-goals-team-from-m365-group.md
+      - name: Manage members of a group-connected team
+        href: manage-group-connected-team-members.md
+      - name: Delete, archive, or restore a group-connected team
+        href: delete-archive-restore-m365-group-connected-team.md
+    - name: Viva Goals-native teams
       href: create-and-edit-teams-and-subteams.md
 
   - name: User setup
@@ -80,11 +88,13 @@ items:
       href: managing-okr-time-periods.md
     - name: Import OKRs and initiatives with Viva Goals
       href: import-okrs-projects.md
-    - name: Renaming initiatives
-      href: renaming-initiatives.md
+    - name: Customize Goals terminology
+      href: customize-terminology.md
     - name: Custom embed URL widget
       href: custom-url-widget.md
-    - name: Share an Update via Goals broadcast
+    - name: Sharing in Viva Goals overview
+      href: share-objectives.md
+    - name: Share an update via Goals Broadcast
       href: goals-broadcast.md
       
   - name: Integrations
@@ -94,15 +104,13 @@ items:
     - name: Viva Goals integrations overview
       href: integrations-overview.md    
     
-    - name: MS Teams
+    - name: Microsoft Teams
       items:
-      - name: Collaborate with Viva Goals in MS Teams
+      - name: Use Viva Goals with Microsoft 365 apps
         href: ms-teams-integration.md
-      - name: Add the Viva Goals app to MS Teams
+      - name: Add the Viva Goals app
         href: configure-ms-teams-integration.md
-      - name: Use Viva Goals in Microsoft Teams
-        href: use-ms-teams-integration.md
-      - name: Link Previews in Microsoft Teams
+      - name: Link previews
         href: ms-teams-link-preview.md
       - name: Notifications in Teams
         href: ms-teams-notifications.md
@@ -188,17 +196,78 @@ items:
         href: tableau-integration.md
       - name: Trello integration
         href: trello-integration.md 
-      - name: Zapier integration
-        href: zapier-integration.md 
       - name: Zendesk integration
         href: zendesk-integration.md
-       
- 
- 
-      
+    - name: Troubleshoot AAD errors
+      href: integration-aad-errors.md
 
-
-
-
+- name: The OKR framework
+  items:
+  - name: Benefits of OKRs
+    href: benefits-of-okrs.md
+  - name: Define your team
+    href: define-your-team.md
+  - name: Determine your rollout plan
+    href: determine-your-rollout-plan.md
   
+- name: Microsoft 365 Copilot in Viva Goals
+  items:
+  - name: Introduction to Microsoft 365 Copilot in Viva Goals
+    href: copilot-intro.md
        
+- name: Use Viva Goals and discover best practices
+  items:
+   - name: Create goals and OKRs
+     items:
+      - name: Writing great goals
+        items:
+        - name: Guide to great goal writing
+          href: ./viva-goals-healthy-okr-program/great-goal-writing.md
+        - name: Pitfalls and best practices
+          href: ./viva-goals-healthy-okr-program/goal-setting-pitfalls.md
+        - name: Goal-setting frameworks
+          href: ./viva-goals-healthy-okr-program/goal-setting-frameworks.md
+        - name: Goal writing recommendations
+          href: ./viva-goals-healthy-okr-program/goal-writing-recommendations.md
+        - name: Write annual, organizational goals using the 5 Ps
+          href: ./viva-goals-healthy-okr-program/write-annual-top-level-okrs.md
+      - name: Using the OKR framework
+        items:
+        - name: Guide to OKRs
+          href: ./viva-goals-healthy-okr-program/write-okrs-overview.md
+        - name: Improve your OKR writing
+          href: ./viva-goals-healthy-okr-program/apply-okr-formula.md
+        - name: Defining Key Result Types in Viva Goals
+          href: ./viva-goals-healthy-okr-program/kr-types.md
+        - name: OKR examples
+          href: ./viva-goals-healthy-okr-program/okr-examples.md
+   - name: Collaborate with Viva Goals
+     items:
+      - name: Align OKRs overview
+        href: ./viva-goals-healthy-okr-program/align-okrs-overview.md
+      - name: Tight vs loose alignment
+        href: ./viva-goals-healthy-okr-program/align-loose-vs-tight.md
+
+   - name: Check in and track goals
+     href: ./viva-goals-healthy-okr-program/check-in-okrs-overview.md
+  
+   - name: Tags
+     href: tags.md
+ 
+   - name: Close and score goals
+     href: ./viva-goals-healthy-okr-program/close-okrs-overview.md
+    
+   - name: Business rhythms and dashboards
+     items:
+      - name: Business rhythms overview
+        href: ./viva-goals-healthy-okr-program/rhythm-of-business-overview.md
+      - name: Review dashboard templates
+        items:
+        - name: Leadership strategy dashboard
+          href: ./viva-goals-healthy-okr-program/leadership-strategy-dashboard.md
+        - name: Organization visibility dashboard
+          href: ./viva-goals-healthy-okr-program/organization-visibility-dashboard.md
+        - name: Departmental alignment dashboard
+          href: ./viva-goals-healthy-okr-program/department-alignment-dashboard.md
+        - name: Team execution dashboard
+          href: ./viva-goals-healthy-okr-program/team-execution-dashboard.md

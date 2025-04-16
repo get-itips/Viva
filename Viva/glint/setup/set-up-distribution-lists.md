@@ -1,143 +1,185 @@
 ---
-title: Set up and use Distribution Lists in Viva Glint
-description: "Distribution lists define which employees within an organization should receive a survey."
+title: Set up and manage Viva Glint Distribution Lists
+description: Distribution lists are how admins define which employees within an organization should receive a survey or permissions to view results.
 ms.author: JudithWeiner
 author: JudyWeiner
 manager: mbarry
 audience: admin
 f1.keywords: NOCSH
-keywords: viva strengths and opportunities
+keywords: distribution lists, attribute rules, delete distribution lists, exclude distribution lists
 ms.collection:  
 - m365initiative-viva
 - selfserve 
 search.appverid: MET150 
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: how-to
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/28/2023
+ms.date: 03/12/2025
 ---
 
-# Set up and use Distribution Lists in Viva Glint
+# Set up and manage Viva Glint Distribution Lists
 
-Distribution Lists define which employees within your organization should receive a survey. When creating a Distribution List, start with the list of all active employees and then refine this list using employee attributes. This creates a custom list of employees that can be chosen as recipients for any Microsoft Viva Glint program within your organization.
+Microsoft Viva Glint Distribution Lists define which employees in your organization are eligible for a survey. Refine lists using employee attributes uploaded to Viva Glint, upload a file of users, use date-based lists, and edit or delete lists over time.
 
-Distribution Lists are essential when a survey program isn't intended to be sent to all active employees.  
+> [!NOTE]
+> To set up Distribution Lists, complete [attribute setup](/../../viva/glint/setup/send-employee-attributes) and [upload data to the Viva Glint system.](/../../viva/glint/setup/upload-employee-attributes)
 
-## Create, edit, or delete a Distribution List 
+## Set up a Distribution List 
 
-In surveys, you can use existing Distribution Lists or edit or create new ones. 
+To set up a new Distribution List:
 
-There are two ways to access Distribution Lists: 
+1. Select **Configuration** and in the **Employees** section select **Distribution Lists**. The Distribution List page displays all existing lists and their number of members.
 
-From the admin dashboard:
- 
-1. Select the  **Configure** symbol.
- 
-1. Select  **Distribution Lists**  under the  **Employees** section.  
+   :::image type="content" source="../../media/glint/setup/distro-list-overview.png" alt-text="Screenshot of the Distribution List window.":::
 
-Or, from your survey program: 
+1. Select **+ New Distribution List**. 
 
-1. Select the  **Configure**  symbol at the top right of your Viva Glint dashboard. 
+   :::image type="content" source="../../media/glint/setup/distro-list-add-new.png" alt-text="Screenshot of Distribution List setup steps.":::
+   
+1. To replace the "Untitled Distribution List...," add a unique name to the list default name. If another list already uses that name, an error message appears.
 
-1. Select  **Survey Programs**  in the **Survey** section. 
+## Add users to a Distribution List
 
-1. Select the survey for which the Distribution List needs to be edited. 
+There are multiple ways for Viva Glint Admins to add users to a list, including:
 
-1. Select the  **Distribution page**  in  **Program Summary**. 
+- [Attribute rules](#use-attribute-rules-to-add-users) that automatically add users based on employee data imported to Viva Glint
+- [Search and select](#search-for-and-add-individual-users) individual users
+- [File imports](#import-users) to add multiple users that don't share an attribute value
+- [A blended approach](#use-a-blended-approach-to-add-users) that combines attribute rules and the search + add feature
 
-1. Select the pencil symbol to Modify Distribution Lists.  
+### Use attribute rules to add users
 
-### Create a new list  
+To automatically add users to a list based on their attribute values in data imported to Viva Glint:
 
-The first page that appears displays all Distribution Lists that exists for your organization and indicates the number of members in each list. 
+1. Select **Configuration** and in the **Employees** section select **Distribution Lists**.
+2. Select the list that should have an attribute rule added.
+3. Select **Add/Edit Employees** and in the **Choose a way to add employees** dialog, select **Attribute Rules.**
+4. In the **Add Attribute Rules** edit pane that appears:
+   1. Select **I want to filter all active employees by these populations:** to include active users only.
+   2. Select **+ New Population** and then **+ Add Filters**.
+   3. Choose attributes and values to include employees who match this data in your imported employee files.
+      
+      > [!TIP]  
+      > For an Exit survey, enable **Include Inactive Employees** and consider contacting them via their [personal email](attribute-fundamentals.md#optional-system-attributes).
+  
+   5. To exclude users, hover over their name in the **Included** section and select **Exclude**.
+   6. To remove someone from the **Excluded** list, hover over their name in the **Excluded** section and select **Remove**.
+4. Confirm your list and select **Save Changes**.
 
-1. Select  **+ New Distribution List**. 
-1. Enter a title for your list by selecting the pencil symbol next to the Untitled Distribution List box. For example, if you're creating a Distribution List for new employees, you could title your list *New Employees* or *New Hires.* 
-1. Select  **Add/Edit Employees**.
+### Add users manually
 
-### Add attribute rules to create a new list 
+Add individual users with the **+ Search for an employee to add** feature or import a file of users to update a list in bulk.
 
-There are two options:
- 
-- All active employees 
-- Filter all active employees 
+#### Search for and add individual users
 
-#### All Active Employees 
+To manually add individual users:
 
-1. Select  **I want to include all active employees only**. 
-1. For an Exit survey, consider enabling  **Include Inactive Employees**, located below the selection box. To include inactive employees, contact them via their personal email; ensure you have a personal email when an employee leaves your organization, if possible. 
+1. Select **Configuration** and then choose **Distribution Lists**.
+2. Select the Distribution List that you need to add employees to.
+3. Enter a name or email address in the **+ Search for an employee to add** field at the bottom of the list.
+4. Select the user from search results to add them to the list.
 
-1. If you need to exclude someone, search for their name and select **Exclude**. 
+#### Import users
 
-1. Conversely, if you need to remove someone from the Excluded list, search their name and select  **Remove**. 
+> [!CAUTION]
+> Importing users to an attribute rule-base list removes attribute rules from the list.
 
-1. Confirm your list and select  **Save Changes**. 
+To import a file of users to a list:
 
-#### Filter all Active Employees 
+1. From the admin dashboard, select **Configuration** and then choose **Distribution Lists**.
+2. Select the Distribution List that you need to add employees to.
+3. Select **Add/Edit Employees**.
+4. From the **Choose a way to add employees** dialog, select **Import**.
+   
+   :::image type="content" source="../../media/glint/setup/dl-choose-add-method.png" alt-text="Screenshot of the choose a way to import employees dialog for distribution lists.":::
+   
+5. In the **Import employees to distribution list** dialog, select **Download CSV** in the **Download your current employee list to modify** section. 
+6. Use the downloaded file as a template and add employee email addresses in the email column. Include the header row, which is labeled differently when there are or aren't users in the list. Both column labels import successfully:
+   1. The header row label in the template file is **email** when there are already users in the **Distribution List**.
+   2. The header row label in the template file is **Employee Email** when there are no users in the **Distribution List**.
+7. After adding all email address values, save the file as .csv or .xlsx.
+8. In the **Import employees to distribution list** dialog, drag and drop or browse to choose the file (maximum size 550 MB, maximum row count 10,000).
+9. To keep any existing users in the list, select **Preserve the employees already in the distribution list**.
+    
+    :::image type="content" source="../../media/glint/setup/dl-import-preserve.png" alt-text="Screenshot of distribution list import dialog with the preserve employees in the list option selected.":::
+   
+10. Select **Import File**.
+11. The **Confirm your import** window displays. If the correct number of employees to be added and removed are correct, select **Confirm Import**.
 
-1. Select  **I want to filter all active employees by the following populations**. 
+#### Export users
 
-1. Select  **+ New Population**. 
+1. From the admin dashboard, select **Configuration** and then choose **Distribution Lists**.
+2. Select the Distribution List that you need to add employees to.
+3. Select **Add/Edit Employees**.
+4. From the **Choose a way to add employees** dialog, select **Import**.
+   
+   :::image type="content" source="../../media/glint/setup/dl-choose-add-method.png" alt-text="Screenshot of the choose a way to import employees dialog for distribution lists.":::
+   
+5. In the **Import employees to distribution list** dialog, select **Download CSV** in the **Download your current employee list to modify** section.
 
-1. Select  **+ Add Filter** to select the attribute you want to use to filter your employee list. Your attribute list is unique to your organization based on your Employee Attribute File. 
+### Use a blended approach to add users
 
-1. Select  **Done**. 
+If your organization needs to add most users to a list based on attribute rules, but also needs to add a few users manually, consider a blended approach.
 
-1. For an Exit survey, consider enabling "Include Inactive Employees," located below the selection box. To include inactive employees, contact them via their personal email.  
+1. Set up a new list and add an [attribute rule](#use-attribute-rules-to-add-users) for it.
+2. When users need to be added manually, add them with the **[Search and add user](#search-for-and-add-individual-users)** feature in the list.
+3. The **Membership Type** in **Distribution Lists** shows as "Attribute Rules, Manual."
 
-1. If you need to exclude someone, search for their name and select  **Exclude**. 
+> [!CAUTION]
+> Importing users to an attribute rule-base list removes attribute rules from the list. Use only the Search and add feature to manually add users to a list that uses a blended membership method.
 
-1. Conversely, if you need to remove someone from the Excluded list, search their name and select  **Remove**. 
+## Use date-based lists
 
-1. Confirm list and select  **Save Changes**. 
+Viva Glint Employee Lifecycle surveys use exit and hire dates in your employee data to automatically trigger Exit and Onboarding surveys. Use date-based distribution lists to include all eligible users based on ranges of dates tied to exit and hire date information.
 
-   > [!NOTE]
-   >The date range selected for an attribute should always be equal to or greater to the frequency at which you update your Employee Attribute File. For companies that integrate their Human Resources Information System (HRIS) files automatically, this will work well. For companies that manually update files, ensure that the window you’ve set is wide enough to include the frequency with which employee data is refreshed. For example, if a window is set to 15 days but employee files are only updated once every 30 days, the survey will likely miss people who should get the survey, since the date range is only set to look at people who started 30-45 days earlier. Instead, set the window for at least 30 days so you are sure to include everyone.
+To set up a date-based list:
 
-After selecting an attribute, you'll see a list of employees that match your criteria. From here, employees can be manually excluded by selecting that employees name in the Included box and then selecting **Exclude** when it appears.
+1. [Set up a list](#set-up-a-distribution-list)
+2. [Use attribute rules to add users](#use-attribute-rules-to-add-users)
+3. Select a date attribute, usually exit or hire date
+4. Select a day range related to the date that employees are eligible.
+5. When selecting days before and after a date, consider:
+   - How often your organization uploads employee data
+   - How quickly new and termed employee data is updated in your HR information system
+   - The Response Window in a survey's Program Setup (the number of days a user has to complete a survey, usually 14 days)
 
-   > [!NOTE]
-   >You do not have the option to manually include employees.
+For example, to ensure that users have enough time to respond to a 30-day onboarding survey, a Viva Glint Admin can choose to make users eligible 30 days to 50 days after their hire date. This setup allows users to receive invites and respond with enough time based on this organization's bi-monthly import of employee data. 
 
-## Modify a Distribution List 
+:::image type="content" source="../../media/glint/setup/dl-day-range-onboard.png" alt-text="Screenshot of a Viva Glint date-based distribution list for a 30-day onboarding survey.":::
 
-Editing a Distribution List is a global change and will affect any program using that list. To modify: 
+## View how a list is populated
+
+On the **Distribution Lists** page, the **Membership Type** column defines if that list is populated manually, by attribute rules, or both. 
+
+- **Attribute Rules**: The list uses attribute rules to add users based on their attribute values in imported employee data
+- **Manual**: The list uses a file of users imported to the list or the **Search and add user** feature to add new users
+- **Attribute Rules, Manual**: The list uses attribute rules and the **Search and add user** feature to add users.
+  
+## Edit a list
+
+Editing a Distribution List is a global change and affects any program using that list. To modify: 
 
 1. Select the Distribution List you want to modify. 
+1. Select  **Add/Edit Employees**  or  **Edit Attribute Rules** if there are filters available. 
+1. Make the necessary changes and select **Save Changes**. 
 
-1. Select  **Add/Edit Employees**  or  **Edit Attribute Rules**  if there are filters available. 
+## Delete a list
 
-1. Make the necessary changes and select  **Save Changes**. 
+Viva Glint Admins can delete lists by hovering over the list and selecting the **Delete** option. A **Delete Distribution List** dialog opens with a list of survey programs that use the list. 
 
-After confirming you have the list you want, select  **Save Changes**. 
+:::image type="content" source="../../media/glint/setup/delete-dl-alert.png" alt-text="Screenshot of the Viva Glint distribution list deletion dialog that alerts users to surveys that use the list.":::
 
-## Understand why frequency of updating your Employee Attribute File matters 
+To delete the Distribution List, remove it from the Distribution section of the program.
 
-The date range selected for an attribute should always be equal or greater to the frequency at which you update your employee data files. For companies that integrate their HRIS files automatically, this works well. For companies that manually update employee files, make sure that the window set is wide enough to include the frequency with which employee data is refreshed. For example, if a window is set to 15 days but employee files are only updated once every 30 days, the survey will likely miss people who should get the survey, since the date range is only set to look at people who started 30-45 days earlier. Instead, set the window for at least 30 days so you're sure to include everyone.
+1. Select **Configuration** and then select **Survey Programs**.
+2. **Select the survey.**
+3. Select **Distribution** and remove the list.
+4. Repeat this process for all survey programs that use the list.
+5. Return to **Distribution Lists** and select the **Delete** option for the list.
+6. In the **Are you sure?** dialog that appears, select **Yes, I'm sure.**
+  
+   :::image type="content" source="../../media/glint/setup/delete-dl-confirm.png" alt-text="Screenshot of the Viva Glint distribution list deletion confirmation dialog.":::
 
-> [!TIP]
-> Consider using the blended membership functionality, explained below.
+   > [!IMPORTANT]
+   > Deleting a Distribution List is a permanent action. The data of the members of that list isn't deleted.
 
-## Use the blended membership Distribution List functionality
-
-Dynamic attributes automatically add and remove users to and from a distribution list. They can also include or exclude certain users from a list. Knowing how your distribution list has been populated helps you make decisions about how to add users.
-
-### View how a Distribution List was populated
-
-From the Distribution Lists page, the far-right column entitled **Membership Type** defines if the list in that row has been populated manually, by attribute rules, or both.
-
-> [!Note]
-> If a distribution list is populated by an Import, it will have the membership type "manual".
-
-## Use the dynamic Distribution Lists functionality
-Your decision whether to use manual population or attribute rule population should be guided by these principles:
-
-<ul><li>If membership type is based on Attribute Rules and a user is manually added in the platform, employee data file imports (i.e. Rubicon) will automatically update the Distribution List.</li>
- <li>If the Distribution List began manually, adding attribute rules will change the list to include both Attribute Rules and Manual.</li>
-<li>If a manually added member is deleted and they match the filter criteria, they'll still appear in the Distribution List, but the Added by method will change from Manual to Attribute Rules.</li></ul>
-
-> [!IMPORTANT]
-> Importing users to an Attribute Rules Distribution List removes existing rules.
->  <ul><li>Activate the **Preserve the employees already in this distribution** list functionality to convert membership type to **Manual** for existing users.</li>
->  <li> Uncheck to deactivate and remove the users based on the rules, and only include those in the import file. </li><ul>

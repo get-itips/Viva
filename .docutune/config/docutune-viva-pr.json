@@ -1,3 +1,28 @@
 {
-  "MetadataMultilineValues": true
+  "Docsets": [
+    {
+      "DocsetName": "OfficeDocs-Briefing",
+      "BuildSourceFolder": "Briefing"
+    },
+    {
+      "DocsetName": "OfficeDocs-MyAnalytics",
+      "BuildSourceFolder": "MyAnalytics"
+    },
+    {
+      "DocsetName": "OfficeDocs-Viva",
+      "BuildSourceFolder": "Viva"
+    },
+    {
+      "DocsetName": "OfficeDocs-WorkplaceAnalytics",
+      "BuildSourceFolder": "WorkplaceAnalytics"
+    },
+    {
+      "DocsetName": "teams-insights",
+      "BuildSourceFolder": "Teams-insights"
+    },
+    {
+      "DocsetName": "Workplace-Analytics-Insights",
+      "BuildSourceFolder": "workplace-analytics-insights"
+    }
+  ]
 }

@@ -5,11 +5,10 @@ title: De-identified data and Viva Insights
 description: De-identified data in Microsoft Viva Insights
 author: madehmer
 ms.author: helayne
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 ms.collection: m365initiative-viva-insights 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: scott.ruble

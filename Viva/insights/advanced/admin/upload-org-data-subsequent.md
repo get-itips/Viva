@@ -1,14 +1,15 @@
 ---
-ms.date: 07/14/2022
+ms.date: 02/13/2025
 title: Upload organizational data (subsequent upload)
 description: This article discusses how to upload your data to the Viva Insights advanced insights app after you've already uploaded data there.
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: how-to
 ms.localizationpriority: medium
-ms.collection: viva-insights-advanced
-ms.service: viva 
-ms.subservice: viva-insights
+ms.collection: 
+- viva-insights-advanced
+- essentials-manage
+ms.service: viva-insights
 manager: anirudhbajaj
 audience: Admin
 ---
@@ -17,9 +18,9 @@ audience: Admin
 
 If organizational data has already been uploaded into the advanced insights app, you as an admin can use the information in this article to:
 
-* Edit existing data.
-* Replace existing data.
-* Delete organizational attributes from existing data.
+* Edit existing data
+* Replace existing data
+* Delete organizational attributes and employees from existing data
 
 Complete these steps after preparing the data as described in [Prepare organizational data](./prepare-org-data.md).
 
@@ -39,22 +40,23 @@ After you prepare the source data, the uploading process follows these steps, wh
 1. The app validates your data. (If validation isn’t successful, you can choose from a few options described in [Validation fails](#validation-fails).)
 1. The app processes your data. (If processing isn’t successful, you can choose from a few options described in [Processing fails](#processing-fails).)
 
-After the data successfully validates and processes, the overall data-upload task is complete.
+   After the data successfully validates and processes, the overall data-upload task is complete.
 
 ## To update, replace, or delete data
 
 All three actions share the same two first steps:
 
-1.	Select either the **Start** button on the **Data hub** tab or the **Edit or start new upload** button on the **Data connections** tab.
+1.	Select either the **Start** button on the **Data hub** tab or **Manage data sources** button on the **Data connections** tab.
 
-:::image type="content" source="../images/admin-upload2-start-process.png" alt-text="Screenshot that shows Edit or start new upload option.":::
+     :::image type="content" source="../images/data-quality-manage-data.png" alt-text="Screenshot that shows the Manage data sources button.":::
 
-2.	The resulting page lists three options:
-    * **Update existing organizational data**
-    * **Delete fields**
-    * **Upload a new file to replace existing organizational data**.
+2.	The resulting page lists four options:
+    * **Add or edit data**
+    * **Delete optional fields**
+    * **Delete employee data**
+    * **Replace all data**
 
-    :::image type="content" source="../images/admin-upload2-options.png" alt-text="Screenshot that shows starting data-upload process." lightbox="../images/admin-upload2-options.png":::
+    :::image type="content" source="../images/data-quality-manage-data-options.png" alt-text="Screenshot that shows the four options to manage data." :::
 
     Make your selection based on what you want to do, then navigate to the corresponding section below for step 3.
 
@@ -63,8 +65,9 @@ All three actions share the same two first steps:
     |Add new employees (rows) |[Update existing organizational data](#update-and-replace-existing-data) |Your file includes needs to include all required fields (**PersonId**, **ManagerId**, and **Organization**) and other optional fields. |
     |Add new fields (columns)|[Update existing organizational data](#update-and-replace-existing-data)| Your file needs to include **PersonId** and other optional fields.|
     |Edit fields (columns)|[Update existing organizational data](#update-and-replace-existing-data)|Your file needs to include **PersonId** and other optional fields.|
-    |Delete attributes| [Delete optional fields from existing organizational data](#delete-optional-fields-from-existing-organizational-data)|You can only delete optional attributes. If you delete fields used in auto-refreshing queries, those queries will be disabled.|
-    |Replace all existing organizational data|[Replace existing data](#replace-existing-data)|This option *permanently deletes* all organizational data you’ve uploaded in the past. If your file is missing any fields, auto-refreshing queries that use those fields will be disabled.|
+    |Delete attributes| [Delete optional fields from existing organizational data](#delete-optional-fields-from-existing-organizational-data)|You can only delete optional attributes. If you delete fields used in autorefreshing queries, those queries will be disabled.|
+    |Replace all existing organizational data|[Replace existing data](#replace-existing-data)|This option *permanently deletes* all organizational data you’ve uploaded in the past. If your file is missing any fields, autorefreshing queries that use those fields will be disabled.|
+    | Remove employees from organizational data | [Delete specific employees from existing organizational data](#delete-employees-and-data-from-existing-organizational-data) | This option lets you delete specific employees from your organizational data using a .csv file. | 
 
 ## Update and replace existing data
 
@@ -72,47 +75,111 @@ All three actions share the same two first steps:
 
 #### File upload
 
-3. Under **Upload file**, select the file you want to upload, then select **Next**.
+* Under **Upload file**, select the file you want to upload, then select **Next**.
 
-Now you’re ready to map fields. For your next steps, go to [Field mapping](#field-mapping).
+  Now you're ready to map fields. For your next steps, go to [Field mapping](#field-mapping).
 
 ##### Example: adding a new data column
 
-Let’s say you want to upload a new engagement score value for each employee. You’ve  already uploaded the recommended 13 months or more of snapshot data, which included the required columns for all employees; now you want to apply the engagement score value to all of that historical data. You’d choose the **Update existing organizational data** option. To  upload your new **EngagementScore** data column, you’d need to upload the file that contains it. 
+Let’s say you want to upload a new engagement score value for each employee. You’ve  already uploaded the recommended 13 months or more of snapshot data, which included the required columns for all employees; now you want to apply the engagement score value to all of that historical data. You’d choose the **Update existing organizational data** option. To  upload your new **EngagementScore** data column, you’d need to upload the file that contains it.
+
+##### Important steps for editing org attributes
+
+If you want to edit past attributes, your .csv file must include updated values with the correct EffectiveDates, to ensure the updated values apply over the correct time period.
+
+For example, consider this initial state of org data within Viva Insights:
+
+| **StartDate** | **EndDate** | **PersonId**| **ManagerId** | **BadgeData** | **Comments** |
+|--------|---------|---------|-----------|-----------|----------|
+| 01/01/0001 | 09/01/2023 | W@contoso.com | R@contoso.com | - | In this period, BadgeData is - |
+| 09/01/2023 | 09/08/2023 | W@contoso.com | R@contoso.com | 102 | In this period, BadgeData is 102 |
+|09/08/2023 | 12/31/9999 | W@contoso.com | R@contoso.com | 106 | In this period, BadgeData is 106 |
+
+In this scenario, if you want to edit the ManagerId value beginning on 09/06/2023 and you want the new value to apply indefinitely going forward, you’ll need to update the ManagerId for every EffectiveDate starting 09/06/2023 from all past incremental upload(s) even if the ManagerId field was not part of those incremental upload(s).
+
+Your new upload, therefore, would look like this:
+
+| **EffectiveDate** | **PersonId**| **ManagerId** |
+|--------|---------|---------|
+| 09/06/2023 | W@contoso.com | D@contoso.com |
+| 09/08/2023 | W@contoso.com | D@contoso.com |
+
+With that upload, your org data would then look like this. Note that for both 09/06/2023 and 09/08/2023, the ManagerId was updated to “D.”
+
+| **StartDate** | **EndDate** | **PersonId**| **ManagerId** | **BadgeData** | **Comments** |
+|--------|---------|---------|-----------|-----------|----------|
+| 01/01/0001 | 09/01/2023 | W@contoso.com | R@contoso.com | - |   |
+| 09/01/2023 | 09/06/2023 | W@contoso.com | R@contoso.com | 102 |   |
+|09/06/2023 | 09/08/2023 | W@contoso.com | D@contoso.com | 102 | This row was added, but it has an EndDate of 09/08/2023 because we have an existing future entry. |
+| 09/08/2023 | 12/31/9999 | W@contoso.com | D@contoso.com | 106 |   |
+
+Or, let’s imagine a different scenario. If you want to change the ManagerId only for the dates between 09/06/2023 and 09/08/2023, this would be your upload:
+
+| **EffectiveDate** | **PersonId**| **ManagerId** |
+|--------|---------|---------|
+| 09/06/2023 | W@contoso.com | D@contoso.com |
+
+After that upload, your org data would look like this. Note that after 09/08/2023, the ManagerId is still “R,” because no change was made for the past entry on 09/08/2023.
+
+| **StartDate** | **EndDate** | **PersonId**| **ManagerId** | **BadgeData** | **Comments** |
+|--------|---------|---------|-----------|-----------|----------|
+| 01/01/0001 | 09/01/2023 | W@contoso.com | R@contoso.com | - |   |
+| 09/01/2023 | 09/06/2023 | W@contoso.com | R@contoso.com | 102 |   |
+|09/06/2023 | 09/08/2023 | W@contoso.com | D@contoso.com | 102 | This row was added, but it has an EndDate of 09/08/2023 because we have an existing future entry. |
+| 09/08/2023 | 12/31/9999 | W@contoso.com | R@contoso.com | 106 |   |
+
+Finally, if you don’t remember the previous values of the EffectiveDate field, you should delete the columns that need to be edited and upload the columns again with the updated values. Or, if there are multiple columns that need to be edited, you can also replace all past data with a new upload with the updated values.
 
 ### Replace existing data
 
 #### File upload
 
-3. Replace existing data:
-    1. Enter an **Upload name**.
-    1. Under **Upload file**, select the .csv file you want to upload. 
+1. Enter an **Upload name**.
+2. Under **Upload file**, select the .csv file you want to upload. 
 
     Make sure that the .csv file is:
+   * UTF-8 encoded
+   * Not open in a different program when you begin the upload process
+   * Not larger than 1 GB
+      :::image type="content" source="../images/admin-prepare-upload.png" alt-text="Screenshot that shows the Prepare and upload window.":::
 
-    * UTF-8 encoded
-    * Not open in a different program when you begin the upload process
-    * Not larger than 1 GB
-    :::image type="content" source="../images/admin-prepare-upload.png" alt-text="Screenshot that shows the Prepare and upload window.":::
+       >[!Note]
+       >To see the structure and guidelines for .csv files, and to avoid common issues during upload, you can download a template through the **Download .csv** template link.
 
-    >[!Note]
-    >To see the structure and guidelines for .csv files, and to avoid common issues during upload, you can download a template through the **Download .csv** template link.
-
-    3. Upload your file by selecting **Next**. If you need to cancel the upload, select **Cancel**.
+3. Upload your file by selecting **Next**. If you need to cancel the upload, select **Cancel**.
 
 Now you’re ready to map fields. For your next steps, go to [Field mapping](#field-mapping).
 
 ### Delete optional fields from existing organizational data
 
-3. Delete fields:
-    1. Name your delete action so you can refer to it later.
-    1. Identify the attribute you want to delete, then check the corresponding box.
-    1. The resulting screen lists which attributes have been deleted. Select **Back** to return to the Data hub.
+1. Name your delete action so you can refer to it later.
+2. Identify the attribute you want to delete, then check the corresponding box.
+3. The resulting screen lists which attributes have been deleted. Select **Back** to return to the Data hub.
 
 The delete process is now complete.
 
 >[!Important]
 > The following sections apply to *upload* and *replace* actions only. 
+
+### Delete employees and data from existing organizational data
+
+Select this option to remove organizational data you no longer need, or remove historical data for an employee so you can edit your data with a clean slate. After you remove the employees, you can upload a new file to add new data for the employees you deleted.
+
+#### How to upload the file
+
+1. Create a .csv file with the names of the employees you want to delete. The file should include a column named "PersonId," with the email address of each person you'd like to delete in each row of that column. For guidance, [use this template file](https://go.microsoft.com/fwlink/?linkid=2301277). Make sure the .csv file is: 
+    * UTF-8 encoded
+    * Not open in a different program when you begin the upload process
+    * Not larger than 1 GB
+
+2. Enter a **Delete action name**. 
+
+3. Under **Upload a file with the employees you want to delete**, select the .csv file. 
+
+4. To upload your file, select **Submit**. To cancel the upload, select **Cancel**. 
+
+5. The **Import history** table shows the status of your deletion. 
+    * Select the download icon to download a list of employees deleted by the operation. You can access the download link for up to 30 days.
 
 ## Field mapping
 
@@ -148,7 +215,7 @@ Follow the steps below to map your .csv data to Viva Insights attributes.
     1. Find the corresponding column header under **Source column name**. To prevent a validation error later, make sure this column is the right data type.
     2. Under the **Map to Viva Insights field** column, open the dropdown list and select the Viva Insights attribute that corresponds with the column header you identified in step a.
     
-     :::image type="content" source="../images/admin-map.png" alt-text="Screenshot that shows mapping Viva attributes." lightbox="../images/admin-map.png":::
+       :::image type="content" source="../images/admin-map.png" alt-text="Screenshot that shows mapping Viva attributes." lightbox="../images/admin-map.png":::
 
     > [!Tip]
     > Hover over an attribute name to read its description. 
@@ -177,7 +244,7 @@ After you’ve mapped attributes, the app starts validating your data.
 
 In most cases, file validation should complete quickly. If your organizational data file is large, validation could take up to one or two minutes.
 
-After this phase completes, validation has either succeeded or failed. <!--Depending on the outcome, you’ll either receive a success notification or a failure notification in the top-right corner of the **Data connections** screen.-->
+After this phase completes, validation has either succeeded or failed.
 
 For information about what happens next, go to the appropriate section:
 
@@ -197,11 +264,19 @@ When processing succeeds, you’ll see a “Success” status in the **Upload or
 
 :::image type="content" source="../images/admin-status-success.png" alt-text="Screenshot that shows successful processing.":::
 
+Here's the typical amount of time needed for organizational data to be reflected after it's uploaded in the following experiences:
+
+* Success status shown in **Data connections > Import history**: **A few hours**  
+
+* Data quality tab, flexible queries, and Power BI templates: **One to two days**  
+
+* Leader/manager report in the Teams app: **Next weekly refresh**
+
 After you receive the “Success” status, you can:
 
 * Select the view (eye) icon to see a summary of the validation results.
 
-:::image type="content" source="../images/admin-upload-results.png" alt-text="Screenshot that shows validation results." lightbox="../images/admin-upload-results.png":::
+   :::image type="content" source="../images/admin-upload-results.png" alt-text="Screenshot that shows validation results." lightbox="../images/admin-upload-results.png":::
 
 * Select the mapping icon to see the mapping settings for the workflow.
 

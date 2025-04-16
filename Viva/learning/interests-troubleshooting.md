@@ -2,19 +2,18 @@
 title: Managing exported interest files
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 08/15/2023
+ms.date: 03/31/2025
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection: 
     - enabler-strategic
     - m365initiative-viva-learning
-localization_priority: medium
-description: Learn how to open and edit an exported interest file. 
+ms.localizationpriority: medium
+description: Learn how to open and edit an exported interest file in Viva Learning.
 ---
 
 # Manage exported interest files

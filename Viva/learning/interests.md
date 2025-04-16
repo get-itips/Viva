@@ -2,18 +2,18 @@
 title: Manage Interests in Viva Learning
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 08/15/2023
+ms.date: 09/30/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection: 
     - enabler-strategic
     - m365initiative-viva-learning
-localization_priority: medium
+    - essentials-manage
+ms.localizationpriority: medium
 description: Interest-based learning personalization is now available in Viva Learning.
 ---
 

@@ -1,14 +1,13 @@
 ---
-ms.date: 08/23/2023
+ms.date: 04/1/2025
 title: vivainsights R package
 description: Learn how the vivainsights R package can help you dive deeper into data and solve specific problems
 author: lrolason
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: overview
 ms.localizationpriority: medium 
 ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: ablubetk

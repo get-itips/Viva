@@ -1,20 +1,19 @@
 ---
-ms.date: 11/11/2022
+ms.date: 09/19/2024
 title: "Bring purpose to your organization by connecting everyday work to strategic priorities"
 ms.reviewer: 
 ms.author: loreenl
 author: LoreenLa
-manager: pamgreen
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-localization_priority: Priority
+ms.topic: concept-article
+ms.service: viva-suite
+ms.localizationpriority: medium
 ms.collection:
   - M365initiative-viva
   - highpri
-  - Tier1
 search.appverid:
 - MET150
 
@@ -28,7 +27,7 @@ Microsoft Viva Goals is a goal-alignment solution that connects teams to your or
 
 ## Objectives and Key Results (OKRs)
 
-Viva Goals uses the ORK framework. OKRs align your entire organization to strategy, shifting focus from output—the everyday work of your team—to outcomes, which are the results of that work. This mindset shift keeps your team highly engaged with a clear sense of purpose and understanding of how everyone is contributing to forward momentum.
+Viva Goals uses the OKR framework. OKRs align your entire organization to strategy, shifting focus from output—the everyday work of your team—to outcomes, which are the results of that work. This mindset shift keeps your team highly engaged with a clear sense of purpose and understanding of how everyone is contributing to forward momentum.
 
 **Objectives** are what you and your team want to accomplish according to your definition of success.
 
@@ -48,7 +47,7 @@ The keys to success with OKRs are transparency and alignment. Right from the CEO
 
 ## Using Viva Goals
 
-After you purchase Viva Goals licenses for your organization, you can log into Viva Goals using your Azure Active Directory credentials. You can set up your OKR model and create one or more Viva Goals organizations to contain your OKRs. Additionally, Viva Goals supports multiple levels of hierarchy, from department level down to individual teams and functional units.
+After you purchase Viva Goals licenses for your organization, you can log into Viva Goals using your Microsoft Entra credentials. You can set up your OKR model and create one or more Viva Goals organizations to contain your OKRs. Additionally, Viva Goals supports multiple levels of hierarchy, from department level down to individual teams and functional units.
 
 [Set up your OKR model](/viva/goals/configure-okr-model)
 

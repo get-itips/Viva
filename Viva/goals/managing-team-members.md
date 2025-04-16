@@ -8,9 +8,8 @@ manager: Liz.Pierce
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-goals
+ms.topic: how-to
+ms.service: viva-goals
 ms.localizationpriority: medium
 ms.collection:  
 - Strat_SP_modern
@@ -23,11 +22,11 @@ description: "Learn how to manage users with the members’and team members page
 
 # Members page overview
 
-Viva Goals allows organization owner admins and team owner admins to view and manage members in their organization and/or teams. From these pages, you can view all the groups and individuals that have been added to an organization and/or team. You can also add or remove members (individuals and groups) and assign permissions from these pages. 
+Viva Goals allows organization owners/admins and team owners to view and manage members in their organization and/or teams. From these pages, you can view all the groups and individuals that have been added to an organization and/or team. You can also add or remove members (individuals and groups) and assign permissions from these pages. 
 
 ## Prerequisites and things to note 
 
-[**Role and Permission**](roles-permissions-in-viva-goals.md): This page can be accessed by organization owners, organization admins, team owners, team admins and team members.  
+[**Role and Permission**](roles-permissions-in-viva-goals.md): This page can be accessed by organization owners, organization admins, team owners, and team members.  
 
 **Definitions:**
 
@@ -47,7 +46,7 @@ You can view all members of an organization (individual members and groups) by n
 
 - If you want to search for a specific member who has been added to the organization either individually or as part of a group, you can search for the member in the search bar at the top of the page. 
 
-    - When you search for a user, for example, if you search for John, the search tool returns all results for John from Azure Active Directory (individuals and groups). This includes members and groups who are part of the organization and those who aren't.  
+    - When you search for a user, for example, if you search for John, the search tool returns all results for John from Microsoft Entra ID (individuals and groups). This includes members and groups who are part of the organization and those who aren't.  
 
     - If you want to know if a user or group listed in the search result is part of the organization or not, select on the more options button (Three dots). The dropdown indicates whether the user or group is a member or a nonmember. 
 
@@ -67,7 +66,7 @@ You can view all members of an organization (individual members and groups) by n
 
     - To reactivate a user, you can search for the user, select on more options, and then select on reactivate. 
 
-- Alternately, a member who was added to an organization as part of a group can be deactivated by removing this user from the group in Azure Active Directory.  
+- Alternately, a member who was added to an organization as part of a group can be deactivated by removing this user from the group in Microsoft Entra ID.  
 
 > [!NOTE]
 > If the user is not part of the organization, clicking on more options button in the search results will only provide the option to add this user to the organization. 
@@ -87,9 +86,11 @@ You can view all members of an organization (individual members and groups) by n
 > [!NOTE]
 >  If the user is not part of the organization, clicking on more options button in the search results will only provide the option to add this user to the organization. 
 
-### Remove a group that’s part of the organization from Microsoft Azure Active Directory 
+<a name='remove-a-group-thats-part-of-the-organization-from-microsoft-azure-active-directory'></a>
 
-- When a group that has been added to an Org is deleted from Azure AD, the users of the group cease to have access to the organization. 
+### Remove a group that’s part of the organization from Microsoft Entra ID 
+
+- When a group that has been added to an Org is deleted from Microsoft Entra ID, the users of the group cease to have access to the organization. 
 
 ### Change the role of a member in the organization: 
 
@@ -97,10 +98,8 @@ You can view all members of an organization (individual members and groups) by n
 
 - Select on the more options button next to the user in the search results.  
 
-    - If the user is part of the organization, the more options drop down will list two options: 
+    - If the user is part of the organization, the more options drop down will list two possible options: 
         -  Make admin/remove admin 
-
-        - Make observer/regular user 
 
     - Choose the relevant role for the user. 
 
@@ -151,7 +150,7 @@ You can view all members of a team (individual members and groups) by navigating
 
 You can search for a member who is part of the team from the search bar at the top of the member’s page. 
 
-- When you search for a user, for example, if you search for John, the search tool returns all results for John from Azure AD (individuals and groups). This includes members who are part of the team and those who aren't.  
+- When you search for a user, for example, if you search for John, the search tool returns all results for John from Microsoft Entra ID (individuals and groups). This includes members who are part of the team and those who aren't.  
 
 - You can select on the more options button next to a particular search result to know whether that user/group is part of the team or not.  
 
@@ -169,7 +168,7 @@ You can search for a member who is part of the team from the search bar at the t
 
     - If the user was added to the team in an individual capacity, the more options drop down will list the remove button. Clicking it removes the user from the team. Note that removing a member from a team doesn't remove the member from the organization. To remove a member from the organization, an organization owner or admin have to deactivate them or delete them from the Admin >> members page. 
 
-    - If the user was added to the team as part of a group, you won't see the remove option. You'll have to remove this user from the group in Azure AD to remove this user from the team 
+    - If the user was added to the team as part of a group, you won't see the remove option. You'll have to remove this user from the group in Microsoft Entra ID to remove this user from the team 
 
 > [!NOTE]
 > If the user is not part of the team, clicking on more options button in the search results will only provide the option to add this user to the team. If this user is not part of the organization itself, then adding this user to the team will also add them to the organization. 
@@ -180,7 +179,7 @@ You can search for a member who is part of the team from the search bar at the t
 
 - Select on the more options button next to the user in the search results.  
 
-    - If the user is part of the team, the more options drop down will list the option to “Make team admin/remove team admin” 
+    - If the user is part of the team, the more options drop down will list the option to "Make team owner/remove team owner" 
 
     - Choose the relevant role for the user. 
 
@@ -198,9 +197,11 @@ You can search for a member who is part of the team from the search bar at the t
 > [!NOTE]
 > If the user is not part of the team, clicking on more options button in the search results will only provide the option to add this user to the team. If this user is not part of the organization itself, then adding this user to the team will also add them to the organization. 
 
-### Delete a group that’s part of the organization from Azure AD:
+<a name='delete-a-group-thats-part-of-the-organization-from-azure-ad'></a>
 
-- When a group that has been added to a team is deleted from Azure AD, Viva Goals listens for such signals by running a scan once a day. Upon learning that this group has been deleted in Azure AD, the users of the group cease to have access to the team. 
+### Delete a group that’s part of the organization from Microsoft Entra ID:
+
+- When a group that has been added to a team is deleted from Microsoft Entra ID, Viva Goals listens for such signals by running a scan once a day. Upon learning that this group has been deleted in Microsoft Entra ID, the users of the group cease to have access to the team. 
 
 ## FAQ (Frequently Asked Questions)
 
@@ -215,7 +216,7 @@ You can search for a member who is part of the team from the search bar at the t
     1. For the individuals and groups that are part of the organization, you'll see the following attributes 
         1. Name & designation 
         1. Email 
-        1. Member type (Regular/observer for individual members, Security/Distribution for groups) 
+        1. Member type (Member for individual members, Security/Distribution for groups) 
         1. Role (Admin, Member for individuals. Groups are listed as Members by default) 
 
 3. **What happens to a member’s OKRs, projects and check-ins when they are deactivated from the organization?**
@@ -232,12 +233,10 @@ You can search for a member who is part of the team from the search bar at the t
 6. **Can I filter users in my organization in any way?**
     1. You can filter users in your organization based on their role and their status in the organization. This filter can be applied to the list of individual users and users who are part of a group.  
 
-7. **How do I remove team owners/admins from the team?**
+7. **How do I remove team owners/ains from the team?**
     1. Team owners can only be removed by the Org owner/admins and other team owners. They have to first reassign the team owner role to another individual before removing the existing team owner. 
-    
-    Team admins can be removed by organization owner/admins and team owners and other team admins. They can remove a team admin by clicking on More options button next to the member and clicking on remove. 
-    
-    When a user is assigned the role of a team owner or a team admin, they start being listed in the individual users' section. Even if an admin removes the group that a team admin belonged to, the team admin doesn't get removed. They have to be removed manually one by one. 
+        
+    When a user is assigned the role of a team owner, they start being listed in the individual users' section. Even if an admin removes the group that a team owner belonged to, the team owner doesn't get removed. They have to be removed manually one by one. 
 
-8. **What are groups in AAD?**
-    1. Azure Active Directory (Azure AD) provides several ways to manage access to resources, applications, and tasks. With Azure AD groups, you can grant access and permissions to a group of users instead of for each individual user. You can find more information on groups [here](/azure/active-directory/fundamentals/concept-learn-about-groups). 
+8. **What are groups in Microsoft Entra ID?**
+    1. Microsoft Entra ID provides several ways to manage access to resources, applications, and tasks. With Microsoft Entra groups, you can grant access and permissions to a group of users instead of for each individual user. You can find more information on groups [here](/azure/active-directory/fundamentals/concept-learn-about-groups). 

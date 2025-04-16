@@ -3,20 +3,20 @@ title: "Understand how security works in Microsoft Viva"
 ms.reviewer: loreenl
 ms.author: elizapo
 author: lizap
-manager: pamgreen
-ms.date: 4/23/2023
+manager: elizapo
+ms.date: 5/08/2024
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-localization_priority: Priority
+ms.topic: solution-overview
+ms.service: viva-suite
+ms.localizationpriority: medium
 ms.custom:
 ms.collection:  
 - M365initiative-viva
 - m365solution-overview
 - highpri
-- tier1
+- essentials-security
 search.appverid:
 - MET150
 description: "Find Microsoft Viva security information."
@@ -28,7 +28,7 @@ Microsoft Viva and the Viva apps work with and integrate into Microsoft 365. Thi
 
 Before setting up Microsoft Viva, consider the following security recommendations:
  
-- Protect data by implementing appropriate access controls and role-based access controls so only authorized users have access to certain data and features. Use Azure AD to handle user authentication and authorization. 
+- Protect data by implementing appropriate access controls and role-based access controls so only authorized users have access to certain data and features. Use Microsoft Entra ID to handle user authentication and authorization. 
 - Provide another layer of security for users by setting up multifactor authentication (MFA).
 - Make sure that you have a plan for incident response to tackle any security breaches that may occur.
 
@@ -69,14 +69,14 @@ For more information about security in Viva Engage, see
 ### Viva Glint
 Microsoft Glint is a people-driven platform that provides visibility into the health of your organization and guides effective action. 
 
-This happens through the analysis of Microsoft 365 collaborative data and organizational (HR) data that you provide or that's used in Microsoft Azure Active Directory.
+This happens through the analysis of Microsoft 365 collaborative data and organizational (HR) data that you provide or that's used in Microsoft Entra ID.
 Because of the potential sensitivity about how data could be used, Viva Glint uses role-based access to control who has access. [Learn about assigning roles for viewing feedback in reporting.](https://go.microsoft.com/fwlink/?linkid=2230740)
 
 ### Viva Goals
 Microsoft Viva Goals is a goal-alignment solution that connects teams to your organization’s strategic priorities, unites them around your mission and purpose, and drives business. For information about security in Viva Goals, see [Viva Goals security, privacy, and compliance](goals/vg-privacy-and-security.md).
 
 ### Viva Insights
-Microsoft Viva Insights produces useful insights about how your organization and employees function by analyzing Microsoft 365 collaboration data and organizational (HR) data that you provide or that's used in Microsoft Azure Active Directory. 
+Microsoft Viva Insights produces useful insights about how your organization and employees function by analyzing Microsoft 365 collaboration data and organizational (HR) data that you provide or that's used in Microsoft Entra ID. 
 
 Because of the potential sensitivity about how data could be used, Viva Insights uses role-based access to control who has access. 
 
@@ -93,9 +93,7 @@ You can turn off or turn on Viva Learning at the organization level on the Manag
 
 For more information about Viva Learning, see [Microsoft Viva Learning](/viva/learning/).
 
-### Viva Topics
-Viva Topics uses existing content security features in Microsoft 365, along with administrative controls, to control what AI-generated content is shown to users in your organization. What an individual can see in topics is determined by the combination of [Microsoft 365 security](/microsoft-365/security/) settings (permissions to sites, files, and folders) and [Topics admin settings](topics/topic-experiences-security-privacy.md).
- 
-Viva Topics doesn’t modify any existing access controls on content in your organization. Users see only what they already have access to. Admins can also indicate which [SharePoint sites are scanned for information](topics/topic-experiences-discovery.md#select-sharepoint-topic-sources) or [prevent topic viewers from seeing specific topics](topics/topic-experiences-knowledge-rules.md). Admins can access the topic center to see a list of created topics for more granular control. Admins can also [use sensitivity labels to restrict topic and resource discovery](topics/topic-experiences-discovery.md#exclude-resources-based-on-sensitivity-labels).
+### Viva Pulse
+Viva Pulse enables team leads to send brief surveys using research-backed templates to get a snapshot of team sentiment and act on feedback. Additionally, Viva Pulse reporting enables analysis of results and trends so leads can pinpoint what's working well and which areas to focus on over time.
 
-For more information, see [Security and privacy in Microsoft Viva Topics](topics/topic-experiences-security-privacy.md).
+Security for Viva Pulse is largely inherited from Teams. Viva Pulse also supports using [access control policies](feature-access-management.md) to grant or restrict access to specific features for users and groups. For more information about access control at the feature level in Viva Pulse, see [Granular access controls for Viva Pulse](/viva/pulse/setup-admin-access/granular-access-controls).

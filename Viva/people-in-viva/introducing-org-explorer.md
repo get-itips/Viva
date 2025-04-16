@@ -1,11 +1,11 @@
 ---
-ms.date: 01/18/2023
+ms.date: 01/24/2024
 title: Introducing Org Explorer
 ms.reviewer: 
 ms.author: ponincev
 author: PollyNincevic
-ms.topic: article
-ms.service: viva
+ms.topic: overview
+ms.service: viva-suite
 manager: margrets
 audience: Admin
 description: "Introducing Org Explorer"
@@ -17,21 +17,23 @@ Org Explorer helps you visualize and explore your company’s internal structure
 
 Org Explorer is available in Outlook.
 
-![Image of Org Explorer in Outlook for Windows desktop.](../media/org-explorer.jpg)
+![Org Explorer](media/introducing-org-explorer/org-explorer.jpg)
 
-|#  |Element  |Function
+
+
+|#  |Element  |Function|
 |----------|-----------|------------|
-|1    |Search       |To search for a person, type their name or alias in the search box.        |
-|2|Manager chain   |The manager chain shows all the managers above the person in focus
-|3    |Peers       |Peers are people that report to the same manager as the person in focus.       |
-|4    |Person in focus    |When you select a person in Org Explorer, the page displays org information about them. For example, contact information, who their manager is, people reporting to them, and who they collaborate with.      |
-|5    |People reporting to       |People reporting to the person in focus are listed in the section below the person.        |
+|1    |Search       |Type a person’s name or alias and select from the suggestions that appear.  |
+|2|Manager chain   |The manager chain shows all the managers above the person in focus. The number of reports will show to the right of the person. You can hover over the number to view both direct and indirect reports.|
+|3    |Peers       |Peers are people who report to the same manager as the person in focus. If the peer has people reporting to them, the number of reports will show. You can hover over the number to view both direct and indirect reports.  |
+|4    |Person in focus    |When you select a person in Org Explorer, the page displays org information about them. For example, contact information, who their manager is, people reporting to them, and who they collaborate with. You can also select __View profile__ to view their [profile card](https://go.microsoft.com/fwlink/?linkid=2258586).   |
+|5    |People reporting to       |People reporting to the person in focus are listed in the section below the person.       |
 |6    |Expand team       |Use the toggle to show/hide next-level reports and expand teams.         |
-7|Works with|The people in the Works with section represent people who are [relevant to or working with the person in focus](/graph/people-insights-overview#including-a-person-as-relevant-or-working-with).|
+|7|Works with|The people in the Works with section represent people who are [relevant to or working with the person in focus](/graph/people-insights-overview#including-a-person-as-relevant-or-working-with). The relevancy is based activities like in-common meetings, emails, and other collaboration patterns.|
 
 ## Where is the organization information collected from?
 
-The organizational information you see about users in Org Explorer is from Azure Active Directory – AAD. [Learn more about user information](/graph/api/resources/users?).
+The organizational information you see about users in Org Explorer is from Microsoft Entra ID – Microsoft Entra ID. [Learn more about user information](/graph/api/resources/users?).
 
 ## How is the "Works With" data generated?
 
@@ -54,4 +56,3 @@ You can turn off Org Explorer by unassigning the People in Viva license in the a
 [Explore your organization](https://go.microsoft.com/fwlink/?linkid=2223751)
 
 [Search for a person](https://go.microsoft.com/fwlink/?linkid=2224126)
-

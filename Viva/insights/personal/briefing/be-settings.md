@@ -1,14 +1,13 @@
 ---
 
-ms.date: 01/26/2021
+ms.date: 4/1/2025
 title: Settings for the Briefing email
 description: Learn how to change your personal settings for the Briefing email from Microsoft Viva
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 ms.collection: 
 - M365-analytics
 - viva-insights-personal
@@ -25,6 +24,9 @@ Use Briefing settings to pick what time of day you receive the Briefing email in
 ## To update settings
 
 ### Find the settings page
+
+>[!Important]
+>The Briefing settings have remained accessible in the Viva Insights app, despite the fact that Briefing emails are paused. To eliminate confusion and align with the Briefing email pause, we've hidden the Briefing settings page referred to below.
 
 You can update your Briefing email settings in two places:
 

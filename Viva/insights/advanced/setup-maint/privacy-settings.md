@@ -1,14 +1,13 @@
 ---
-ms.date: 08/31/2023
+ms.date: 05/07/2024
 title: Customize Viva Insights privacy settings
 description: Learn how to customize  Viva Insights privacy settings in the advanced insights app
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: ablubetk
@@ -17,11 +16,21 @@ audience: Admin
 
 # Customize Viva Insights privacy settings
 
-![insights admin](../images/applies-to-insights-admin.png) *Applies to: Insights Administrator*
+*Applies to: Insights Administrator*
 
-:::image type="content" source="../images/setup-vi-settings-1.png" alt-text="Image alt text." lightbox="../images/setup-vi-settings-1.png":::
+To get the most out of the Viva Insights experience, you might want to set up a few optional controls in the **Privacy settings** page.
 
-To get the most out of the Viva Insights experience, you might want to set up a few optional controls in the **Privacy settings** page. 
+> [!VIDEO 34102e25-f316-432c-974b-b20d7f8f7ff0]
+
+## Partitions
+
+Partitions are analyst workspaces that include only certain employee data and attributes. If you turn on partitions, going forward, all analysts assigned to Viva Insights must be manually assigned a partition to access the Viva Insights dataset. Existing analysts, however, will continue to have access to full tenant data through the global partition. 
+
+Once you turn on partitions, you can’t turn them off without contacting us. 
+
+:::image type="content" source="../images/admin-partitions-turn-on.png" alt-text="Screenshot that shows the option to turn on partitions in privacy settings." lightbox="../images/admin-partitions-turn-on.png":::
+
+[Learn more about partitions and how to set them up](../admin/partitions.md).
 
 ## Domain reclassification
 
@@ -35,7 +44,7 @@ To reclassify domains, go to the **Reclassify external domains** section. From t
 
 ## Minimum group size
 
-Set the minimum group size, which is the minimum aggregation threshold for insights. In other words, this is the smallest number of people that Viva Insights considers a “group.” Viva Insights shows insights about groups in the app in Teams and on the web, in organization insights throughout the app. You'll need to set this number to at least 10.
+Set the minimum group size, which is the minimum aggregation threshold for insights. In other words, this is the smallest number of people that Viva Insights considers a “group.” The minimum group size applies to data visualizations in advanced insights Power BI templates as well as group comparisons in organization insights for leaders and managers in Outlook and Teams. You'll need to set this number to at least five.
 
 To learn how team and group size differ, refer to [What’s the difference between minimum team size and minimum group size?](manager-settings.md#whats-the-difference-between-minimum-team-size-and-minimum-group-size).
 

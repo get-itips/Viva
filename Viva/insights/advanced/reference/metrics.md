@@ -1,16 +1,20 @@
 ---
-ms.date: 10/11/2023
+ms.date: 02/12/2025
 title: Advanced insights metric descriptions
 description: Describes the metrics for analysis data that are available in Microsoft Viva Insights, including query metrics and Power BI template metrics
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 manager: helayne
 audience: Admin
-ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.collection: 
+- viva-insights-personal
+- essentials-manage
+- viva-copilot
+- magic-ai-copilot
+- viva-insights-advanced
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 
@@ -20,39 +24,51 @@ search.appverid:
 
 When you create queries in the Microsoft Viva Insights advanced insights app, you can add these metrics from the **Metrics** pane. We've listed the descriptions alphabetically within each category.
 
+## Metrics and definitions
+
 | Category | Name | Description | Data type |
 |---|---|---|---|
-|<a name="after-hours-collaboration-define"></a> **After-hours collaboration** |  <a name="after-hours-collaboration-define"></a> After-hours collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting), outside of working hours. | Hour |
+|<a name="after-hours-collaboration-define"></a> **After-hours collaboration** |  <a name="after-hours-channel-message-hours-define"></a> After-hours channel message hours | Number of hours a person spent posting, replying to, or reading Teams channels messages outside of working hours. | Hour |
+| | <a name="after-hours-collaboration-hours-define"></a>  After-hours collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting), outside of working hours. | Hour |
 | | <a name="after-hours-email-hours-define"></a>  After-hours email hours | Number of hours a person spent sending and receiving emails outside of working hours. | Hour |
 | | <a name="after-hours-call-hours-define"></a>  After-hours call hours | Number of hours a person spent in scheduled and unscheduled Teams calls, outside of working hours. For calls that started during working hours, this number only includes the part of the call that occurred outside of that person’s work schedule. | Hour |
 | | <a name="after-hours-unscheduled-call-hours-define"></a>  After-hours unscheduled call hours | Number of hours a person spent in unscheduled Teams calls, outside of working hours. For calls that started during working hours, this number only includes the part of the call that occurred outside of that person’s work schedule. | Hour |
 | | <a name="after-hours-scheduled-call-hours-define"></a> After-hours scheduled call hours | Number of hours a person spent in scheduled Teams calls, outside of working hours. For calls that started during working hours, this number only includes the part of the call that occurred outside of that person’s work schedule. | Hour |
 | | <a name="after-hours-chat-hours-define"></a>  After-hours chat hours | Number of hours a person spent in Teams chats outside of working hours. | Hour |
 | | <a name="after-hours-meeting-hours-define"></a>  After-hours meeting hours | Number of hours a person spent in meetings with at least one other person, outside of working hours. | Hour |
-| <a name="collaboration-activity-define"></a> **Collaboration activity** |<a name="active-connected-hours-define"></a>Active  connected hours| Sum of half-hour blocks where a person remains active. An active block is defined as having at least one meeting or Teams call or email sent or Teams chat sent with at least one other person, either internal or external, during that block.| Hour| 
-||<a name="collaboration-hours-define"></a> Collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting). | Hour |
+| <a name="collaboration-activity-define"></a> **Collaboration activity** |<a name="active-connected-hours-define"></a>Active connected hours| Sum of half-hour blocks where a person remains active. An active block is defined as having at least one meeting or Teams call, email sent, Teams chat sent, or Teams channel message post or reply with at least one other person, either internal or external, during that block.| Hour| 
+||<a name="channel-message-hours-define"></a> Channel message hours | Number of hours a person spent posting, replying to, or reading Teams channels messages. | Hour |
+||<a name="channel-message-posts-define"></a> Channel message posts | Number of messages posted on Teams channels. | Count |
+||<a name="channel-message-reactions-define"></a> Channel message reactions | Number of reactions to posts and replies to messages on Teams channels. | Count |
+||<a name="channel-message-replies-define"></a> Channel message replies | Number of replies to messages on Teams channels. | Count |
+||<a name="channel-visits-define"></a> Channel visits | Number of visits to Teams channels. | Count |
+||<a name="collaboration-hours-define"></a> Collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting).| Hour |
 || <a name="collaboration-span-define"></a> Collaboration span| Number of hours a person spent in work sessions, including those before, during, and after working hours as set in Outlook. *During* working hours, a work session is the time between the first and last collaboration activity. *Before* or after working hours, a work session is the time that one activity takes from start to finish, unless another activity starts within one hour. In that case, the session lasts from the beginning of the first to the end of the second activity.|Hour|
 | | <a name="email-hours-define"></a>  Email hours | Number of hours a person spent sending and receiving emails. | Hour |
-| | <a name="meeting-hours-define"></a>  Meeting hours | Number of hours a person spent in meetings with at least one other person during and outside of working hours. | Hour |
+| | <a name="meeting-hours-define"></a>  Meeting hours | Number of hours a person spent in meetings with at least one other person during and outside of working hours. Measures scheduled meetings in Outlook, regardless of whether the user joins the meeting in Teams. For example, if a meeting is scheduled in Outlook but the user doesn't join the meeting in Teams, this is still treated as meeting hours. | Hour |
 | | <a name="chat-hours-define"></a>  Chat hours | Number of hours a person spent in Teams chats with at least one other person, during and outside of working hours. | Hour |
 | | <a name="call-hours-define"></a>  Call hours | Number of hours a person spent in scheduled and unscheduled Teams calls with at least one other person, during and outside of working hours. | Hour |
-| | <a name="unscheduled-call-hours-define"></a>  Unscheduled call hours | Number of hours a person spent in unscheduled Teams calls with at least one other person, during and outside of working hours. | Hour |
+| | <a name="unscheduled-call-hours-define"></a> Unscheduled call hours | Number of hours a person spent in unscheduled Teams calls with at least one other person, during and outside of working hours. | Hour |
 | | <a name="scheduled-call-hours-define"></a>  Scheduled call hours | Number of hours a person spent in scheduled Teams calls with at least one other person, during and outside of working hours. | Hour |
-| | <a name="multitasking-hours-define"></a>  Multitasking hours | Number of hours a person spent sending or reading emails or chats during a meeting or a Teams call. | Hour |
+| | <a name="multitasking-hours-define"></a> Multitasking hours | Number of hours a person spent sending or reading emails or chats, posting or replying to Teams channels messages, or visiting Teams channels during a meeting or Teams call. (Messages sent in the chat of the meeting/Teams call are excluded.)  | Hour |
 | | <a name="emails-sent-define"></a> Emails sent | Number of emails a person sent. | Count |
 | | <a name="meetings-define"></a>  Meetings | Number of meetings a person attended. | Count |
 | | <a name="chats-sent-define"></a>  Chats sent | Number of Teams chats a person sent. | Count |
 | | <a name="calls-define"></a>  Calls | Number of Teams calls a person joined, including scheduled and unscheduled calls. | Count |
 | | <a name="meeting-and-call-hours-define"></a>  Meeting and call hours | Number of hours a person spent in meetings and Teams calls with at least one other person, either internal or external, after deduplication of time due to overlapping activities. | Hour |
-|<a name="collaboration-by-day-of-the-week-define"></a> **Collaboration by day of the week** | <a name="weekend-emails-sent-define"></a>  Weekend emails sent | Number of emails a person sent on Saturdays or Sundays. | Hour |
-||<a name="open-1-hour-block-define"></a> Open 1-hour block | <a name="weekend-emails-sent-define"></a>  Number of open one-hour blocks in a person’s calendar without any scheduled meetings during the workday. | Count |
+| | <a name="time-with-leadership-define"></a> Time with leadership | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with people who are skip level or above up to six levels in the organization chart. | Hour |
+| | <a name="urgent-email-hours-define"></a>  Urgent email hours | Number of hours a person spent in emails where some level of urgency is involved. Urgency is defined by a set of urgent keywords in email subject lines. | Hour |
+| | <a name="urgent-meeting-hours-define"></a> Urgent meeting hours | Number of hours a person spent in meetings where some level of urgency is involved. Urgency is defined by a set of urgent keywords in meeting subject lines. | Hour |
+|<a name="collaboration-by-day-of-the-week-define"></a> **Collaboration by day of the week** | <a name="meeting-hours-on-x-define"></a>  Meeting hours on *x* (day) | Number of hours a person spent in meetings with at least one other person during and outside of working hours on the specified day (Monday through Sunday). | Hour |
+| | <a name="weekend-emails-sent-define"></a>  Weekend emails sent | Number of emails a person sent on Saturdays or Sundays. | Count |
+| | <a name="weekend-channel-message-posts-define"></a>  Weekend channel message posts | Number of messages a person posted on Teams channels during Saturdays or Sundays. | Count |
+| | <a name="weekend-channel-message-replies-define"></a>  Weekend channel message replies | Number of messages a person replied to on Teams channels during Saturdays or Sundays. | Count |
 | | <a name="weekend-chats-sent-define"></a>  Weekend chats sent | Number of Teams chats a person sent on Saturdays or Sundays. | Hour |
+| | <a name="weekend-collaboration-hours-define"></a>  Weekend collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels on Saturdays and Sundays. | Hour |
 | | <a name="weekend-meetings-define"></a>  Weekend meetings | Number of meetings a person attended during Saturdays or Sundays. | Count |
 | | <a name="unscheduled-weekend-calls-define"></a>  Unscheduled weekend calls | Number of unscheduled Teams calls a person joined, on Saturdays or Sundays. | Count |
-| | <a name="collaboration-hours-define"></a>  Collaboration hours on *x* (day) | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting) during the specified day (Monday through Sunday). | Hour |
-|<a name="collaboration-by-time-of-day-define"></a> **Collaboration by time of day** | <a name="urgent-email-hours-define"></a>  Urgent email hours | Number of hours a person spent in emails where some level of urgency is involved. Urgency is defined by a set of urgent keywords in email subject lines. | Hour |
-| | <a name="urgent-meeting-hours-define"></a>  Urgent meeting hours | Number of hours a person spent in meetings where some level of urgency is involved. Urgency is defined by a set of urgent keywords in meeting subject lines. | Hour |
-| | <a name="emails-sent-x-define"></a>  Emails sent *x* (hour block) | Number of emails a person sent during a defined hour block. The metric name includes when the defined hour block begins and ends, which is written as two numbers from 00 to 24 (depicting 24 hours in a day). For emails sent between 8AM and 9AM, for example, the metric name would be "Emails sent 08 09." | Count |
+| | <a name="collaboration-hours-define"></a>  Collaboration hours on *x* (day) | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting) during the specified day (Monday through Sunday). | Hour |
+|<a name="collaboration-by-time-of-day-define"></a> **Collaboration by time of day** | <a name="emails-sent-x-define"></a>  Emails sent *x* (hour block) | Number of emails a person sent during a defined hour block. The metric name includes when the defined hour block begins and ends, which is written as two numbers from 00 to 24 (depicting 24 hours in a day). For emails sent between 8AM and 9AM, for example, the metric name would be "Emails sent 08 09." | Count |
 | | <a name="chats-sent-x-define"></a>  Chats sent *x* (hour block) | Number of Teams chats a person sent during a defined hour block. The metric name includes when the hour block begins and ends, which is written as two numbers from 00 to 24 (depicting 24 hours in a day). For chats sent between 8AM and 9AM, for example, the metric name would be "Chats" sent 08 09." | Count |
 | | <a name="meetings-x-define"></a>  Meetings *x* (hour block) | Number of meetings a person attended during a defined hour block. The metric name includes when the hour block begins and ends, which is written as two numbers from 00 to 24 (depicting 24 hours in a day). For meetings between 8AM and 9AM, for example, the metric name would be "Meetings 08 09." | Count |
 | | <a name="unscheduled-calls-x-define"></a>  Unscheduled calls *x* (hour block) | Number of unscheduled Teams calls a person joined with at least one other person during a defined hour block. The metric name includes when the hour block begins and ends, which is written as two numbers from 00 to 24 (depicting 24 hours in a day). For unscheduled calls between 8AM and 9AM, for example, the metric name would be "Unscheduled calls 08 09." | Count |
@@ -61,9 +77,15 @@ When you create queries in the Microsoft Viva Insights advanced insights app, yo
 | | <a name="small-group-chats-sent-excluding-manager-define"></a> Small-group chats sent, excluding manager | Number of Teams chats a person sent to an internal group of eight or less people, including the sender and excluding the sender’s manager from the recipient group. | Count |
 | | <a name="internal-meeting-hours-without-manager-1-1-define"></a> Internal meeting hours without manager 1:1 | Number of hours a person spent in meetings with only one other person who is not their manager. | Hour |
 | | <a name="internal-meeting-hours-with-3-to-8-attendees-define"></a> Internal meeting hours with 3 to 8 attendees | Number of hours a person spent in meetings with at least three and up to eight internal collaborators only and no external collaborators. | Hour |
-| <a name="collaboration-involving-manager-define"></a> **Collaboration involving manager** | <a name="unscheduled-call-hours-with-manager-1-1-define"></a>Redundant meeting hours (lower level)<a name="redundant-meeting-hours-lower-level-define"></a>|Number of meeting hours a person spent in a meeting with both their manager and their skip-level manager present in the meeting.|Hour
+| <a name="collaboration-involving-manager-define"></a> **Collaboration involving manager** | <a name="meeting-and-call-hours-with-manager-define"></a>Meeting and call hours with manager<a name="meeting-and-call-hours-with-manager-define"></a>|Number of hours a person spent in meetings and Teams calls where attendees included the person, their manager, and one or more other people (not a one-on-one meeting or call), after deduplication of time due to overlapping activities. |Hour
+| | <a name="meeting-and-call-hours-with-manager-1-1-define"></a> Meeting and call hours with manager 1:1 | Number of hours a person spent in meetings and Teams calls involving only the person and their manager, after deduplication of time due to overlapping activities. | Hour |
+| | <a name="meeting-and-call-hours-with-skip-level-define"></a> Meeting and call hours with skip level | Number of hours a person spent in meetings and Teams calls where their manager's manager also attended the meeting or joined the call, after deduplication of time due to overlapping activities. | Hour |
+| | <a name="meeting-and-call-hours-with-skip-level-1-1-define"></a> Meeting and call hours with skip level 1:1 | Number of hours a person spent in meetings and Teams calls involving only the person and their skip manager, after deduplication of time due to overlapping activities. | Hour |
+| | <a name="redundant-meeting-hours-lower-level-define"></a> Redundant meeting hours (lower level) | Number of meeting hours a person spent in a meeting with both their manager and their skip-level manager present in the meeting. | Hour |
+| | <a name="recurring-meeting-hours-with-manager-1-1-define"></a> Recurring meeting hours with manager 1:1 | Number of hours a person spent in recurring meetings involving only the person and their manager. | Hour |
 || Unscheduled call hours with manager 1:1 | Number of hours a person spent in unscheduled Teams calls involving only the person and their manager. | Hour |
 | | <a name="unscheduled-call-hours-with-manager-define"></a> Unscheduled call hours with manager | Number of hours a person spent in unscheduled Teams calls where attendees included the person, their manager, and one or more other people (not a one-on-one meeting). | Hour |
+| | <a name="unscheduled-call-hours-with-skip-level-define"></a> Unscheduled call hours with skip level | Number of hours a person spent in unscheduled Teams calls where their manager's manager also joined the call. | Hour |
 | | <a name="collaboration-hours-with-direct-reports-define"></a> Collaboration hours with direct reports | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls where all participants report directly to the person, after deduplication of time due to overlapping activities (for example, calls during a meeting). | Hour |
 | | <a name="small-group-emails-sent-including-manager-define"></a> Small-group emails sent, including manager | Number of emails a person sent to an internal group of eight or less people, including the sender and the sender's manager in the recipient group. | Count |
 | | <a name="small-group-chats-sent-including-manager-define"></a> Small-group chats sent, including manager | Number of Teams chats a person sent to an internal group of eight or less people, including the sender and the sender's manager in the recipient group. | Count |
@@ -72,6 +94,7 @@ When you create queries in the Microsoft Viva Insights advanced insights app, yo
 | | <a name="meeting-hours-with-manager-1-1-define"></a> Meeting hours with manager 1:1 | Number of meeting hours involving only the person and their manager. | Hour |
 | | <a name="meeting-hours-with-skip-level-define"></a> Meeting hours with skip level | Number of meeting hours a person attended where their manager's manager also attended the meeting. | Hour |
 | | <a name="meetings-with-manager-define"></a> Meetings with manager | Number of meetings a person attended where attendees included a person, their manager, and one or more other people (not a one-on-one meeting). | Count |
+| | <a name="meetings-including-manager-and-skip-level-leadership-define"></a> Meetings including manager and skip-level leadership | Number of meetings where a person's manager and skip manager or skip manager's peers also attended. | Count |
 | | <a name="meetings-with-manager-1-1-define"></a> Meetings with manager 1:1 | Number of meetings a person attended involving only the person and their manager. | Count |
 | | <a name="meetings-with-skip-level-define"></a> Meetings with skip level | Number of meetings a person attended where their manager's manager also attended the meeting. | Count |
 |**Collaboration network**|Diverse ties | Number of colleagues who are connected to a person (that is, had a reciprocal interaction with them in the last four weeks) but not connected to many of that person’s other colleagues. Diverse ties offer good sources of new and varied information from across the company. (Interactions are based on emails, meetings, and Teams calls and chats.) | Count
@@ -80,7 +103,7 @@ When you create queries in the Microsoft Viva Insights advanced insights app, yo
 || External network size|The number of people external to the company with whom a person had a reciprocal interaction in a four-week span. A reciprocal interaction occurs between A & B when both A has reached out to B and B has reached out to A.|Score
 || Influence rank| An employee’s potential influence on opinions of the network. It measures how well connected a person is to other well-connected individuals. The closer the rank is to 1, the higher the person’s rank or network influence score. If two people have the same influence score, they also have the same influence rank. (A person’s influence score is based on the frequency of collaboration activities, which include emails, meetings, Teams calls, and Teams chats with other people within the company.)
 ||Influence score|A numeric score that indicates how well connected a person is within the company. A higher score means that the person is better connected and has greater potential to drive change. (A person’s connection score is based on the frequency of collaboration activities, which include emails, meetings, Teams calls, and Teams chats with other people within the company.)|Rank
-||Internal network size|Number of people within the organization with whom a person has had a reciprocal interaction in the past four weeks.|Count |
+||Internal network size| Number of people within the organization with whom a person has had at least one reciprocal interaction with during the calendar month. |Count |
 ||Network outside company|The number of distinct external domains outside the company with at least one individual a person has had a reciprocal interaction with.|Count |
 ||Network outside organization|The number of distinct internal organizational units within the company with at least one individual a person has had a reciprocal interaction with.|Count |
 ||Strong ties | Number of colleagues who are connected to a person (that is, had a reciprocal interaction with them in the last four weeks) and who are also connected to many of that person’s other colleagues. (Interactions are based on emails, meetings, and Teams calls, and Teams chats.) |Count 
@@ -93,18 +116,23 @@ When you create queries in the Microsoft Viva Insights advanced insights app, yo
 |**Person-to-Group**|Collaboration time invested | Time spent by a person collaborating with any member of a collaborator group | Minutes
 || Meeting time invested | Time spent by a person in a meeting with any member of a collaborator group | Minutes
 || Mail time invested | Time spent by a person sending mails to or reading mails from any member of a collaborator group | Minutes
-| <a name="external-collaboration-define"></a> **External collaboration** | <a name="external-collaboration-hours-define"></a> External collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls with at least one other person outside the company, after deduplication of time due to overlapping activities (for example, calls during a meeting). | Hour |
+| <a name="external-collaboration-define"></a> **External collaboration** | <a name="external-channel-message-hours-define"></a> External channel message hours | Number of hours a person spent posting, replying to or reading messages in Teams channels with at least one other person outside the company. | Hour |
+| | <a name="external-collaboration-hours-define"></a> External collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with at least one other person outside the company, after deduplication of time due to overlapping activities (for example, calls during a meeting). | Hour |
 | | <a name="external-unscheduled-call-hours-define"></a> External unscheduled call hours | Number of hours a person spent in unscheduled Teams calls with at least one other person outside the company. | Hour |
 | | <a name="external-email-hours-define"></a> External email hours | Number of hours a person spent in emails with at least one other person outside the company. | Hour |
 | | <a name="external-chat-hours-define"></a>  External chat hours | Number of hours a person spent in Teams chats with at least one other person outside the company. | Hour |
 | |  <a name="external-meeting-hours-define"></a> External meeting hours | Number of hours a person spent in meetings with at least one other person outside the company. | Hour |
+| |  <a name="external-1-1-meeting-hours-define"></a> External 1:1 meeting hours | Number of hours a person spent in meetings where the only other participant was an external person. | Hour |
+| |  <a name="external-meetings-including-manager-define"></a> External meetings including manager | Number of meetings where a person and their manager met with at least one person outside of the company. | Count |
 | <a name="focus-define"></a> **Focus**|  <a name="available-to-focus-hours-define"></a>  Available-to-focus hours | Hours remaining during working hours after excluding meetings and scheduled Teams calls for focused work. This metric helps organizations understand how meetings and scheduled Teams calls can impact what time is available for self-directed work. | Hour |
-||<a name="time-in-self-organized-meetings-define"></a>Time in self-organized meetings | Number of hours spent in meetings organized by the person with at least one other person. | Hour
-| | <a name="uninterrupted-hours-define"></a> Uninterrupted hours | Sum of blocks one hour or longer where a person didn’t attend a meeting, read or send emails, read or send Teams chats, or initiate or receive Teams calls. In other words, Uninterrupted hours is the sum of blocks of time one hour or longer for deep thinking with no communication. This metric helps organizations understand whether employees have long blocks of uninterrupted time for deep thinking to solve new problems creatively and to fuel innovation. | Hour |
-| | <a name="interrupted-hours-define"></a> Interrupted hours | Available-to-focus hours interrupted by emails, Teams chats, or unscheduled Teams calls. Interrupted hours excludes one-hour or longer blocks of Uninterrupted hours for deep work. This metric helps organizations understand whether employees are choosing to use the blocks of time between meetings or scheduled Teams calls for emails, unscheduled calls, or Teams chats. | Hour |
+| | <a name="uninterrupted-hours-define"></a> Uninterrupted hours | Sum of blocks one hour or longer where a person didn't attend a meeting, read or send emails, read or send Teams chats, joined Teams calls, posted or replied to Teams channels messages, or visited Teams channels. In other words, Uninterrupted time is the sum of blocks of time one hour or longer for deep thinking with no communication. This metric helps organizations understand whether employees have long blocks of uninterrupted time for deep thinking to solve new problems creatively and to fuel innovation. | Hour |
+| | <a name="interrupted-hours-define"></a> Interrupted hours | Time available to focus that was interrupted by emails, Teams chats, unscheduled Teams calls, or Teams channels activity. Interrupted time excludes one-hour or longer blocks of uninterrupted time for deep work. This metric helps organizations understand whether employees are choosing to use the blocks of time between meetings or scheduled Teams calls for emails, unscheduled calls, or Teams chats. | Hour |
+||<a name="open-1-hour-block-define"></a> Open 1-hour block | <a name="weekend-emails-sent-define"></a>  Number of open one-hour blocks in a person’s calendar without any scheduled meetings during the workday. | Count |
 | <a name="generated-load-define"></a> **Generated load**|  <a name="generated-load-call-hours-define"></a>  Generated load - Call hours | Number of Teams calls hours that the person created for internal participants by initiating Teams calls. | Hour |
 | | <a name="generated-load-call-participants-define"></a> Generated load – Call participants | Number of internal participants of Teams calls that were initiated by a person. | Count |
 | | <a name="generated-load-calls-organized-define"></a> Generated load – Calls organized | Number of internal Teams calls that were initiated by a person. | Count |
+| | <a name="generated-load-channel-message-reactions-define"></a> Generated load – Channel message reactions | Number of reactions to messages posted or replies to messages by the person on Teams channels. | Count |
+| | <a name="generated-load-channel-message-replies-define"></a> Generated load – Channel message replies | Number of replies to messages posted by the person on Teams channels. | Count |
 | | <a name="generated-load-chat-recipients-define"></a> Generated load – Chat recipients | Number of internal recipients who read Teams chats sent by a person. | Count |
 | | <a name="generated-load-chats-read-hours-define"></a> Generated load – Chats-read hours | Number of hours that internal recipients spent reading Teams chats sent by a person. | Hour |
 | | <a name="generated-load-email-recipients-define"></a> Generated load – Email recipients | Number of internal recipients who read emails sent by a person. | Count |
@@ -117,34 +145,131 @@ When you create queries in the Microsoft Viva Insights advanced insights app, yo
 ||Booked focus hours kept with plan |Number of hours a person booked in Viva Insights, using a focus plan, that didn’t overlap with meetings. | Hour
 ||Booked focus hours kept without plan | Number of focus hours a person booked in Viva Insights, without using a focus plan, that didn’t overlap with meetings.  |Hour
 ||Booked no-meeting days | Number of days a person booked as [no-meeting days](../../personal/teams/shared-no-meeting-day.md) in Viva Insights.  | Day
-|<a name="meeting-hours-on-time-and-advanced-notice-define"></a> **Meetings on time and with advanced notice**| <a name="meeting-hours-with-12-to-24-hours-of-advanced-notice-define"></a> Meeting hours with 12 to 24 hours of advanced notice | Number of meeting hours that were scheduled more than 12 and less than 24 hours before the meeting start time. | Hour
-||<a name="meeting-hours-with-24-or-more-hours-of-advanced-notice-define"></a> Meeting hours with 24 or more hours of advanced notice |Number of meeting hours that were scheduled 24 hours or more before the meeting start time. | Hour|
-||<a name="meeting-hours-with-six-or-fewer-hours-of-advanced-notice-define"></a>Meeting hours with six or fewer hours of advanced notice | Number of meeting hours that were scheduled six hours or before the meeting start time. | Hour
-||<a name="meeting-hours-with-six-to-12-hours-of-advanced-notice-define"></a>Meeting hours with six to 12 hours of advanced notice | Number of meeting hours that were scheduled more than six and less than or equal to 12 hours before the meeting start time. | Hour|
-||<a name="meeting-hours-joined-on-time-define"></a>Meeting hours joined on time| Number of Teams meeting hours that were joined early or within five minutes after the scheduled start time. | Hour
-||<a name="meeting-hours-ended-on-time-define"></a> Meeting hours ended on time |Number of Teams meeting hours that were ended early or within one minute after the scheduled end time. | Hour|
-||<a name="meeting-hours-not-ended-on-time-define"></a>Meeting hours not ended on time |Number of Teams meetings hours that were ended after one minute past the scheduled end time. |Hour
-||<a name="meeting-hours-not-joined-on-time-define"></a>Meeting hours not joined on time |Number of Teams meetings hours that were joined after five minutes past the scheduled start time. | Hour
-|<a name="meeting-types-define"></a> **Meeting types** | <a name="conflicting-meeting-hours-define"></a> Conflicting meeting hours | Number of meeting hours where a person had overlapping meetings in their calendar. The count includes just the amount of time that overlaps. | Hour |
+|**Learning time**| Calendared learning time | Number of hours blocked in a person’s calendar for learning activities. An appointment or meeting is considered a learning activity based on keywords that appear in the subject line. | Hour
+|<a name="meeting-types-define"></a> **Meeting types** | <a name="30-to-59-minutes-long-meeting-hours-define"></a> 30 to 59 minutes long meeting hours | Hours of meetings with a duration of 30 to 59 minutes. | Hour |
+| |  <a name="30-to-59-minutes-long-meetings-define"></a> 30 to 59 minutes long meetings | Number of meetings with a duration of at least 30 minutes and less than one hour.​ | Count |
+| |  <a name="60-minutes-or-longer-meeting-hours-define"></a> 60 minutes or longer meeting hours | Hours of meetings with a duration of 60 minutes or longer. | Hour |
+| |  <a name="60-minutes-or-longer-meetings-define"></a> 60 minutes or longer meetings | Number of meetings with a duration of 60 minutes or longer. | Count |
+| |  <a name="conflicting-meeting-hours-define"></a> Conflicting meeting hours | Number of meeting hours where a person had overlapping meetings in their calendar. The count includes just the amount of time that overlaps.  | Hour |
 | |  <a name="small-and-short-meeting-hours-define"></a>  Small and short meeting hours | Meeting hours with a duration of one hour or less that have at least two and up to eight invitees, including the organizer. | Hour |
 | |  <a name="small-and-short-recurring-meeting-hours-define"></a> Small and short recurring meeting hours | Recurring meeting hours with a duration of one hour or less that have at least two and up to eight invitees, including the organizer. | Hour |
 | |  <a name="large-and-long-meeting-hours-define"></a>  Large and long meeting hours | Meeting hours with a duration of more than one hour and nine or more invitees, including the organizer. | Hour |
 | |  <a name="large-and-long-recurring-meeting-hours-define"></a> Large and long recurring meeting hours | Recurring meeting hours with a duration of more than one hour and nine or more invitees, including the organizer. | Hour |
+| |  <a name="large-and-long-recurring-meetings-define"></a> Large and long recurring meetings | Number of recurring meetings that are more than one hour and include nine or more attendees, including the organizer. | Count |
 | |  <a name="large-and-short-meeting-hours-define"></a> Large and short meeting hours | Meeting hours with a duration of one hour or less and nine or more invitees, including the organizer. | Hour |
 | | <a name="large-and-short-recurring-meeting-hours-define"></a> Large and short recurring meeting hours | Recurring meeting hours with a duration of one hour or less and nine or more invitees, including the organizer. | Hour |
+| |<a name="meeting-hours-ended-on-time-define"></a> Meeting hours ended on time |Number of Teams meeting hours that were ended early or within one minute after the scheduled end time. | Hour|
+| |<a name="meeting-hours-not-ended-on-time-define"></a>Meeting hours not ended on time |Number of Teams meetings hours that were ended after one minute past the scheduled end time. |Hour|
+| |<a name="meeting-hours-joined-on-time-define"></a>Meeting hours joined on time| Number of Teams meeting hours that were joined early or within five minutes after the scheduled start time. | Hour |
+| |<a name="meeting-hours-not-joined-on-time-define"></a>Meeting hours not joined on time |Number of Teams meetings hours that were joined after five minutes past the scheduled start time. | Hour |
+| | <a name="meeting-hours-with-12-to-24-hours-of-advanced-notice-define"></a> Meeting hours with 12 to 24 hours of advanced notice | Number of meeting hours that were scheduled more than 12 and less than 24 hours before the meeting start time. | Hour |
+| |<a name="meeting-hours-with-24-or-more-hours-of-advanced-notice-define"></a> Meeting hours with 24 or more hours of advanced notice |Number of meeting hours that were scheduled 24 hours or more before the meeting start time. | Hour|
+| |<a name="meeting-hours-with-six-or-fewer-hours-of-advanced-notice-define"></a>Meeting hours with six or fewer hours of advanced notice | Number of meeting hours that were scheduled six hours or before the meeting start time. | Hour |
+| |<a name="meeting-hours-with-six-to-12-hours-of-advanced-notice-define"></a>Meeting hours with six to 12 hours of advanced notice | Number of meeting hours that were scheduled more than six and less than or equal to 12 hours before the meeting start time. | Hour|
 | | <a name="small-and-long-meeting-hours-define"></a>Small and long meeting hours | Meeting hours with a duration of more than one hour that have at least two and up to eight invitees, including the organizer. | Hour |
 | | <a name="small-and-long-recurring-meeting-hours-define"></a> Small and long recurring meeting hours | Recurring meeting hours with a duration of more than one hour that have at least two and up to eight invitees, including the organizer. | Hour |
 | | <a name="recurring-meeting-hours-define"></a> Recurring meeting hours | Meeting hours for meetings that are set to recur. | Hour |
+||<a name="time-in-self-organized-meetings-define"></a>Time in self-organized meetings | Number of hours spent in meetings organized by the person with at least one other person. | Hour |
 |**Meeting quality**|Number of attendees who ended the meeting on time|Number of attendees that left a Teams meeting early or within one minute after the scheduled end time|Count
 ||Number of attendees who didn’t end the meeting on time|Number of attendees who left a Teams meeting after one minute past the scheduled end time.|Count |
 ||Number of attendees who joined the meeting on time|Number of attendees who joined a Teams meeting early or within five minutes after the scheduled start time.|Count|
 ||Number of attendees who didn’t join the meeting on time|Number of attendees who joined a Teams meeting after five minutes past the scheduled start time.|Count|
-| <a name="working-hours-collaboration-define"></a> **Working-hours collaboration** | <a name="working-hours-collaboration-hours-define"></a> Working-hours collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, and Teams calls with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting), during working hours. | Hour |
+| <a name="working-hours-collaboration-define"></a> **Working-hours collaboration** | <a name="working-hours-channel-message-hours-define"></a> Working-hours channel message hours | Number of hours a person spent posting, replying to, or reading Teams channels messages during working hours. | Hour |
+| | <a name="working-hours-collaboration-hours-define"></a> Working-hours collaboration hours | Number of hours a person spent in meetings, emails, Teams chats, Teams calls, and Teams channels with at least one other person, either internal or external, after deduplication of time due to overlapping activities (for example, calls during a meeting), during working hours. | Hour |
 | | <a name="working-hours-email-hours-define"></a> Working-hours email hours | Number of hours a person spent sending and receiving emails during working hours | Hour |
 | | <a name="working-hours-call-hours-define"></a> Working-hours call hours | Number of hours a person spent in scheduled and unscheduled Teams calls, during working hours. | Hour |
 | | <a name="working-hours-chat-hours-define"></a> Working-hours chat hours | Number of hours a person spent in Teams chats during working hours. | Hour |
 | | <a name="working-hours-meeting-hours-define"></a> Working-hours meeting hours | Number of hours a person spent in meetings with at least one other person, during working hours. | Hour |
+| | <a name="working-hours-scheduled-call-hours-define"></a> Working-hours scheduled call hours | Number of hours a person spent in scheduled Teams calls, during working hours. | Hour |
+| | <a name="working-hours-unscheduled-call-hours-define"></a> Working-hours unscheduled call hours | Number of hours a person spent in unscheduled Teams calls, during working hours. | Hour |
 
+> [!NOTE]
+> In Microsoft Teams, teamwork and communication happen in channels. Viva Insights includes several metrics which measure aspects of team communication over channels in Teams. When these metrics first become available in the Advanced insights app, they will reflect a baseline of only 14 days of historical data; this historical data will increase as time progresses. This differs from other metrics, which usually have 13 months of historical baseline data.
+
+## Microsoft 365 Copilot metrics
+
+These metrics provide insights around how employees are using Microsoft 365 Copilot with Microsoft 365 apps.
+
+>[!Note]
+>"NULL" values in analyst query results indicate employees without a Microsoft 365 Copilot license, which signifies no activity due to the absence of a license. A "0" value, on the other hand, indicates users with a license but who did not engage in any activity for the specified day, week, or month.
+
+| Metric | Description | Date from when the data is available and the customers can view |
+|---|---|---|
+| Summarize meeting actions taken using Copilot in Teams | The number of times users summarized meetings using Copilot. Each action represents a user sending a prompt in the meeting Copilot dialog (including suggested prompts and user-generated prompts). This metric does *not* include meeting summaries accessed through Intelligent Recap. | 10/15/2023 |
+| Total meetings summarized by Copilot in Teams | The number of meetings summarized by Copilot. Each meeting summarized represents a meeting where the user sent a prompt in the meeting Copilot dialog (including suggested prompts and user-generated prompts). This metric does *not* include meeting summaries accessed through Intelligent Recap. | 10/15/2023 |
+| Intelligent recap actions taken using Copilot | The number of times users accessed a meeting recap in Teams using Copilot. An action is only counted if the user selected **Recap** and viewed the meeting notes under the AI summary tab. | 02/01/2024 |
+| Summarize chat actions taken using Copilot in Teams | The number of times users summarized chats and channel conversations in Teams using Copilot. | 10/15/2023 |
+| Total chat conversations summarized by Copilot in Teams | The number of chats and channel conversations summarized by Copilot. | 12/18/2023 |
+| Summarize email thread actions taken using Copilot in Outlook | Number of times users summarized email conversations with Copilot.  | 11/15/2023 |
+| Draft Word document actions taken using Copilot | The number of times users drafted Word documents using Copilot. | 10/15/2023 | 
+| Summarize Word document actions taken using Copilot in Word |  The number of times users summarized Word documents using Copilot.  | 10/15/2023 | 
+| Visualize as table actions taken using Copilot in Word | The number of times users converted text to a table with Copilot in Word. | 02/01/2024 |
+|  Create presentation actions taken using Copilot  | The number of times users created PowerPoint presentations using Copilot. | 10/15/2023 |
+| Organize presentation actions taken using Copilot | The number of times users prompted Copilot in PowerPoint to help organize a presentation. | 02/01/2024 |
+| Add content to presentation actions taken using Copilot | The number of times users added a slide or image to a presentation using Copilot. | 02/01/2024 |
+|  Summarize presentation actions taken using Copilot in PowerPoint  | Number of times users  summarized PowerPoint presentations with Copilot.  | 10/15/2023 | 
+| Meeting hours summarized by Copilot in Teams | Meeting hours summarized are calculated based on actual hours summarized, not a per action estimate. For example, if a user summarizes after a 1-hour meeting, they'll count 1 hour toward the total. If another user summarizes 15 minutes into the meeting, they'll count 15 minutes toward the total, resulting in an overall total of 1 hour, 15 minutes. This metric does *not* include meeting summaries accessed through Intelligent Recap. | 12/18/2023 |
+| Compose chat message actions taken using Copilot in Teams | The number of chats and channel message drafts created in Teams using Copilot. | 10/15/2023 |
+| Copilot actions taken in Microsoft 365 Copilot Chat (work) | The number of Copilot actions completed by active Copilot users in Copilot Chat (work), formerly called Business Chat. Includes prompts submitted through Teams, Outlook, Edge, and the Microsoft 365 app.| 10/15/2023 |
+|  Generate email draft actions taken using Copilot in Outlook | The number of times users generated email drafts using Copilot. | 11/15/2023 |
+|  Email coaching actions taken using Copilot  | The number of times users selected coaching by Copilot in Outlook. | 11/15/2023 |
+| Total emails sent using Copilot in Outlook | The number of emails sent with assistance from Copilot. | 11/15/2023  |
+|  Excel analysis actions taken using Copilot  | The number of times users analyzed data to show insights as charts, PivotTable objects, summaries, trends, or outliers in Excel using Copilot.  | 10/15/2023 |
+| Create Excel formula actions taken using Copilot | The number of times users generated new columns with formulas based on Excel data using Copilot. | 10/15/2023 | 
+| Excel formatting actions taken using Copilot | The number of times users highlighted, sorted, and filtered tables in Excel using Copilot.  | 10/15/2023 | 
+| Copilot actions taken in Excel  | The number of Copilot actions completed by active Copilot users in Excel.  | 10/15/2023 |
+| Copilot actions taken in Outlook  | The number of Copilot actions completed by active Copilot users in Outlook. | 10/15/2023 |
+| Copilot actions taken in PowerPoint  | The number of Copilot actions completed by active Copilot users in PowerPoint. | 10/15/2023 |
+| Copilot actions taken in Teams  | The number of Copilot actions completed by active Copilot users in Teams. This number includes the number of times users reviewed Intelligent recaps in Teams. | 10/15/2023 |
+| Copilot actions taken in Word  |  The number of Copilot actions completed by active Copilot users in Word.| 10/15/2023 |
+| Total Copilot actions taken | The total number of actions completed with Copilot by users with Copilot Chat or other in-app Copilot features. With automatically-generated Copilot insights such as Intelligent Recap or auto-summarizations in Word, an action is only counted if the user viewed the results from Copilot, such as expanding the document summary. This metric might also include Copilot actions taken using Copilot features that are **not** available in the Copilot Dashboard or analyst workbench as standalone metrics. (Viva Insights' individual Copilot metrics don't provide a comprehensive view of *all* Copilot features and total actions taken.) | 02/01/2024 | 
+|  Rewrite text actions taken using Copilot in Word  | The number of times users modified text in Word documents using Copilot.  | 10/15/2023 |
+| Days of active Copilot usage in Excel | The number of days the user was actively using Copilot in Excel.  | 10/15/2023 |
+| Days of active Copilot usage in Loop | The number of days the user was actively using Copilot in Loop. | 10/15/2023 |
+|  Days of active Copilot usage in OneNote  |  The number of days the user was actively using Copilot in OneNote.  | 10/15/2023 |
+|  Days of active Copilot usage in Outlook  |  The number of days the user was actively using Copilot in Outlook.  | 10/15/2023 |
+| Days of active Copilot usage in PowerPoint | The number of days the user was actively using Copilot in PowerPoint. | 10/15/2023 |
+|  Days of active Copilot usage in Teams  |  The number of days the user was actively using Copilot in Microsoft Teams.  | 10/15/2023 |
+| Days of active Copilot usage in Word | The number of days the user was actively using Copilot in Word. | 10/15/2023 |
+|  Days of active Copilot Chat (work) usage  |  The number of days the user was actively using Copilot Chat (work), formerly called Business Chat. | 10/15/2023 |
+| Copilot Chat (work) prompts submitted | The number of prompts submitted by users in Copilot Chat (work), formerly called Business Chat. Includes prompts submitted through Teams, Outlook, Edge, and the Microsoft 365 app. | 10/15/2023 |
+| Copilot Chat (work) prompts submitted in Outlook | The number of Copilot Chat (work) queries submitted by users through Outlook, formerly called Business Chat. | 02/21/2024 | 
+| Copilot Chat (work) prompts submitted in Teams | The number of Copilot Chat (work) queries submitted by users through Teams, formerly called Business Chat. | 10/15/2023 | 
+| Chat (Copilot in Word) prompts submitted | The number of times users submitted a prompt to Copilot chat in Word. Includes any prompts that don't map to one of the established Word Copilot skills such as "Summarize"-, "Draft"-, or "Rewrite"- actions taken in Word. | 02/01/2024 |
+| Chat (Copilot in PowerPoint) prompts submitted | The number of times users submitted a prompt to Copilot chat in PowerPoint. Includes any prompts that don't map to one of the established PowerPoint Copilot skills such as "Summarize"-, "Add content"-, or "Organize presentation"- actions taken in PowerPoint. | 02/01/2024 |
+| Chat (Copilot in Excel) prompts submitted | The number of times users submitted a prompt to Copilot chat in Excel. Includes any prompts that don't map to one of the established Excel Copilot skills such as "Analysis"-, "Formatting"-, or "Formula"- actions taken in Excel. | 02/01/2024 |
+| Copilot Chat (web) prompts submitted	 | The number of queries submitted by users in the web tab of Copilot Chat, also known as "Copilot with Enterprise Data Protection." Includes prompts submitted through Edge and the Microsoft 365 app. | 08/20/2024 |
+| Copilot assisted hours | The estimated number of hours users were assisted by using Copilot. [Learn more about this metric calculation](../../org-team-insights/copilot-dashboard.md#details-on-the-copilot-assisted-hours-metric).  | 10/15/2023 |
+| Total Copilot active days  | The number of days the user was actively using Copilot in any of the apps.  | 10/15/2023 |
+| Total Copilot enabled days  | The number of days the user had at least one service plan for Copilot enabled. | 10/15/2023 |
+| Copilot Chat (work) enabled days |  The number of days the user had Copilot Chat (work), formerly called Business Chat, enabled. | 10/15/2023 |
+| Copilot enabled days for Power Platform connectors | The number of days the user had Power Platform Connectors in Microsoft 365 Copilot enabled. | 10/15/2023 |
+| Copilot enabled days for Productivity App  | The number of days the user had Microsoft 365 Copilot enabled in the following productivity apps: Word, PowerPoint, Excel, Outlook, Loop, OneNote, Whiteboard. | 10/15/2023 |
+| Copilot enabled days for Intelligent Search | The number of days the user had Intelligent Search capabilities within Microsoft 365 Copilot enabled.  | 10/15/2023 |
+| Copilot enabled days for Teams  | The number of days the user had Microsoft 365 Copilot enabled within Microsoft Teams. | 10/15/2023 |
+
+>[!Note]
+>The Copilot active days metrics may capture Copilot actions that are not yet captured in Viva Insights metrics. For example, "Copilot actions taken in Teams" might return a figure that's larger than the sum of the metrics representing the actions employees can take with Copilot in Teams, such as "Summarize meeting actions taken using Copilot in Teams." This data gap will be closed over time.
+
+## Copilot for Sales metrics
+
+These metrics provide insights about how employees are using Copilot for Sales within Microsoft 365 apps like Outlook, Teams, and Word.
+
+| Metric | Description | Date from when the data is available and the customers can view |
+|----|----|----|
+| Total Copilot for Sales enabled days | The number of days the user had at least one premium service plan for Copilot for Sales enabled. | 2/21/2024  |
+| Total Copilot for Sales active days  | The number of days the user actively used Copilot for Sales at least once in Microsoft Teams or Outlook. | 2/21/2024 |
+| Days of active Copilot for Sales usage in Teams  | The number of days the user actively used Copilot for Sales in Teams. | 2/21/2024 |
+| Days of active Copilot for Sales usage in Outlook   | The number of days the user actively used Copilot for Sales in Outlook. | 2/21/2024 |
+| Summarize email thread actions taken using Copilot for Sales | The number of times users summarized email conversations with Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/email-summary-premium). | 2/21/2024 |
+| Generate email draft actions taken using Copilot for Sales | The number of times users generated email replies in Outlook using Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/email-reply-premium). | 2/21/2024 |
+| Create follow-up email actions taken using Copilot for Sales  | The number of times users created a follow-up email directly from the Teams post-meeting experience using Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/view-meeting-summary-recap#create-a-post-meeting-summary-email). | 2/21/2024 |
+| Review post-meeting summary actions taken using Copilot for Sales | The number of times users reviewed the post-meeting summary highlights and follow-up actions that Copilot for Sales identified. [Learn more about this feature](/microsoft-sales-copilot/view-meeting-summary-recap). | 2/21/2024 |
+| Review CRM record summary actions taken using Copilot for Sales | The number of times users reviewed a CRM record summary with Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/view-opportunity-summary). | 2/21/2024 |
+| Save email or meeting to CRM actions taken using Copilot for Sales  | The number of times users saved Outlook activities such as emails and meetings to their CRM with Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/save-outlook-activities-crm). | 2/21/2024 |
+| Save email summary in CRM actions taken using Copilot for Sales  | The number of times users saved an email summary to their CRM as a note to a record using Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/view-save-email-summary-crm#save-email-summary-to-crm). | 2/21/2024 |
+| Create CRM record actions taken using Copilot for Sales  | The number of times users created a new CRM record (like a contact, lead, or opportunity) from Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/create-new-record). | 2/21/2024 |
+| Edit CRM record actions taken using Copilot for Sales  | The number of times users edited a CRM record with Copilot for Sales. [Learn more about this feature](/microsoft-sales-copilot/edit-crm-record). | 2/21/2024 |
 
 ## Exported metrics
 

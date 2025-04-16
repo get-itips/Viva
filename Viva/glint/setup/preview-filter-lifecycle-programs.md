@@ -1,101 +1,78 @@
 ---
-title: Preview and filter Employee Lifecycle programs 
-description: "Once your Viva Glint Employee Lifecycle program is set up, take these steps to set it live or edit it."
+title: Preview Viva Glint Employee Lifecycle programs 
+description: Once your Viva Glint Employee Lifecycle program is set up, take these steps to set it live or edit it.
 ms.author: SarahBerg
 author: SarahAnneBerg
-manager: pamgreen
+manager: elizapo
 audience: admin
 f1.keywords: NOCSH
-keywords: viva strengths and opportunities
+keywords: lifecycle preview, preview exit surveys, preview onboarding surveys, enable lifecycle surveys
 ms.collection:  
 - m365initiative-viva
 - selfserve 
 search.appverid: MET150 
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: how-to
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/28/2023
+ms.date: 03/24/2025
 ---
 
-# Preview and filter Employee Lifecycle programs 
+# Preview Viva Glint Employee Lifecycle programs 
 
 ## Approve your program 
 
-When each section of a Viva Glint Employee Lifecycle survey has been set up successfully, a blue checkmark displays to the right of the section name on the *Program Summary* page. The survey can now be approved and enabled. 
+When each section of a Microsoft Viva Glint Employee Lifecycle survey is set up successfully, a blue checkmark displays next to the section name on the **Program Summary** page. The survey can now be approved and enabled. 
 
-**Procedure** 
-
-To approve a program, toggle the Approved button to YES. 
+To approve a program, enable the **Approved** toggle at the top of the page.
 
 ## Preview your survey  
 
-Once your program is approved, you can preview the survey to test the user experience. 
+Once your program is approved, preview the survey to test the user experience. 
 
 ### Preview the survey 
 
-1. Hover over the box to the left with the survey name and select the **Preview** option. 
-2. Select the user whose survey you will preview.  
-3. Select **Preview Questionnaire**. 
-4. The introductory page of the program opens in a new tab, in the default language of the selected user.  
+1. Use the toggle at the top of the page to switch the survey to **Approved**.
+2. Hover over survey card on the left and select **Preview**. 
+3. Select a user to generate a survey preview.  
+4. Select **Preview Questionnaire**. 
+5. The introductory page of the program opens in a new tab. The default language chosen by the user displays.  
 
 >[!TIP]
 > When reviewing the introduction and summary for each item, ensure that:
 > - Rating scale is as expected (1-5 or 1-7) 
-> - Rating scale labels are written as expected (Strongly Disagree/Strongly Agree)
+> - Rating scale labels are written as expected (Strongly Disagree - Strongly Agree)
 > - Comments are available 
-> - Items are not skippable unless intended 
-> - Macros appear as actual values and do not show up as macros 
+> - Items can't be skipped, unless intended 
+> - Macros appear as actual values and don't show up as macros 
 > - Additional Language options are available as expected 
 
-## Preview a survey invitation for an Employee Lifecycle program 
+## Preview the survey invitation  
 
-Preview a survey from an invitation email. Use this preview survey email to ensure surveys will be received by your employees and do not end up in a spam or junk folder. 
+Preview a survey from an invitation email. Use this preview email to ensure surveys are received and don't end up in a spam or junk folder. 
 
-**Procedure** 
-
-1. Use the vertical ellipses next to the survey name to select **Preview**. 
-2. Select the user whose survey you'll preview.  
-3. Select **Send a sample pulse invite**.  
-4. Select **Preview Questionnaire**. 
-5. Check your email for your survey invite. 
-6. Review the email content and select **Get Started**. The introductory page of the program will open in a new tab, in the default language of the user you're previewing. 
+1. Use the toggle at the top of the page to switch the survey to **Approved**.
+2. Hover over the survey card on the left and select **Preview**. 
+3. Select a user to generate a survey preview and email invite.  
+4. Select **Send a sample pulse invite**.  
+5. Select **Preview Questionnaire**. 
+6. Check your email for your survey invite. 
+7. Review the email content and select **Provide Feedback**. The welcome page of the survey opens in a new tab, in the chosen language of the user you're previewing. 
 
 ## Enable an Employee Lifecycle program 
 
-After a survey is approved, it must be enabled to go Live on the scheduled date. Surveys move to Live status at midnight on the day it's scheduled to go out, in the default time zone. 
+Lifecycle surveys move to Live status shortly after they're enabled. Surveys generate and send multiple times per day based on new eligible users in your selected Distribution Lists.
 
-1. Use the vertical ellipse next to the survey name to **Enable Survey**. 
-2. Select **Enable Survey** (again).  
-3. The **Status indicator** changes to blue. If the survey is Live, the Status indicator will show green. 
+1. Use the toggle at the top of the page to switch the survey to **Approved**.
+2. Hover over the survey card on the left and select **Enable Survey**.
+3. In the Enable Survey dialog that appears, select **Yes, enable the survey**.
+4. The survey card on the left changes from gray to blue and displays response rate as users submit surveys.
 
-## Employee Lifecycle reports are unique 
+> [!IMPORTANT]
+> After a Lifecycle survey is enabled for the first time, Viva Glint Admins can make edits by switching the Approved toggle off. When an admin re-approves the survey in the future, the survey **auto-enables**.
 
-Employee Lifecycle reporting behaves differently than that of Viva Glint's recurring programs. 
+## Other resources
 
-- Scores displayed in the dashboard/reports are filtered to responses received in the last 90 days by default. 
-- As Employee Lifecycle surveys don't have a traditional start/stop time - they are always active - reports will aggregate scores based on the date ranges selected or the default 90-day period.  
-- Responses appear on the dashboard as feedback is submitted. 
-- The report user will see responses on the dashboard after the program thresholds are met and according to their user profile permissions (manager hierarchy or customized populations). 
+- Set up an [Onboarding](program-summary-setup-lifecycle.md) or [Exit](exit-survey-setup.md) survey.
+- [Learn how Employee Lifecycle reports trend differently](/viva/glint/reports/trend-graph-lifecycle-survey).
 
-## Understand the Trend Graph in Employee Lifecycle reporting 
-
-When using the default time period: 
-
-- The *latest data point* on the Trend Graph will be any surveys received during the past 90 days. 
-- The *next point* is 90 days before the first data point (180 days - 91 days before today). 
-- The *following point* is 90 days before the second data point (270 days - 181 days before today), and the data points continue in this manner.  
-- The date displayed when hovering over data points is considered Day 1 of that range, meaning that the most recent data point will have a date of 90 days before today's date (the date, which is being studied). This date is not capped by the actual survey launch date. 
-- If a custom date range (x date to y date) is selected, the trend shows for the same number of days selected. For example, if you select the last 30 days, trend shows for the previous 30 days. 
-
-## Additional resource
-
-[Set up Program Summary for Viva Glint Employee Lifecycle Programs](https://www.microsoft.com/).
  
-
-
-
-
-
-
-

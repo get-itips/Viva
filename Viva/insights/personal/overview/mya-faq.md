@@ -1,22 +1,23 @@
 ---
 
-ms.date: 08/4/2023
+ms.date: 06/04/2024
 title: Personal insights FAQ
 description: Frequently asked questions about Personal insights with Microsoft Viva Insights
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: faq
 ms.localizationpriority: medium
-ms.service: viva
+ms.service: viva-insights
 ms.collection: M365-analytics, viva-insights-personal
 manager: helayne
 audience: Admin, user
-ms.subservice: viva-insights
 
 ---
 
 # Personal insights FAQ
 
+>[!Important]
+>Beginning at the end of March 2024, we’ll be pausing the digest email, which are typically sent twice a month. All the content from digest emails will still be available within the [Viva Insights app in Teams or on the web.](https://support.microsoft.com/topic/viva-insights-app-in-teams-and-on-the-web-f07f80a1-177d-4541-9185-31493b74fc0f) You can continue to explore and analyze your data insights seamlessly. To learn more about this change, refer to the [Digest email pause.](/Viva/insights/personal/reference/digest-pause).
 
 This article answers frequently asked questions about Microsoft Viva Insights' personal insights options—like the [Viva Insights app](../teams/introduction.md), [Digest emails](../use/email-digests-3.md), [Viva Insights Outlook add-in](../use/add-in.md), and [Inline suggestions](../use/mya-notifications.md).
 
@@ -189,7 +190,7 @@ Some Viva Insights feature descriptions start with _**Applies to**_ sections tha
 
 You can identify your _plan_ (and also your _service plan_) by following these steps:
 
-1. Open your [Home page](https://insights.viva.office.com/).
+1. Open your [Home page](https://insights.cloud.microsoft/).
 2. At the top right of the page, select your initials or picture, and then select **View account**.
 3. For **Subscriptions**, select **View subscriptions**:
 
@@ -270,15 +271,19 @@ You can manage the experience in two ways:
 * Configure access to Viva Insights elements for your entire organization. For details, see [Configure access at the tenant level](../../advanced/setup-maint/configure-personal-insights.md#configure-access-at-the-tenant-level).
 * Turn Viva Insights access on or off for individual users. For details, see [Configure access at the user level](../../advanced/setup-maint/configure-personal-insights.md#configure-access-at-the-user-level).
 
-#### Q2. How can I pilot Viva Insights to a subset of users?
+#### Q2. How do I control access to individual features in Viva Insights?
+
+To control access to certain features, Microsoft Global administrators can use the Viva feature access management platform. [Learn more](../../org-team-insights/org-insights.md#control-access-to-insights-features).
+
+#### Q3. How can I pilot Viva Insights to a subset of users?
 
 Turn on the "Insights by MyAnalytics" or "MyAnalytics (Full)" service plan for the pilot users. Because these plans are enabled by default, you'll need to confirm that the plans are turned off for other users. For details on how to turn off the plans, see [Assign licenses to users](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
 
-#### Q3. How can I manage Viva Insights experiences in Microsoft 365 GCC?
+#### Q4. How can I manage Viva Insights experiences in Microsoft 365 GCC?
 
 You can enable or disable Viva Insights experiences by following the applicable steps in [Assign licenses to users](/office365/admin/subscriptions-and-billing/assign-licenses-to-users). 
 
-#### Q4. How can I manage the Windows 10 activity history for the organization?
+#### Q5. How can I manage the Windows 10 activity history for the organization?
 
 You can set the following two Group Policy settings at the tenant level for the organization:
 

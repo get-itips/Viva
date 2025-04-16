@@ -1,16 +1,15 @@
 ---
 
-ms.date: 11/07/2019
+ms.date: 4/02/2025
 title: Book focus time with the Briefing email
 description: Learn how to use the Briefing email to schedule focus time
 author: madehmer
 ms.author: helayne
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 search.appverid:
 - MET150
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 ms.collection: 
 - M365-analytics
 - viva-insights-personal

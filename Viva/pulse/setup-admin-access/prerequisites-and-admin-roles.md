@@ -7,12 +7,13 @@ author: michellehu-msft
 manager: alisaliddle
 audience: Admin
 f1.keywords: NOCSH
-ms.date: 08/04/2023
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-pulse
+ms.collection:
+ - m365initiative-viva-pulse
+ - essentials-get-started
+ms.date: 12/19/2024
+ms.topic: concept-article
+ms.service: viva-pulse
 ms.localizationpriority: medium
-ms.collection: m365initiative-viva-pulse  
 search.appverid: MET150
 ---
 

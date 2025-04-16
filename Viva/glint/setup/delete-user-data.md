@@ -11,39 +11,65 @@ ms.collection:
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: how-to
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/28/2023
+ms.custom: CELA-approved
+ms.date: 02/25/2025
 ---
 
 # Delete user data from Viva Glint
 
-As your company’s data controller, Microsoft Viva Glint admins can submit a user data deletion request to comply with a General Data Protection Regulation (GDPR) data subject request. The deletion requests will be processed right away.
+Viva Glint Admins, as data controllers, have the authority to manage survey data in response to a Data Subject Request (DSR).
 
->[!NOTE]
->User data deletion in Viva Glint is an irreversible process.
+## Data deletion control
 
-## User data can be deleted from the People section on the admin dashboard
+Viva Glint Admins, as data controllers, can choose to either: 
 
->[!IMPORTANT]
->Deleting a user from Azure Active Directory does not delete the user and their information from Viva Glint. To delete user information from Viva Glint, you must complete the instructions provided below.
+1. Erase all data related to the requester, excluding attributes and survey responses, or
+2. Erase all data related to the requester, including survey responses.
 
-1. Select **People** from the Employees section.
-2. Use the search box to select the employee whose data should be deleted. Open that employee’s page.
-3. From the Actions dropdown menu, choose **Delete User**.
-4. A Delete User Confirmation box displays with this information:
-     1. Data will be removed from Viva Glint except for essential account information associated with your organization’s Microsoft subscription.
-     2. To include later, the information must be reuploaded into your company’s HRIS data.
-     3. By deleting the user,
-         1. Survey results from Viva Glint reports will be deleted, possibly impacting reports.
-         2. The user’s data is removed from distribution list and future surveys.
+This configuration is set at the platform level and applies to all requests equally and is set to exclude attribute and survey responses (option 1) by default. [Learn more](/../../viva/glint/setup/manage-general-settings).
+
+## Delete user data
+
+1. Select **People** from the **Employees** section on your Glint admin dashboard.
+   
+2. Use the **search box** to select the employee whose data should be deleted. Open that employee’s page.
+   
+3. From the **Actions** dropdown menu, choose **Delete User**.
+   
+4. A **Delete User Confirmation** box displays with this information:
+   
+     1. Data is removed from Viva Glint except for essential account information associated with your organization’s Microsoft subscription.
+     2. To include later, the information must be reuploaded into your company’s employee data.
+     3. By deleting the user:
+         1. Survey results are deleted, possibly impacting Glint reports, if deletion control is set to **ON**. [Learn more](/../../viva/glint/setup/manage-general-settings#user-data).
+         2. The user’s data is removed from distribution lists and future surveys.
          3. The user’s role definitions and their reporting permissions are removed.
-     4. The display will indicate whether the user has direct reports and that the admin will have to reassign the reports later or in the next HRIS file import.
-5. Go back to the **People** page and verify that the username does not appear in the list of All, Active or Inactive employees.
-6. Return to the admin dashboard and select **Activity Audit Log** in the Client Settings section. The action taken should be listed first in the Event column and its status should read “Success” and the Details column “deleted.”
-7. If the deleted user is a manager, verify that all reports they had been permissioned for no longer include their name. The report will now read, “Deleted User’s Team.”
+     4. The display indicates whether the user has direct reports and that the admin needs to reassign the reports later or in the next Employee Attribute File import.
+ 
+ ## Retroactive user uploads
 
->[!NOTE]
-> Should a deleted user be reinstated to your organization, their data will need to be uploaded as if they are a new employee. No previous data is stored once deleted.
+Follow these steps to facilitate a [**retroactive user upload update**](/../../viva/glint/setup/update-glint-reporting-data) if past survey data should reflect the new manager.
+        
+1. Return to the **People** page and verify that the user doesn't appear in the list of **All, Active or Inactive** employees.
+   
+1. Return to the admin dashboard and select **Activity Audit Log** in the **Service Configuration** section. The user deletion action should be listed in the **Event** column and its status should read **Success**. The **Details** column shows **Deleted**.
+   
+1. If the deleted user is a manager, verify that all reports their team appeared in no longer include their name. The report now reads **Deleted User’s Team**.
+
+> [!IMPORTANT]
+> Glint 360 responses are also deleted with these requests.
+
+> [!NOTE]
+> Should a deleted user be *reinstated*, their data needs to be uploaded as if they're a new employee. No previous data is stored once deleted.
+
+## Employee IDs reuse control
+
+Glint Admins, as data controllers, can reuse employee IDs and reassign them to new or rehired employees. They can choose to either: 
+
+1. Exclude data associated with employee IDs of previously removed employees from uploads, or
+2. Update the already deleted records with the status provided in the Human Resources Information System (HRIS) file.
+
+This configuration is set at the platform level, applies to all records equally, and excludes data by default (option 1). [Learn more](/../../viva/glint/setup/manage-general-settings#user-data).

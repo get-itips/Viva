@@ -92,7 +92,8 @@
   "notification_subscribers": [],
   "sync_notification_subscribers": [
     "dstrome@microsoft.com",
-    " v-thraya@microsoft.com"
+    " v-garymoore@microsoft.com",
+    " v-shawndyas@microsoft.com"
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/viva",
@@ -136,6 +137,7 @@
   "need_generate_pdf": false,
   "redirection_files": [
     ".openpublishing.redirection.json",
-    ".openpublishing.redirection.WorkplaceAnalytics.json"
+    ".openpublishing.redirection.WorkplaceAnalytics.json",
+    ".openpublishing.redirection.viva.json"
   ]
 }

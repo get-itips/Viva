@@ -2,14 +2,13 @@
 title: "Use eDiscovery for Viva Engage content"
 f1.keywords:
 - NOCSH
-ms.author: v-bvrana
+ms.author: donnabouldin
 author: Starshine89
-manager: pamgreen
-ms.date: 08/14/2023
+manager: elizapo
+ms.date: 09/26/2024
 audience: Admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-engage
+ms.topic: how-to
+ms.service: viva-engage
 ms.localizationpriority: medium
 ms.custom: Adm_Yammer
 search.appverid:     
@@ -22,8 +21,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 
 # Use eDiscovery for Viva Engage content
 
-You can use eDiscovery to surface Viva Engage content from within the Microsoft Purview compliance portal. However, to use this functionality, your Viva Engage network must be in Native Mode. Viva Engage networks provisioned after January 9, 2020 run in Native Mode by 
-default. For more information, see [Overview of Native Mode](overview-native-mode.md).
+You can use eDiscovery to surface Viva Engage content from within the Microsoft Purview compliance portal. However, to use this functionality, your Viva Engage network must be in Native Mode. Viva Engage networks provisioned after January 9, 2020 run in Native Mode by default. For more information, see [Overview of Native Mode](overview-native-mode.md).
 
 ### How to query Viva Engage content 
 
@@ -40,7 +38,7 @@ You can find complete instructions on how to run eDiscovery queries on your Micr
     
       :::image type="content" source="../media/engage/admin/query-type-ediscovery2.png#lightbox" alt-text="Screenshot of how to filter an eDiscovery query to search on Engage content."lightbox="../media/engage/admin/query-zoom2.png":::
 
-### Viva Engage data points 
+### Viva Engage data points
 
 After you run your query, your search results will include (but aren't limited to) these key data points:  
 
@@ -51,13 +49,10 @@ After you run your query, your search results will include (but aren't limited t
 - Attachments
 - Mentions
 - Timestamp
+- Reactions
 
 We continue to update the data points that are included in search results for Viva Engage.
 
 ## See also
 
-[About Microsoft Purview](/purview/)
-
-[eDiscovery in Office 365](/office365/securitycompliance/ediscovery)
-
-[Overview of the eDiscovery (Premium) solution in Microsoft Purview](/office365/securitycompliance/office-365-advanced-ediscovery)
+[Overview of Microsoft Purview eDiscovery (Premium)](/purview/ediscovery-overview)

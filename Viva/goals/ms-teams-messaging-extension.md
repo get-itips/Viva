@@ -2,15 +2,14 @@
 ms.date: 08/10/2023
 title: Microsoft Teams Message Extension
 ms.reviewer: 
-ms.author: rasanders
-author: RaSanders-MSFT
-manager: Liz.Pierce
+ms.author: daisyfeller
+author: daisyfell
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-goals
+ms.topic: integration
+ms.service: viva-goals
 ms.localizationpriority: medium
 ms.collection:  
 - Strat_SP_modern

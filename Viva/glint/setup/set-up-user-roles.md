@@ -1,149 +1,228 @@
 ---
 title: Set up Viva Glint User Roles
-description: Admins can customize manager roles to provide specific permissions for viewing reports and comments.
-ms.author: SarahBerg
-author: SarahAnneBerg
-manager: pamgreen
+description: Admins assign roles, edit roles, and can export and import roles manually or in bulk for their Viva Glint programs.
+ms.author: JudithWeiner
+author: JudyWeiner
+manager: MelissaBarry
 audience: admin
 f1.keywords: NOCSH
-keywords: permissions, bulk imports, user role imports, custom access 
+keywords: permissions, bulk imports, user role imports, custom access, status change, active employee, inactive employee, customize roles, modify roles 
 ms.collection: 
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: install-set-up-deploy
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/14/2023
+ms.date: 02/13/2025
 ---
 
 # Set up Viva Glint User Roles
 
-You can assign multiple roles with specific permissions - access to different segments of data and filter - within **User Roles** from the admin configuration dashboard. The User Roles and Access Template include prepopulated example roles and detailed instructions for two areas of setup. Use it to help plan your Microsoft Viva Glint programs.
+In the **User Roles** feature, admins assign multiple roles with specific permissions, granting access to different segments of data reports and filters.
 
-You can use the template to indicate which attributes User Roles are allowed to view, according to three filter distinctions:
+:::image type="content" source="../../media/glint/setup/user-roles-access.png" alt-text="Screenshot that shows how to access User Roles from the admin dashboard.":::
 
-- Report filters: Attributes this role can view while searching results.
-- Report sections: Which section a user can add to reports.
-- Comment filters: Attributes this role must have to view the Comments report.
+## Viva Glint User Role template
 
-> [!TIP]
-> To protect confidentiality, give managers access to only one filterable attribute. Assigning more than one filterable attribute could increase the chance that a manager may be able to deduce the origin of individual responses.
+Use our template as a planning tool to define role permissions. There are three filter distinctions:
 
->[!NOTE]
-> Not all User Roles and pre-populated attributes and permissions in the template may apply to your organization. Consult your Employee Attribute File for attributes specific to your organization and make changes, as necessary.
+- **Report filters**: Attributes the role can use to filter results
+- **Report sections**: Attributes the role can use to see more sections in reports
+- **Comment filters**: Attributes the role can use as filters to review comments
 
-[Download the template to use as a planning tool to define permissions for your User Roles.](https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:1e304311-018e-330d-ab5a-79bbe2c4631c)
+The [**User Roles and Access template**](https://www.microsoft.com/download/details.aspx?id=105793) includes prepopulated example roles and instructions for defining permissions. 
 
-## Create User Roles
+**Not all User Roles and prepopulated attributes and permissions in the Viva Glint template may apply to your organization.** To customize your template, use your Employee Attribute File labels (column headers) for attributes specific to your organization.
 
-Program admins can specify the employee population and report filters their leaders can view on their dashboard based on manager, HRBP, and executive roles. Defining roles is important for data cuts, access permissions, and program integrity.
-
-### Procedure to create User Roles
-
-1. Select the **Configure** symbol.
-2. In the **Employees** section, select **User Roles**.
-3. You'll see predefined user roles initially:
-   1. Active Employees: Not intended to have data access
-   2. Company Admin: Employees who are granted **ALL** permission; can't be edited
-   3. Inactive employees: Not intended to have data access
-   4. Manager: Commonly used and prepopulated; permissions and attributes can be edited
-4. To add roles, select **+ New Role**.
-5. Enter a User Role name by selecting the pencil symbol next to the title box.
-
-## Set up the Role Settings page
-
-You can do the following from the Role Settings page:
-
-- [Permissions](#permissions-setup)
-- [Report Attributes](#report-attributes)
-- [Add or remove users](#add-user-to-a-role)
-
-### Permissions setup
-
-1. Select **Permissions** in the **Role Settings** section.
-2. Choose all appropriate permissions and access capabilities you want for the new User Role.
-3. Select **Save Changes**.
-
-### Report Attributes
-
-1. Select **Report Attributes** in the **Role Settings** section.
-2. Select all attributes and hierarchies that this role should be allowed to view for report filters, report sections, and comment filters.
-3. Select **Save Changes**.
 
 > [!TIP]
-> Since filtering through results across too many attributes can make identifying survey respondents within reports easier, we recommend giving access to only one attribute per manager role. For example, *Managers with Country Access* or *Managers with Comments*.
+> To protect confidentiality, give managers access to only one filterable attribute. Assigning more than one filterable attribute increases the chance that a manager can deduce the origin of individual survey responses.
 
-### Add user to a role
+## Preconfigured User Roles
 
-1. Select **+ Search for an employee to add**.
-2. Select their name.
-3. The new user will now appear in the **All Members** section.
+The roles in this table are preconfigured in Viva Glint:
 
-### Remove a user from a User Role category
+|**Role title**|**Data reporting permission level**|
+|---------|----------|
+|**Company Admin**| Employees who are granted **ALL** permissions. Includes optional Advanced Configuration access.|
+|**Active Employees**|  Automatic role membership based on the employee's status ("ACTIVE") in Viva Glint. This role doesn't grant data access.|
+|**Inactive Employees**| Automatic role membership based on the employee's status ("INACTIVE") in Viva Glint. This role doesn't grant data access.|
+|**Managers**|Includes permission to see reporting for the employee's team based on Viva Glint's calculated manager hierarchy. Attribute filters aren't defined.|
+|**Support Users**| [Other Microsoft 365 users](/viva/glint/setup/add-external-user) who have advanced access. |
 
-1. Hover over a user's name.
-2. Select the **trash can** symbol.
-3. Select **Yes, Remove**.
+> [!IMPORTANT]
+> - Viva Glint Admins can't delete predefined User Roles from Viva Glint.
+> - Users that need to access Viva Glint dashboards, or the My Surveys tab, need an "ACTIVE" status and to exist in the Active Employees role. Learn more about accessing [Viva Glint](access-glint.md).
 
-## Import User Roles in bulk
+## Modify predefined roles
 
-When you need to assign many individuals to a specific User Role, you can mass assign them by using the bulk import feature.
+Viva Glint Admins can modify predefined Viva Glint product roles. This capability reduces the time required to assign roles and reduces the necessity to create new roles.
 
-### Procedure to import User Roles in bulk
+Access User Roles from your admin dashboard. Your User Role list may look something like this:
 
-1. Select the **Configure** symbol.
-2. In the **Employees** section, select **User Roles**. Select the User Role you need to update.
-3. On the **Role Settings** page, select **Export.** Within the box that displays, make your selections and then again, select **Export**.
-4. Open the downloaded .csv file and delete all columns except the column with email addresses.
-5. Add or delete email addresses.
-     > [!NOTE]
-     > This can be a full replacement for the existing file, so you will not need to have an Add or Remove column.
-6. Save your file.
-7. Return to the **Role Settings** page and select **Import**.
-8. Select the checkbox to indicate if you only added users.
-9. Drag and drop your file, or browse to select your file, into the area indicated.
-10. Select **Import File**.
-11. Confirm your import and then select **Confirm Import**.
+:::image type="content" source="../../media/glint/setup/user-roles-preconfig.png"alt-text="Screenshot of preconfigured User Roles.":::
 
-## View and edit attribute rules for a User Role
+**As an example, let's grant the Managers role a new permission in Survey Programs:**
 
-This functionality works for roles, which already have filters and/or populations applied to them.
+1. Select **Permissions.**
+   
+   :::image type="content" source="../../media/glint/setup/user-roles-permissions.png"alt-text="Screenshot of accessing Permissions in User Roles."lightbox="../../media/glint/setup/user-roles-permissions.png":::
 
-1. From the **User Roles** page, select a role to view or edit.
-2. On the **Role Settings** page, the number of members of this group will display and the attribute rule applied. (Example: ***Includes: Gender: Female***)
-3. To change, select **Edit Attribute Rules**.
-4. In the new display window, choose from:
-   - I want to include all active employees only, or
-   - I want to filter all active employees by the following populations
-5. Add new population(s) and filter(s) as desired.
-6. Choose whether to include inactive employees or to exclude any employees.
-7. Select **Save Changes**.
+2. View what permissions they have and now let's add **Manage Survey Programs** with the ability to **Manage Sensitive Comments**.
 
-## Create an attribute rule-based User Role
+   :::image type="content" source="../../media/glint/setup/user-roles-add-permissions-2.png"alt-text="Screenshot of adding Permissions in User Roles."lightbox="../../media/glint/setup/user-roles-add-permissions-2.png":::
 
-1. Select  **User Roles**  from the **Configure**  section of your admin dashboard.
+3. Select **Save Changes** and then **Save Permissions** in the Confirm your changes to Permissions dialog box.
+   
+   :::image type="content" source="../../media/glint/setup/user-roles-save-permissions-2.png"alt-text="Screenshot of the Save Permissions dialog box."lightbox="../../media/glint/setup/user-roles-save-permissions-2.png":::
+
+4. A banner tells you that the new permissions are saved.
+
+### Update the name of the modified role 
+
+1. Navigate to the initial **User Roles** page and select the **pencil** symbol next to the role name.
+2. Update the role name to specify exactly which manager this role reflects. In our example, it's a manager who can view sensitive comments.
+
+   :::image type="content" source="../../media/glint/setup/user-roles-update-role-title-2.png" alt-text="Screenshot of updating a role title in User Roles.":::
+
+## Enable User Roles
+
+Admins can specify the employee population and attributes their leaders can view on their dashboard for each User Role. Defining roles is important for data cuts, access permissions, and program integrity.
+
+1. Select the **Configuration** symbol.
+1. In the **Employees** section, select **User Roles**.
+1. Select **+New Role**. The **Role Settings** page displays.
+1. Enter a role name in the **Untitled Role** field by selecting the **pencil** symbol.
+
+   :::image type="content" source="../../media/glint/setup/user-roles-title.png"alt-text="Screenshot of the Role Settings page.":::
+
+1. Select **Permissions**.
+
+   :::image type="content" source="../../media/glint/setup/user-roles-access-permissions.png" alt-text="Screenshot of Access Permissions in Role Settings.":::
+
+1. Make choices for these sections based on decisions in your User Role template:
+   1. Survey Programs
+   
+      :::image type="content" source="../../media/glint/setup/user-roles-survey-programs.png" alt-text="Screenshot of the Survey Programs Access section in Permissions and Access.":::
+
+   1. Focus Areas and Conversations
+   
+      :::image type="content" source="../../media/glint/setup/user-roles-focus-areas-convos.png" alt-text="Screenshot of the Focus Areas and Conversations section in Permissions and Access.":::
+
+   1. Reporting
+   
+      :::image type="content" source="../../media/glint/setup/user-roles-reporting.png" alt-text="Screenshot of the Reporting section in Permissions and Access.":::
+
+   1. Data Management
+   
+      :::image type="content" source="../../media/glint/setup/user-roles-data-management.png" alt-text="Screenshot of the Data Management section in Permissions and Access.":::
+
+   1. Resources
+   
+      :::image type="content" source="../../media/glint/setup/user-roles-resources.png" alt-text="Screenshot of the Resources section in Permissions and Access.":::
+
+1. Select **Save Changes**.
+
+1. On the **Role Settings** page, select **Report Attributes**.
+
+   :::image type="content" source="../../media/glint/setup/user-roles-report-attributes.png" alt-text="Screenshot of Report access in Role Settings.":::
+
+1. Attributes are separated into sections:
+    - Standard
+    - Manager Hierarchy: Select all levels, for roles with Manager Hierarchy-based access, users see only their team
+    - Other Reporting Hierarchies: For instance, Location or Department Hierarchy
+
+1. Select all attributes and hierarchies that this role should be allowed to view:
+    - Report filters
+    - Report sections
+    - Comment filters
+
+1. Select **Save Changes**.
+
+> [!TIP]
+> Filtering through results across too many attributes makes identifying survey respondents easier. For this reason, it's best to give access to only one attribute per manager role. 
+
+## Add or edit employees in a role
+
+Select the **Add/Edit Employees** button. The **Choose a way to add employees** window opens.
+
+Add members to a User Role by choosing from these options:
+
+- **Attribute Rules**: [User rules](#attribute-rule-based-user-roles) like Location or Department to populate a User Role. This dynamically changes with your employee data uploads.
+- **Import**: Use a CSV or XLSX file to [import employees](#import-user-roles-in-bulk) for this User Role. 
+
+> [!IMPORTANT]
+> - Switching from **Attribute Rules** to **Import** removes attribute rules.
+> - Switching from **Import** to **Attribute Rules** overrides any employees uploaded.
+   
+## Attribute rule-based User Roles
+
+:::image type="content" source="../../media/glint/setup/user-roles-attribute-slider.png" alt-text="Screenshot of the **Add Attribute Rules** section in Role Settings.":::
+
+1. From your admin dashboard, choose the **Configuration** symbol and then select **User Roles**.  
 2. Choose any role - *excluding preconfigured roles*.
 3. Select  **Add/Edit Employees.**
 4. In the new display window, choose either:
    - I want to include all active employees only, or
    - I want to filter all active employees by the following populations
+
 5. To add users based on a filtered population, select  **I want to filter all active employees by the following populations**.
 6. Select  **+ New Population**.
-7. Select  **+ Add Filter**  to select the attribute you want to use to filter your employee list. Your attribute list is unique to your organization based on your Employee Attribute File.
+7. Select  **+ Add Filter**  to select an attribute to filter your employee list. Your attribute list is unique to your organization based on your Employee Attribute File.
 8. Select  **Done**.
-9. To exclude someone, search their name and select  **Exclude**.
+9. To exclude someone, search their name and select **Exclude**.
 10. To remove someone from the Excluded list, search their name and select **Remove**.
-11. Confirm list for user role and select  **Save Changes**.
+11. Confirm list for User Role and select  **Save Changes**.
 
-## Grant Custom access
+## Import User Roles in bulk
 
-Custom access is intended for users who need to have the default access overridden or are in a role that is so specific, it needs to be per user.
+When you need to assign many individuals to a specific User Role, use the bulk import feature.
 
-### Create Custom Team Access for Programs
+:::image type="content" source="../../media/glint/setup/user-roles-import-dialog-box.png" alt-text="Screenshot of the Import Employees to Role dialog box in Role Settings.":::
 
-1. From your Glint dashboard, select **Configure** and then **People** and then **Select User.**
-2. Review User Roles for accuracy.
-3. Next to the survey name, select **Edit**.
-4. Customize the survey access from the dialog box that opens and select **Save**. Customized data access for that program now displays on the user profile.
+1. From your admin dashboard, choose the **Configuration** symbol and then select **User Roles**.
+2. On the **Role Settings** page, select **Export.** In the window that opens, make your selections and select **Export**.
+3. Open the downloaded CSV file and delete all columns except the column with email addresses.
+4. Add or delete email addresses, as needed. This edit can be a full replacement for the existing file so you don't need an *Add* or *Remove* column.
+5. Save your file.
+1. Return to the **Role Settings** page and select **Import**.
+1. Select the checkbox to indicate if you only added users.
+1. Drag and drop your file, or browse to select your file, into the area indicated.
+1. Select **Import File**.
+1. Confirm your import and select **Confirm Import**.
+
+## Remove a user from a User Role
+
+1. Hover over a user's name.
+2. Select the **trash can** symbol.
+3. Select **Yes, Remove**.
+   
+## View and edit attribute rules for a User Role
+
+This functionality works for roles which already have filters and/or populations applied to them.
+
+1. From the **User Roles** page, select a role to view or edit.
+2. On the **Role Settings** page, the number of members of this group displays and the attribute rule applies. (Example: *Includes: Gender: Female*)
+3. To change, select **Edit Attribute Rules**.
+4. In the new display window, choose from:
+   - I want to include all active employees only, or
+   - I want to filter all active employees by the following populations
+5. Add new populations and filters, as desired.
+6. Choose whether to include inactive employees or to exclude any employees.
+7. Select **Save Changes**.
+
+### Change a user's status from ACTIVE to INACTIVE
+
+A user's status, "INACTIVE" or "ACTIVE," determines their membership to Viva Glint's [predefined Active or Inactive Employees roles](#preconfigured-user-roles). To update employees' status, Viva Glint Admins can:
+
+- Upload employee data with new status values ("INACTIVE" or "ACTIVE") for users.
+- Upload a full employee file, leaving out users who should be inactivated. Users not included in the file automatically switch to an INACTIVE status.
+
+Learn more about data upload methods for Viva Glint: [Choose a data upload method](choose-upload-method.md).
+
+## Grant custom access
+ 
+Custom access is for users who need to have their default access overridden. This access type is useful when a role is so specific that it needs to be *per user,* rather than at the User Role level. For example, use custom access for Human Resources Business Partners (HRBPs) who serve unique combinations of employee groups in your organization. To grant custom access in bulk to multiple users for survey, Focus Area, and Admin access, see [Advanced Configuration uploads](advanced-config-uploads.md).
+
+

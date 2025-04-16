@@ -1,91 +1,115 @@
 ---
 title: Use Viva Glint's Focus Area Overview report
-description: "Provides a status of the completion of Focus Areas across teams, at-a-glance critical insights, and access to additional details."
-ms.author: SarahBerg
-author: SarahAnneBerg
-manager: pamgreen
+description: "Provides a status of the completion of Focus Areas across teams, at-a-glance critical insights, and access to other details."
+ms.author: JudithWeiner
+author: JudyWeiner
+manager: MelissaBarry
 audience: admin
 f1.keywords: NOCSH
-keywords: viva strengths and opportunities
+keywords: goal overview, goal report, export focus area permissions, export focus areas, roles with focus area permissions, focus areas for 360 feedback programs, development focus areas, people goals, percentage of focus area participation for managers
 ms.collection:  
 - m365initiative-viva
 - selfserve 
 search.appverid: MET150 
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: how-to
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/28/2023
+ms.date: 2/10/2025
 ---
 
 # Use Viva Glint's Focus Area Overview report
 
-The Focus Areas Overview report provides a status of the completion of Focus Areas across teams. The report provides critical insights immediately with easy access to additional details.  
+The Microsoft Viva Glint Focus Areas Overview report provides a completion status for Focus Areas across teams. The report provides critical insights and easy access to other details. Leaders and admins use this report to connect managers working on similar Focus Areas and to view feedback comments to read context about what their managers are working on. 
 
-## Grant permission to view the Focus Area Overview report 
+>[!IMPORTANT]
+>Your organization may use the word "goals," rather than our standard term "Focus Areas." For this reason, the verbiage and images on guidance may not match exactly with your dashboard.
 
-Access is approved to the roles with **View Focus Areas Reports and Manager-Visible Focus Areas** within **User Roles** in the **Employees** section of an admin’s Microsoft Viva Glint dashboard. The scope of the report respects access at a per-person level. 
 
-## Access the report 
+## Grant permission for managers to view the Focus Area Overview report 
 
-From the admin dashboard, follow this procedure: 
+1. Open **User Roles** on your Microsoft Viva Glint admin dashboard. 
+1. Approve **View Focus Areas Reports** in the **Reporting** section of **Managers Permissions and Access**. 
 
-1. From the top menu bar, select the **Reports** tab. 
-1. In the left-most column of the Reports page, select **Focus Area Overview**.  
-1. Now select the **Focus Area Overview** card. 
+The report respects access at a per-person level. 
 
-## How leaders can use this report 
+:::image type="content" source="../../media/glint/reports/reporting-view-focus-area-reports.png" alt-text="Screenshot of where to grant permissions for roles to see Focus Area reports.":::
 
-Your leaders and admins use this report to: 
+## Access the Focus Area Overview report 
 
-- Connect managers working on similar Focus Areas. 
-- View feedback comments to provide context for what their managers are working on. 
+From the admin dashboard, select the **Reports** tab. From the Focus Areas column, select **Focus Area Overview**.  
 
-### Report section summary 
+   :::image type="content" source="../../media/glint/reports/focus-areas-from-reports.png" alt-text="Screenshot showing the Reports tab in the admin dashboard, highlighting the Focus Area Overview option.":::
 
-The table below explains the report sections and descriptions.
+## Report section summary 
 
-| **Term** | **Description** | 
+Use this table to understand report sections and descriptions.
+
+| Term | Description | 
 |---|---|
-| **Summary** | Provides a sense of Focus Area completion across teams and answers the following: <br> - How close are we to Focus Area completion?<br>- What’s the status of the Focus Areas? <br>- What percent of the population makes up each status?<br>- How many managers have created Focus Areas?|
+| **Summary** | - How close are we to Focus Area completion?<br>- What’s the status of the Focus Areas? <br>- What percent of the population makes up each status?<br>- How many managers created Focus Areas?|
 | **Overall Focus Area Completion** | Shows progress toward 100% Focus Area completion. View the count of Focus Areas completed and the number of employees who completed them. |
-| **Focus Area Status** | Illustrates each Focus Area status and the populations they cover; hover over each status to see a deeper dive into the information. |
-| **% of Employees with Focus Areas** | Displays the overall percent of managers and others with Focus Areas; hover over the number for a deeper dive into the information. | 
-| **% of Employees without Focus Areas** | Displays the percentage of employees that don't have Focus Areas. |
-| **Goal Status by Type** | The breakdown of Focus Areas by type. Many sections of the report are dynamic, displaying additional details when you select them. |
-| **Column Headers** | Select column headers to sort by status in ascending or descending order. |
-| **Status Bars** | Select any status bar to include that data in the **Summary** section. This provides additional insights about the Focus Area type, specifically: <br>- Overall completion status <br>- % of  employees that don't have the focus area| 
-| **Percentages** | Hover over percentages throughout the report to see more detailed information.|
-| **Filter** | Located in the header menu at the top of the page. It's indicated by an arrow and any selected filters, when collapsed. <br> The selections you choose for the report are automatically added to the filter. Select the arrow to expand the menu to view past reports or modify filters. The current Focus Area period appears by default, but you can look back at previous periods as well.|
+| **Focus Area Status** | Illustrates each Focus Area status and the populations they cover. Hover over each status for a deeper dive into the information.|
+| **% of Employees with Focus Areas** | Shows the overall percent of managers and others with Focus Areas. Hover over the number for a deeper dive into the information. | 
+| **% of Employees without Focus Areas** | Displays the percentage of employees who don't have Focus Areas. |
+| **Goal Status by Type** | The breakdown of Focus Areas by type. Sections of the report are dynamic, displaying more details when you select them. |
+| **Column Headers** | Select column headers, sortable by status in ascending or descending order |
+| **Status Bars** | Select any status bar to include that data in the **Summary** section. This data provides other insights about the Focus Area type, specifically: <br>- Overall completion status <br>- % of  employees that don't have the Focus Area| 
+| **Percentages** | To see detailed information, hover over the percentage score.|
+| **Filter** | Located in the header menu at the top of the page and indicated by an arrow and any selected filters, when collapsed. <br> The selections chosen are automatically added to the filter. To view past reports or modify filters, select the arrow to expand the menu. The current Focus Area period appears by default, but you can look back at previous periods.|
 
-## Exporting Focus Area data  
+## Focus Area Status by Type
 
-You can export Focus Area data from two different dashboard sections: 
+People Goals and Development are terms Viva Glint uses to distinguish between two different types of Focus Area related goals:
+- **Development** goals refer to 360 feedback program Focus Areas.
+- **People** goals refer to Focus Areas for all other types of surveys.
+
+:::image type="content" source="../../media/glint/setup/focus-area-overview-status-type.png" alt-text="Screenshot of Focus Area status by type.":::
+
+### How is the percentage of Focus Area participation calculated?
+
+The percentage calculation for the Focus Area Overview Report is based on how many users have access to the **Create Focus Areas** permission in **User Roles**. 
+
+If a manager has one Focus Area for the Engagement Survey and one Focus Area for their 360 program, the Focus Area Overview report shows two Focus Areas created for that user. However, the manager only counts once towards the total users eligible to create Focus Areas. 
+
+## Exporting Focus Area report data  
+
+Export Focus Area data in two different ways: 
+- From the Focus Area Overview report,
+- From the admin dashboard.
 
 ### Export data from the Focus Area Overview report 
 
-1. The down-facing arrow in the circle opens the Export options. 
+Use the **Export** menu to choose your export option. 
+- **Export Focus Areas Usage to Spreadsheet**, or
+- **Export All Action Items to Spreadsheet**.
 
-1. Select **Export All Action Items to Spreadsheet**. 
+   :::image type="content" source="../../media/glint/reports/focus-areas-overview-export.png" alt-text="Screenshot of the download options or exporting the Focus Area report.":::
 
-1. Select the option to download action items for the selected goal period in the **Usage Report**. 
+### Export data from the admin dashboard 
 
-### Exporting Focus Area data from the admin dashboard 
+1. In the **Action Taking** section, select **All Action Items Report**.
+1. The report automatically generates a CSV file.
 
-1. In the Action Taking section, select **All Action Items Report**.
-1. The report automatically generates as a *.csv* file. 
+   :::image type="content" source="../../media/glint/reports/focus-area-export-csv.png" alt-text="Screenshot of the verification dialog box indicating that your csv report downloaded.":::
 
-### What will the report show? 
+### What does the Focus Area Overview report include?
 
 - Employee email 
-- First and last name 
-- Focus Area(s) 
-- Goal period 
-- Focus Area(s) window and due date 
-- Action item/description 
-- Action item/Goal status 
+- Employee first and family name 
+- Employee Focus Area 
+- Employee Focus Area period 
+- Focus Area windows and due dates 
+- Action item and description 
+- Action item and status 
 - Whether the items are a Viva Glint suggested item 
-- Focus Area comments: Following the Viva Glint Suggested Action Item column in the exported spreadsheet, admins can see
-   - The number of comments supporting a Focus Area
-   -  The comment, each displays in its own row 
+- Focus Area comments: Following the Suggested Action Item column, admins with permissions can see:
+   - The number of comments supporting a Focus Area.
+   - The comment, each in its own row.
+ 
+## Learn from Viva People Science methodology
+
+Initiating and managing action after a survey can be an unclear process. Focused and streamlined action planning is essential. An action plan is a written commitment to make incremental improvements to the employee experience. 
+
+> [!div class="nextstepaction"]
+> [Viva People Science explains focus areas and action planning](../people-science/people-science-explains-focus-areas.md)
 

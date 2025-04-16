@@ -1,21 +1,20 @@
 ---
-ms.date: 06/05/2023
+ms.date: 05/23/2024
 title: Upload organizational data (first upload)
 description: Learn how to first upload your data to the Viva Insights advanced insights app. 
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection: viva-insights-advanced
-ms.service: viva 
-ms.subservice: viva-insights
+ms.service: viva-insights
 manager: anirudhbajaj
 audience: Admin
 ---
 
 # Upload organizational data (first upload)
 
-Your organizational data can appear in the Microsoft Viva Insights’ advanced insights app in one of two ways: through Azure Active Directory, which is the default source, or through a .csv file that you as an admin upload.
+Your organizational data can appear in the Microsoft Viva Insights’ advanced insights app in one of two ways: through Microsoft Entra ID, which is the default source, or through a .csv file that you as an admin upload.
 
 This article talks about the second option: uploading a .csv file.
 
@@ -132,6 +131,14 @@ After processing completes, it's either succeeded or failed. Depending on the ou
 
 When processing succeeds, you’ll see a “Success” status in the **Upload or delete history** table. At this point, the upload process is complete.
 
+Here's the typical amount of time needed for organizational data to be reflected after it's uploaded in the following experiences:
+
+* Success status shown in **Data connections > Import history**: **A few hours**  
+
+* Data quality tab, flexible queries, and Power BI templates: **One to two days**  
+
+* Leader/manager report in the Teams app: **Next weekly refresh**
+
 After you receive the “Success” status, you can:
 
 * Select the view (eye) icon to see a summary of the validation results.
@@ -167,4 +174,3 @@ To learn about formatting your file to prevent errors, refer to [File rules and 
 ## Related topic
 
 [Prepare organizational data](prepare-org-data.md)
-

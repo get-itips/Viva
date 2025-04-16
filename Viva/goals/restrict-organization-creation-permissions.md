@@ -2,15 +2,14 @@
 ms.date: 07/13/2022
 title: Restrict organization creation permissions
 ms.reviewer: 
-ms.author: rasanders
-author: RaSanders-MSFT
-manager: Liz.Pierce
+ms.author: daisyfeller
+author: daisyfell
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-goals
+ms.topic: how-to
+ms.service: viva-goals
 ms.localizationpriority: medium
 ms.collection:  
 - Strat_SP_modern
@@ -34,7 +33,7 @@ As a Global Admin, you can control who can create organizations in your tenant f
 
 ## Anyone in your tenant 
 
-When you select this option, any licensed Viva Goals user, in addition to the global admins, will have permission to create organizations in your Viva Goals tenant. 
+When you select this option, any licensed Viva Goals user will have permission to create organizations in your Viva Goals tenant. 
 
 ## Only global administrators 
 

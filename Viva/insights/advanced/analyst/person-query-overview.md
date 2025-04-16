@@ -1,14 +1,13 @@
 ---
-ms.date: 07/14/2022
+ms.date: 03/25/2025
 title: Person query overview
 description: Learn about custom person queries in the Microsoft Viva Insights advanced insights app
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 ms.collection: viva-insights-advanced 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: anirudhbajaj

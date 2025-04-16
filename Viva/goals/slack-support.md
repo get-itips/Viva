@@ -2,15 +2,14 @@
 ms.date: 10/31/2022
 title: Slack troubleshooting and support
 ms.reviewer: 
-ms.author: rasanders
-author: RaSanders-MSFT
-manager: liz.pierce
+ms.author: daisyfeller
+author: daisyfell
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-goals
+ms.topic: troubleshooting-general
+ms.service: viva-goals
 ms.localizationpriority: high
 ms.collection:  
 - m365initiative-viva-goals  

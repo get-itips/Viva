@@ -5,24 +5,22 @@ title: Microsoft Viva Accelerators introduction
 description: Introduces Microsoft Viva Accelerators and what solutions are available to use
 author: zachminers
 ms.author: v-zachminers
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
 search.appverid:
 - MET150
-ms.service: viva 
-ms.subservice: viva-insights
+ms.service: viva-insights
 ms.collection:
   - M365-analytics
   - viva-insights
   - highpri
-  - Tier1
 manager: scott.ruble
 audience: Admin
 ---
 
 # Microsoft Viva Accelerators
 
-Microsoft Viva Accelerators can help you create foundation applications and workflows to solve common business problems. These accelerators enable you to access, transform, and utilize your existing Microsoft data sources, such as Microsoft Viva Topics and Microsoft Graph. The following solutions include step-by-step walkthroughs and code sample to help guide you.
+Microsoft Viva Accelerators can help you create foundation applications and workflows to solve common business problems. These accelerators enable you to access, transform, and utilize your existing Microsoft data sources, such as Microsoft Graph. The following solutions include step-by-step walkthroughs and code sample to help guide you.
 
 ## Data lake solution
 
@@ -34,7 +32,7 @@ Microsoft Viva Accelerators can help you create foundation applications and work
 
 ## Multitenant solution
 
-- [**Complex organizations and insights**](/viva/solutions/introduction.md) - Set up an Azure Data Factory pipeline to automatically pull Viva Insights query data for two tenants through OData links into an Azure storage blob location for combined analysis.
+- [**Complex organizations and insights**](/previous-versions/viva/complex-organization-insights) - Set up an Azure Data Factory pipeline to automatically pull Viva Insights query data for two tenants through OData links into an Azure storage blob location for combined analysis.
 
 ## Help and feedback
 

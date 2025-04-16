@@ -8,16 +8,14 @@ brand: m365
 metadata:
   title: Microsoft Viva # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Get started with this employee experience platform that brings together communications, knowledge, learning, resources, and insights. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: m365 #Required; service per approved list. service slug assigned to your service by ACOM.
-  ms.technology: viva
+  ms.service: viva-suite
   ms.topic: hub-page # Required
   author: loreenl #Required; your GitHub user alias, with correct capitalization.
   ms.author: loreenl #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/18/2023 #Required; mm/dd/yyyy format.
+  ms.date: 04/16/2025 #Required; mm/dd/yyyy format.
   ms.custom: intro-hub-or-landing
   ms.collection:
-    - Tier1
-    - essentials-hub-or-landing
+    - essentials-navigation
 # highlightedContent section (optional)
 # Maximum of 8 items
 highlightedContent:
@@ -25,20 +23,21 @@ highlightedContent:
   items:
     # Card
     - title: Learn how to use the Microsoft Viva suite
-      itemType: get-started
+      itemType: overview
       url: microsoft-viva-overview.md
+    # Card
+    - title: Microsoft 365 Copilot in Microsoft Viva
+      itemType: overview
+      url: /viva/copilot/viva-copilot-overview
     # Card
     - title: Microsoft Viva community
       itemType: whats-new
       url: https://techcommunity.microsoft.com/t5/welcome-to-the-microsoft-viva/ct-p/Microsoft-Viva
     # Card
-    - title: Introducing Microsoft Viva
+    - title: Microsoft Viva adoption
       itemType: overview
-      url: https://www.microsoft.com/microsoft-viva/overview
-    # Card
-    - title: Microsoft Viva overview
-      itemType: video
-      url: https://www.youtube.com/watch?v=J3qCWxKVfFA
+      url: https://adoption.microsoft.com/en-us/viva/
+
 
 # tools section (optional)
 tools:
@@ -85,13 +84,6 @@ tools:
       imageSrc: media/logos/pulse-logo.svg
       url: /viva/pulse/introduction-to-viva-pulse
 
-    # Card
-    - title: Microsoft Viva Topics
-      # imageSrc should be square in ratio with no whitespace
-      imageSrc: media/logos/topics-launch-c-64.svg
-      url: /viva/topics/
-
-
 # additionalContent section (optional)
 # Card with summary style
 additionalContent:
@@ -103,24 +95,25 @@ additionalContent:
         - title: Employee communications and communities
           summary: Modernize how you communicate and engage with employees with Viva Connections, Viva Engage, and Viva Amplify. 
           url: /viva/experience-connection
+        # Card
         - title: Microsoft Viva workplace analytics and employee feedback
           summary: Transform employee feedback and insights into impact with Viva Insights, Viva Glint, and Viva Pulse.
           url: /viva/experience-insight
         # Card
-        - title: Goal setting and management
-          summary: Align people’s work to team and organizational goals with Viva Goals.
-          url: /viva/experience-purpose
-        # Card
         - title: Learning and knowledge management
-          summary: Help your workforce learn, grow, and succeed with Viva Learning and Viva Topics.
-          url: /viva/experience-growth
+          summary: Help your workforce learn, grow, and succeed with Viva Learning.
+          url: /viva/learning/overview-viva-learning
+
     - title: Key resources  # < 60 chars (optional)
       items:
+
         # Card
         - title: End user help and learning
           links:
           - text: Microsoft Viva help and learning
             url: https://support.microsoft.com/viva
+          - text: Viva Amplify
+            url: https://support.microsoft.com/topic/introduction-to-viva-amplify-cedd11d3-ea8a-4d55-9b5b-61459353be1a
           - text: Viva Connections
             url: https://support.microsoft.com/office/your-intranet-is-now-in-microsoft-teams-8b4e7f76-f305-49a9-b6d2-09378476f95b
           - text: Viva Engage
@@ -133,26 +126,19 @@ additionalContent:
             url: https://support.microsoft.com/office/viva-learning-preview-app-01bfed12-c327-41e0-a68f-7fa527dcc98a
           - text: Viva Pulse
             url: https://support.microsoft.com/topic/introducing-viva-pulse-34c94efe-185d-480e-94a2-27e013a5204b
-          - text: Viva Topics
-            url: https://support.microsoft.com/office/understanding-viva-topics-5bef3020-2679-4045-81cb-bcbc37218332
 
         # Card
-        - title: Learning paths
+        - title: Copilot in Viva
           links:
-            - text: Get started with Microsoft Viva Connections
-              url: /training/paths/viva-connections-get-started/
-            - text: Introduction to Viva Insights
-              url: /training/paths/m365-workplace-analytics-start/
-            - text: Introduction to Viva Glint
-              url: /viva/glint/introduction-viva-glint
-            - text: Get started with Viva Goals
-              url: /training/paths/viva-goals-get-started
-            - text: Become an OKR Champion with Viva Goals
-              url: /training/paths/okr-leadership/
-            - text: Introduction to Viva Learning
-              url: /training/modules/viva-learning-introduction/
-            - text: Get started with Microsoft Viva Topics
-              url: /training/paths/m365-viva-topics/
+
+            - text: Overview of Copilot in Microsoft Viva
+              url: /viva/copilot/viva-copilot-overview
+            - text: Control access to Copilot in Microsoft Viva
+              url: /viva/copilot/copilot-access-management
+            - text: Connect to the Microsoft 365 Copilot Dashboard in Viva Insights
+              url: /viva/insights/org-team-insights/copilot-dashboard
+            - text: Set up Copilot Academy
+              url: /viva/learning/academy-copilot       
 
         # Card
         - title: Adoption
@@ -161,22 +147,31 @@ additionalContent:
               url: https://adoption.microsoft.com/viva/
             - text: End user resources
               url: https://support.microsoft.com/viva
-            - text: Tech community
-              url: https://techcommunity.microsoft.com/t5/microsoft-viva/ct-p/MicrosoftViva
- 
+             
         # Card
         - title: Extensibility
           links:
-            - text: Viva Connections
+            - text: Build apps for Microsoft Viva
+              url: https://developer.microsoft.com/en-us/viva
+            - text: Extend Viva Connections
               url: /sharepoint/dev/spfx/viva/overview-viva-connections
+            - text: Integrate with Viva Learning
+              url: /graph/api/resources/viva-learning-api-overview?view=graph-rest-1.0
+                     
         # Card
-        - title: Solutions for your business
+        - title: Troubleshooting
           links:
-            - text: Use Microsoft Viva in the hybrid workplace
-              url: /viva/solutions/viva-for-the-hybrid-workplace
-            - text: Run a healthy OKR program with Viva Goals
-              url: /viva/solutions/healthy-okr-program-overview
-            - text: Solve common business problems with accelerators
-              url: /viva/solutions/introduction
-            - text: Incorporate learning into your organization
-              url: /viva/solutions/incorporate-learning
+            - text: Self-help diagnostics for Microsoft Viva administrators
+              url: /viva/troubleshoot/viva-suite-administration/viva-self-help-diagnostics
+            - text: Viva Connections
+              url: /viva/troubleshoot/connections/viva-connections-welcome
+            - text: Viva Engage
+              url: /viva/troubleshoot/engage/viva-engage-welcome
+            - text: Viva Glint
+              url: /viva/troubleshoot/glint/viva-glint-welcome
+            - text: Viva Insights
+              url: /viva/troubleshoot/insights/viva-insights-welcome
+            - text: Viva Learning
+              url: /viva/troubleshoot/learning/viva-learning-welcome
+            - text: Viva Pulse
+              url: /viva/troubleshoot/pulse/viva-pulse-welcome

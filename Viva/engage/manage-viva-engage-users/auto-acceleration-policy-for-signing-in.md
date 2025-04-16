@@ -1,15 +1,14 @@
 ---
-title: "Improve Office 365 sign-in for Viva Engage with auto-acceleration policy"
+title: "Improve Microsoft 365 sign-in for Viva Engage with auto-acceleration policy"
 f1.keywords:
 - NOCSH
-ms.author: v-bvrana
+ms.author: donnabouldin
 author: Starshine89
-manager: pamgreen
-ms.date: 7/13/2023
+manager: elizapo
+ms.date: 09/24/2024
 audience: Admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-engage
+ms.topic: how-to
+ms.service: viva-engage
 ms.localizationpriority: medium
 ms.custom:
 - Adm_O365
@@ -20,20 +19,20 @@ search.appverid:
 - MED150
 - MBS150
 ms.assetid: 4d0e5067-992c-4cd6-bad5-b4ac0d52f596
-description: "Create an auto-acceleration policy to improve Office 365 sign-in for Viva Engage."
+description: "Create an auto-acceleration policy to improve Microsoft 365 sign-in for Viva Engage."
 ---
 
-# Improve Office 365 sign-in for Viva Engage with auto-acceleration policy
+# Improve Microsoft 365 sign-in for Viva Engage with auto-acceleration policy
 
-To improve the Office 365 sign-in experience for Viva Engage, use the Auto-acceleration policy to accelerate directly to the ADFS federated domain, bypassing the Office 365 sign-in page. 
+To improve the Microsoft 365 sign-in experience for Viva Engage, use the Auto-acceleration policy to accelerate directly to the ADFS federated domain, bypassing the Office 365 sign-in page. 
   
 ## Prerequisites
 
-- You must be a global administrator in Office 365 to run the PowerShell commands.
+- You must be a Microsoft 365 Global Administrator to run the PowerShell commands.
     
-- Download and install the [Azure Active Directory V2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.2.16).
+- Download and install the [Azure Active Directory v2 PowerShell Module](https://www.powershellgallery.com/packages/AzureAD/2.0.2.16).
     
-- Open administrative Azure AD Powershell and run following commands:
+- Open administrative Azure AD PowerShell and run following commands:
 
      > [!IMPORTANT]
      > The `Save-Module` command downloads the module from the Internet. You need a working internet connection on the computer where you run these commands. 
@@ -53,7 +52,7 @@ To improve the Office 365 sign-in experience for Viva Engage, use the Auto-accel
 
 1. Run the following commands:
     
-    Connect to Tenant's Azure AD. This command prompts you to sign in using admin credentials.
+    Connect to Tenant's Microsoft Entra ID. This command prompts you to sign in using admin credentials.
     
       ```powershell
      connect-AzureAD [-tenantID | -tenantDomain] <tenant name>
@@ -125,7 +124,7 @@ Note: If you have multiple federated domains, adjust the third command appropria
   
 ## Testing
 
-In a new in-private browser session, sign in to Viva Engage with user credentials from the federated domain. Your sign-in workflow should skip the Azure AD page and go straight to the ADFS sign-in page.  
+In a new in-private browser session, sign in to Viva Engage with user credentials from the federated domain. Your sign-in workflow should skip the Microsoft Entra ID page and go straight to the ADFS sign-in page.  
   
 ## Scenarios
 
@@ -133,5 +132,5 @@ The following table summarizes the authorization flows for this policy.
   
 |**Login**|**Flow without policy**|**Flow with policy**|
 |:-----|:-----|:-----|
-|Viva Engage.com  <br/> |Email address \> Azure AD sign-in \> ADFS sign-in  <br/> |Email address \> ADFS sign-in  <br/> |
-|Viva Engage.com/mycompany.com  <br/> |Email address \> Azure AD sign-in \> ADFS sign-in  <br/> |Email address \> ADFS sign-in  <br/> |
+|Viva Engage.com  <br/> |Email address \> Microsoft Entra sign-in \> ADFS sign-in  <br/> |Email address \> ADFS sign-in  <br/> |
+|Viva Engage.com/mycompany.com  <br/> |Email address \> Microsoft Entra sign-in \> ADFS sign-in  <br/> |Email address \> ADFS sign-in  <br/> |

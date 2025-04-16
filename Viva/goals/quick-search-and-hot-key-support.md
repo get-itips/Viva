@@ -2,15 +2,14 @@
 ms.date: 04/11/2022
 title: "Quick search and hot key support"
 ms.reviewer: 
-ms.author: rasanders
-author: RaSanders-MSFT
-manager: Liz.Pierce
+ms.author: daisyfeller
+author: daisyfell
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-goals
+ms.topic: how-to
+ms.service: viva-goals
 ms.localizationpriority: medium
 ms.collection:  
 - m365initiative-viva-goals

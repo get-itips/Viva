@@ -1,18 +1,17 @@
 ---
-ms.date: 09/26/2023
+ms.date: 06/12/2024
 title: "Track Viva Engage events in the Microsoft 365 audit log and with the Management Activity API"
 description: "View Viva Engage events through Microsoft 365 Management API and Microsoft 365 Security compliance portal auditing logs."
 ms.reviewer: ethli
-ms.author: v-bvrana
+ms.author: donnabouldin
 author: Starshine89
-manager: pamgreen
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-engage
-localization_priority: Priority
+ms.topic: how-to
+ms.service: viva-engage
+ms.localizationpriority: medium
 ms.collection:  
 - M365initiative-viva
 - highpri
@@ -24,7 +23,7 @@ search.appverid:
 
 To monitor security and compliance-related Viva Engage events for your organization, turn on audit logging. You can monitor changes to users, groups, files, admins, and network settings. The audit logs are available in the Microsoft 365 Security compliance portal or by using the Microsoft 365 Management Activity API.
   
-You must have the Microsoft 365 Global administrator role or the Audit Logs role in Exchange online to audit events. You can view Viva Engage events from your home network but not from external networks. You can track the following event categories:
+To audit events, you must have be assigned the Audit Logs role in Microsoft Exchange Online. You can view Viva Engage events from your home network but not from external networks. You can track the following event categories:
   
 - **Users**—includes activate, suspend, and delete a user.
 
@@ -52,7 +51,7 @@ To view the audit log:
   
 ## Learn more about the Management API
 
-You can use the Microsoft 365 Management Activity API to download various Viva Engage audit data. Read about how to register your application in Azure AD to get access to these features in [Get started with Microsoft 365 Management APIs](/office/office-365-management-api/get-started-with-office-365-management-apis). For the API reference, see [Microsoft 365 Management Activity API schema](/office/office-365-management-api/office-365-management-activity-api-schema).
+You can use the Microsoft 365 Management Activity API to download various Viva Engage audit data. Read about how to register your application in Microsoft Entra ID to get access to these features in [Get started with Microsoft 365 Management APIs](/office/office-365-management-api/get-started-with-office-365-management-apis). For the API reference, see [Microsoft 365 Management Activity API schema](/office/office-365-management-api/office-365-management-activity-api-schema).
   
 ## Related articles
 

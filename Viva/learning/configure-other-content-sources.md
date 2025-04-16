@@ -1,35 +1,33 @@
 ---
 title: Add other content providers for Microsoft Viva Learning
-ms.author: chucked
+ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 06/28/2023
+ms.date: 11/04/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
   - highpri
-  - Tier1
-localization_priority: medium
+ms.localizationpriority: medium
 description: Learn how to configure other content providers as a learning content source for Microsoft Viva Learning.
 ---
 
 # Add other content providers for Microsoft Viva Learning
 
-A growing set of learning content providers is available through Viva Learning. This set may change at any time as more providers join or change their status with the program.
+A growing set of learning content providers is available through Viva Learning. This set can change at any time as more providers join or change their status with the program.
 
 Some learning sources are enabled by default and available without a Viva Suite or Viva Learning license. These learning sources include:
 
-- LinkedIn Learning select 125 courses or full LinkedIn Learning course catalog with a LinkedIn Learning Enterprise subscription
+- [Global skilling initiative (GSI) courses](https://opportunity.linkedin.com/skills-for-in-demand-jobs) from LinkedIn Learning or the full LinkedIn Learning course catalog with a LinkedIn Learning Enterprise subscription.
 - Microsoft Learn
 - Microsoft 365 Training
 
-Third-party content sources aren't enabled by default. To enable these sources, you'll need to [add them in the Viva Learning Admin tab](/viva/learning/use-tabs.md) and follow the specific instructions shown in the following table.
+Third-party content sources aren't enabled by default. To enable these sources, you need to [add them in the Viva Learning Admin tab](/viva/learning/use-tabs) and follow the specific instructions shown in the following table.
 
 > [!NOTE]
 > You'll need a Viva Learning or Viva Suite license to access this feature. [Learn more about licensing](https://www.microsoft.com/microsoft-viva/learning).
@@ -53,7 +51,7 @@ Third-party content sources aren't enabled by default. To enable these sources, 
  
 
 
-Refer to the details mentioned in [Manage providers in Viva Learning](/viva/learning/use-tabs.md) to configure any provider in Viva Learning Admin tab. 
+Refer to the details mentioned in [Manage providers in Viva Learning](/viva/learning/use-tabs) to configure any provider in Viva Learning Admin tab. 
 
 > [!NOTE]
 > Available content providers are subject to change. Depending on your organization, you may have access to more content providers than are listed here.
@@ -68,7 +66,7 @@ The step-by-step content ingestion process is described below.
 
 1. **Third-party provider** <br> Viva Learning requires content catalog data from every third-party content source. The various fields extracted as part of the Content Catalog package or API from the content source are represented in the table [View the table](#content-catalog-metadata-fields).
 
-2. **Third-party Connector** <br> The third-party Connector pulls content from the content provider using both API and SFTP mechanisms. The first time you sync, the third-party extractor pulls the full data. Afterwards, a scheduler triggers once every 24 hours to refresh the data and pull any changes. Then the extract is validated and processed. If you encounter an error in processing, the error code displays on the admin portal. User records received from the extract are mapped with Azure Active Directory (AAD) records to ensure the correct assignment and completion status for every user. Once all the records are processed, the data is synchronized to Viva Learning application and displayed on the Viva Learning app.
+2. **Third-party Connector** <br> The third-party Connector pulls content from the content provider using both API and SFTP mechanisms. The first time you sync, the third-party extractor pulls the full data. Afterwards, a scheduler triggers once every 24 hours to refresh the data and pull any changes. Then the extract is validated and processed. If you encounter an error in processing, the error code displays on the admin portal. User records received from the extract are mapped with Microsoft Entra ID records to ensure the correct assignment and completion status for every user. Once all the records are processed, the data is synchronized to Viva Learning application and displayed on the Viva Learning app.
 
 3. **Viva Learning** <br> Content details (content provider logo, thumbnail, title, description, etc.) display on the **Home** and **Learning** tabs in Viva Learning.
 
@@ -86,9 +84,9 @@ The step-by-step content ingestion process is described below.
 |Content module description/summary |Description or summary of learning content |Required |
 |Content language/locale |Language in which content is available. Metadata should be provided in all available languages. |Required |
 |Content module duration |Time duration of learning content |Required |
-|Last modified date of content module/content creation date |Date the learning content was last modified |Required |
+|Last modified date of content module or content creation date |Date the learning content was last modified |Required |
 |Content format |Content format, such as article or video |Required |
-|Assigned user role |Role(s) or group(s) that have permissions to the content  |Required for role-based access |
+|Assigned user role |Roles or groups that have permissions to the content  |Required for role-based access |
 |Content ID |Unique identifier for learning content |Recommended |
 |Content module author/creator/contributor |Author/creator/contributor of learning content |Recommended |
 |Content module length/size |Size of content, not based on time. For example, this could be the number of pages. |Recommended |
@@ -104,6 +102,6 @@ The step-by-step content ingestion process is described below.
 
 ## Content consumption for end users
 
-Once you've added a content provider as a content source, content from the provider will flow to Viva Learning and become visible to end users.
+Once you've added a content provider as a content source, content from the provider flows to Viva Learning and become visible to end users.
 
-Once a user chooses to play a course in Viva Learning, they'll be directed to the content provider's webpage. They'll need to enter the sign-in credentials on the provider's sign-in page. [Learn more about how to consume content with Viva Learning](https://support.microsoft.com/office/01bfed12-c327-41e0-a68f-7fa527dcc98a).
+Once a user chooses to play a course in Viva Learning, they're directed to the content provider's webpage. They need to enter the sign-in credentials on the provider's sign-in page. [Learn more about how to consume content with Viva Learning](https://support.microsoft.com/office/01bfed12-c327-41e0-a68f-7fa527dcc98a).

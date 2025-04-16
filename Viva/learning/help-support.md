@@ -2,20 +2,18 @@
 title: Help and support
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 10/27/2021
+ms.date: 11/27/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: troubleshooting-general
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
-  - Tier1
 ms.localizationpriority: medium
-description: Get help with Viva Learning.
+description: Find out how to get support and help with Viva Learning.
 ---
 
 # Help and support

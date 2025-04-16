@@ -1,14 +1,13 @@
 ---
 
-ms.date: 11/07/2019
+ms.date: 4/1/2025
 title: Follow up on tasks with the Briefing email
 description: Learn how to use the Briefing email to get today's tasks done
 author: madehmer
 ms.author: helayne
-ms.topic: article
+ms.topic: concept-article
 ms.localizationpriority: medium 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 ms.collection: 
 - M365-analytics
 - viva-insights-personal

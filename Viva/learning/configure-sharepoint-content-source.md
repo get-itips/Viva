@@ -2,20 +2,18 @@
 title: Add SharePoint as a learning content source for Microsoft Viva Learning
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 10/27/2021
+ms.date: 11/25/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
   - highpri
-  - Tier1
-localization_priority: medium
+ms.localizationpriority: medium
 description: Learn how to add SharePoint as a learning content source for Microsoft Viva Learning.
 ---
 
@@ -42,11 +40,21 @@ Viva Learning supports the following document types:
 
 For more information, see [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits?redirectSourcePath=%252farticle%252fSharePoint-Online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498).
 
->[!NOTE]
-> You can use either a Modern or Classic SharePoint site. You can choose whether to use an existing site or create a new SharePoint site based on your organization's needs.
 
->[!NOTE]
-> Ensure that the SharePoint site is a communication site. This functionality isn't compatible with team sites.
+You can use either a Modern or Classic SharePoint site. You can choose whether to use an existing site or create a new SharePoint site based on your organization's needs.
+
+
+While either communication and teams sites can be used, we recommend using a communication site. 
+
+> [!NOTE]
+> If you are using a custom SharePoint Domain (for example, sp.contoso.com) raise a [**support ticket**](/services-hub/unified/support/open-support-requests) with the Viva Learning team to get the URL allowed. 
+
+> [!NOTE]
+> Viva Learning ingests up to 1000 files as learning objects. A Viva Suite or Viva Learning license is required to ingest more than 1000 files as learning objects.
+
+> [!NOTE]
+> Viva Learning doesn't support user-based permissions. Only the Microsoft 365 and Mail enabled security group (MESG) group types are supported. Viva Learning won't ingest files that don't have associated Microsoft 365 Groups or MESG permissions.
+
 
 
 ## Learning Service
@@ -55,7 +63,7 @@ The Learning Service uses the provided folder URLs to get metadata from all cont
 
 ## Configure SharePoint as a source
 
->[!NOTE]
+> [!NOTE]
 > You must be a Microsoft 365 global administrator or knowledge admin to perform these tasks.
 
 1. Open Viva Learning App in Teams or go to the Viva Learning [web app](https://aka.ms/VivaLearningWeb)
@@ -70,10 +78,10 @@ The Learning Service uses the provided folder URLs to get metadata from all cont
 
 1. Update the display name in configuration flow. The display name is the organization or tenant name by default.  
 
-   > [!Note]
+   > [!NOTE]
    > Only the owner of the added site URL can update the display name.
    
-   > [!Note]
+   > [!NOTE]
    > Display names for already ingested learning objects update after 24 hours.
    
    Once configured, configured providers list SharePoint immediately. You can track the sync status and export sync logs.
@@ -100,7 +108,7 @@ The Learning Service uses the provided folder URLs to get metadata from all cont
 > To allow for broader access to the Learning App Content Repository, a link to the list is soon available in the Viva Learning interface where users can request access and ultimately help populate the list. Site owners and global administrators are able to grant access to the list. Access is specific to the list only and doesn't apply to the site where the list is stored. For more information, see [Provide your own organization's content](#provide-your-own-organizations-content) later in this article.
 
 > [!NOTE]
-> Viva Learning ingests up to 1000 items and files as learning objects.
+> Viva Learning ingests up to 1000 files as learning objects. A Viva Suite or Viva Learning license is required to ingest more than 1000 files as learning objects.
 
 ### Folder URL document library curation
 
@@ -142,7 +150,7 @@ Add links to both internal content from SharePoint and external content from sit
 
      ![Screenshot of the documents library with a new file called Azure.url.](../media/learning/sp-linkinlibrary.png)
 
-   - The linked object will show up in the Viva Learning app.
+   - The linked object shows up in the Viva Learning app.
 
 
 ### Metadata
@@ -153,56 +161,73 @@ Improve overall discovery and search relevance of the content by adding columns 
 
 If a description column is already present, you can delete it and add a new one by following the steps to add a metadata field.
 
-**To add a metadata field, follow these steps**:
+**Add a metadata field**:
 
 > [!IMPORTANT]
-> You'll need to use the column names exactly as they're provided here for the metadata to populate the field. Adding metadata is optional, but if configured incorrectly, the learning objects and any changes to those objects won't appear.
+> - You'll need to use the column names exactly as they're provided here for the metadata to populate the field. Adding metadata is optional.
 
 1. Select the folder from your learning content repository.
-1. From the **Documents** page, select **Add column**.
+1. From the **Documents** page, select **Add column**. Learn more about [column types](https://support.microsoft.com/office/list-and-library-column-types-and-options-0d8ddb7b-7dc7-414d-a283-ee9dca891df7)
+
    [![Screenshot of the Documents page with Add column selected.](../media/learning/sp-new-column.png)](../media/learning/sp-new-column-big.png#lightbox)
 
-**To add a description column to the document library page, follow these steps**:
+**Add a description column to the document library page**:
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Multiple lines of text**.
 1. Name the column `ContentDescription`.
 1. Add custom descriptions for each item. If no description is supplied, Viva Learning provides a default message that highlights the content as being from your own SharePoint library.
 
 **Add the content title**:
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Multiple lines of text**.
 1. Name the column `ContentTitle`.
 1. Add custom title for each item. If no title is supplied, Viva Learning picks the file name as the title.
 
 **Add the content format**: 
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Multiple lines of text**.
 1. Name the column `ContentFormat`.
 1. Add format for each item. If no format is supplied, Viva Learning picks the file type from the file extension like xlsx, docx, and so on.
 
 **Provide a thumbnail image**:
 
->[!NOTE]
-> Only public URLs work for this process.
+> [!NOTE]
+> - Only public URLs work for this process.
+> - For proper rendering of the image in Viva Learning the minimum aspect ratio should be 16:9.
+> - We recommend copying the URL path of the content image metadata instead of using the URL from the browser. 
 
-1. Follow the initial steps to create a column.
+
+1. Follow the initial steps for creating column.
 1. Choose **Hyperlink**.
 1. Name the column `ThumbnailWebUrl`.
 1. Add the URLs for each item.
 
+
+**Language metadata**
+
+1. Follow the initial steps for creating a column. 
+
+2. Choose Single line of text. 
+
+3. Name the column ContentLanguage 
+
+3. Add two Letter ISO standard Language-Locale code for each item. For example, for French (France) add fr_fr. See the list of [Supported languages](/viva/learning/viva-learning-supported-languages).
+
+4. In case a language isn't provided, Viva Learning sets the language of the course as English (US) or to the default language set for Viva Learning by the admin. Learn more about [language preferences](language-preferences.md).
+
 **Add the duration of the content**:
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Number**.
 1. Name the column `ContentDuration`.
 1. Provide the duration of the content in seconds.
 
 **Add tags**:
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Managed metadata**.
 1. Name the column `SkillTags`.
 1. Select **More options**.
@@ -216,14 +241,14 @@ If a description column is already present, you can delete it and add a new one 
 
 **Add the author**:
 
-1. Follow the initial steps to create a column.
+1. Follow the initial steps for creating a column.
 1. Choose **Multiple lines of text**.
-1. Name the column `ContentAuthor.`
+1. Name the column `ContentAuthor`.
 1. Add the author or authors of the content.
 
 ### Provide your own organization's content
 
-Knowledge admins can access their organization's Learning App Content Repository in SharePoint where they can provide references to cross-organization document libraries. Content within these libraries will be learning content in Viva Learning.
+Knowledge admins can access their organization's Learning App Content Repository in SharePoint where they can provide references to cross-organization document libraries. Content within these libraries is learning content in Viva Learning.
 
 1. In Viva Learning, select the ellipses (**...**), and then select **Settings**.
   
@@ -246,9 +271,9 @@ Knowledge admins can access their organization's Learning App Content Repository
 
 The site URL provided by the knowledge admin where the Learning App Content Repository resides needs to belong to the central location where your Microsoft 365 subscription was originally provisioned. 
 
-Linked folders linked in the repository must also belong to the central location. This restriction conforms to data residency requirements. 
+Linked folders in the repository must also belong to the central location. This restriction conforms to data residency requirements. 
 
-If you encounter issues with content, refer to the [Manage Providers Configuration](/viva/learning/use-tabs.md#manage-providers-configuration) export log for detailed summaries of successful and failed content ingestions.
+If you encounter issues with content, refer to the [Manage Providers Configuration](/viva/learning/use-tabs#manage-providers-configuration) export log for detailed summaries of successful and failed content ingestions.
 
 For more information, see [Multi-geo capabilities in SharePoint Online](/microsoft-365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365).
 

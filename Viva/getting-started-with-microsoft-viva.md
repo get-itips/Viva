@@ -3,21 +3,20 @@ title: "Getting started with Microsoft Viva"
 ms.reviewer: loreenl
 ms.author:  elizapo
 author: lizap
-manager: pamgreen
-ms.date: 09/20/2023
+manager: elizapo
+ms.date: 09/19/2024
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-localization_priority: Priority
+ms.topic: solution-overview
+ms.service: viva-suite
+ms.localizationpriority: medium
 ms.custom: intro-get-started
 ms.collection:
   - M365initiative-viva
   - m365solution-overview
   - intro-overview
   - highpri
-  - Tier1
   - essentials-get-started
 search.appverid:
 - MET150
@@ -28,12 +27,6 @@ description: "Learn everything about Microsoft Viva and Microsoft Viva experienc
 With the growth in hybrid work, it's more important than ever to connect employees with an experience that brings together a wide range of productivity tools all in Microsoft Teams.
 
 Microsoft Viva is an employee experience platform made up of different apps that can be used individually or combined to meet your organization’s needs. Microsoft Viva is customizable and extensible, accessible from anywhere you work, and integrates with tools you already use. It also supports various partner integrations to give you access to industry-leading apps in the natural flow of work.
-
-## In this solution
-
-|Identify your business scenario  |Learn more about requirements, setup, and roles |Get started planning and deploying  |
-|:---------:|:---------:|:---------:|
-|:::image type="icon" source="media/viva-discover1.png" border="false"::: <br> Discover which Viva app, or combination of apps, is the right fit for your business scenario.    | :::image type="icon" source="media/viva-learn2.png" border="false"::: <br> Understand requirements, learn more about change management, and end-user training.   |:::image type="icon" source="media/viva-get-started4.png" border="false"::: <br> Start planning your organization’s Viva deployment.|
 
 ## Identify your business scenario
 
@@ -56,7 +49,6 @@ Viva apps can be used on their own or used together for a more cohesive employee
 |:::image type="icon" source="media/logos/insights-launch-c-64.svg"::: <br> **Viva Insights**    |  - Personal insights help employees build better work habits with actionable recommendations, such as reserving time for focused work, taking regular breaks, and activities to reduce stress and improve focus.  <br> - Manager insights show how your habits impact your team while getting suggestions on how to foster team culture. <br> - Leader insights show a snapshot into how your company is doing, including company-wide outcomes and leading indicators for each outcome. <br> - Advanced Insights has advanced analysis tools for deep diving into Viva Insights data and different ways of analyzing and reporting custom analysis to your company’s business leaders.|   Microsoft Teams <br> Outlook <br> Web-based apps |
 |:::image type="icon" source="media/logos/learning-launch-c-64.svg"::: <br> **Viva Learning**   | - Enable social learning by using Teams chat and tabs- Aggregate learning from connected content providers, learning management systems, and your own company resources. <br> - Recommend learning content and track reported completion progress. <br> - Add learning to the calendar to prioritize personal growth and development. <br> - Get personalized learning suggestions based on your interests and trending content. <br> - Surface learning content in Microsoft Search across Bing.com, Office.com, and SharePoint.com. <br>  | Microsoft Teams <br> SharePoint |
 |:::image type="icon" source="media/logos/pulse-logo.svg" alt-text="Logo of Viva PUlse"::: <br> **Viva Pulse**|Helps managers and team leads seek regular and confidential feedback on their team’s experience. Using People-Science backed templates and analytics, Viva Pulse will enable teams to use their voice so they can help managers pinpoint what's working well and which areas to focus on over time. Viva Pulse will also suggest learning and actions on relevant topics, making it easy for managers to address their team’s needs.| Microsoft Teams |
-|:::image type="icon" source="media/logos/topics-launch-c-64.svg" alt-text="Logo of Viva Topics"::: <br> **Viva Topics**   | - Use AI to automatically identify, process, and organize content, relevant conversations, and expertise across your organization. <br>  - Make it easy for employees to find information and then put that information to work. <br> - Discover and display related topics and expertise from different sources. <br> - Show topic highlights and display topic cards in many Microsoft 365 apps. <br> - Cultivate knowledge using your experts and AI to refine topic pages. |  SharePoint <br> Microsoft Search <br> Microsoft Teams <br> Outlook <br> Office apps |
 
 ## Microsoft Viva license requirements
 
@@ -92,10 +84,9 @@ Find out how employees in your organization can use Viva apps, and give them gui
 |**Viva Connections**     | Helps end users find specific content and tools by giving them a personalized destination with resources, relevant news, popular destinations, and more.        | [Viva Connections on your desktop](https://support.microsoft.com/office/viva-connections-on-your-desktop-3da30f39-684a-4bde-bb81-2e1407d59b52) <p> [Viva Connections on the go](https://support.microsoft.com/office/viva-connections-on-the-go-753e0607-0bfd-4712-ad7e-18490dd565a2)|
 |**Viva Engage** | Provides a place to connect and engage with leaders, colleagues, and communities. Viva Engage creates opportunities for asking questions, sharing knowledge, attending virtual events, building social capital, and extending employee networks. |[Getting started with Microsoft Viva Engage](https://support.microsoft.com/en-us/topic/getting-started-with-microsoft-viva-engage-729f9fce-3aa6-4478-888c-a1543918c284) |
 |**Viva Glint**|Helps HR leaders and admins understand how their people perceive work and how to respond positively to influence the employee experience and business results by reducing turnover and improving productivity. Data provides employee trends, risks, and opportunities across the employee lifecycle. Managers learn to understand and support their employees’ unique work experience with personalized action plans and end users can share their employee experience in a secure, confidential manner and receive relevant and personalized support to maximize their employee experience.|[An introduction to Viva Glint](https://go.microsoft.com/fwlink/?linkid=2239301)|
-|**Viva Goals** | Makes it easy for employees to view objectives and key results (OKRs) that are relevant to both them and your broader organization. Employees can also add their own OKRs and submit them to managers for review. Employees who own OKRs can conduct check-ins to update progress. |[Viva Goals in Teams - Microsoft Support.](/viva/goals/use-ms-teams-integration) |
+|**Viva Goals** | Makes it easy for employees to view objectives and key results (OKRs) that are relevant to both them and your broader organization. Employees can also add their own OKRs and submit them to managers for review. Employees who own OKRs can conduct check-ins to update progress. |[Viva Goals in Teams - Microsoft Support.](/viva/goals/ms-teams-integration) |
 |**Viva Insights**     | Includes advanced insights for end users, managers, and leaders. Also offers custom analysis for evaluating your specific organization’s work patterns with research-based recommendations about where to focus change management efforts.        | [Introducing Viva Insights](/viva/insights/introduction) |
 |**Viva Learning**  | Allows employees to discover, share, and track formal and informal learning in the flow of work.  Users can engage in social learning with colleagues and set and track personal learning goals. Personalized learning helps users get relevant learning content based on their own interests or recommendations from colleagues.       |[Viva Learning](https://support.microsoft.com/office/viva-learning-01bfed12-c327-41e0-a68f-7fa527dcc98a) <br> [Social learning](https://support.microsoft.com/office/social-learning-6badc784-0948-4922-94cc-85cd987def0a) <br> [Personal learning](https://support.microsoft.com/office/personal-learning-ca774f08-6bed-441b-a74b-3aac15cd9019) <br>   [Learning content](https://support.microsoft.com/office/learning-content-b1ef9cb6-c2b1-4c64-aaf9-72f598e42688) |
-|**Viva Topics**  | Compiles information on topics with a short description and related people, sites, files, and pages. All of this occurs within the flow of your work in Microsoft 365 and Office sites and apps.        | [Understanding Viva Topics](https://support.microsoft.com/office/understanding-viva-topics-5bef3020-2679-4045-81cb-bcbc37218332)       |
 
 
 ## Learn about new Viva apps coming soon

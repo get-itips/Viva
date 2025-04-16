@@ -1,9 +1,9 @@
 ---
-title: Recognize survey field character limits in Viva Glint programs
-description: Within Viva Glint surveys, there are many fields for admins to setup and customize for their organization and employees.
+title: Survey field character limits in Viva Glint programs
+description: Within Viva Glint surveys, there are many fields for admins to set up and customize for their organization and employees.
 ms.author: SarahBerg
 author: SarahAnneBerg
-manager: pamgreen
+manager: elizapo
 audience: admin
 f1.keywords: NOCSH
 keywords: glint survey
@@ -11,20 +11,19 @@ ms.collection:
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: concept-article
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 04/21/2023
+ms.date: 11/14/2024
 ---
 
-# Recognize survey field character limits in Viva Glint programs
+# Survey field character limits in Viva Glint programs
 
 The character limits for each open text area in your survey setup are given in the below tables:
 
 ## General and survey setup
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Customer UUID | 64 |
 | Data File Attribute Values | 64 |
@@ -33,17 +32,18 @@ The character limits for each open text area in your survey setup are given in t
 
 ## Survey Text
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Program Name | 50 |
 | Intro Text | 1024 |
+| Company Message to Survey Participants | 1024 |
 | Thank You Text | 1024 |
 | Description | 4000 if imported and 1024 if edited directly in the program |
 | Section Title | 128 |
 
 ## Question/item components for surveys and 360 Feedback
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Item Text | 512 |
 | Report Label | 128 |
@@ -51,25 +51,28 @@ The character limits for each open text area in your survey setup are given in t
 | Comment Placeholder Text | 256 |
 | Open-ended Comments Box | 1000 |
 | Scale Label Values | 100 |
-| Number of Response options allowed for Multiple Choice Questions | 126 |
+| Number of Response options allowed for Multiple Choice Questions | 50 |
 | Number of characters for Multiple Choice Responses | 100 |
 
 ## Communications
 
-| **Field** | **Character limit** |
+Character limits apply to survey invitations, reminders, and results release emails.
+
+| Field | Character limit |
 | --- | --- |
-| Greeting | 1024 |
-| Message | 1024 |
-| Privacy Message | 1024 |
-| Questionnaire Button | 128 |
-| Questions | 1024 |
-| Signature | 1024 |
-| Subject | 1024 |
-| Title | 1024 |
+| Subject | 3000 |
+| Greeting | 3000 |
+| Privacy Message | 3000 |
+| Title | 3000 |
+| Message | 3000 |
+| Questionnaire Button | 65 |
+| Plan text links* | 100 |
+
+*HTML and hyperlinks aren't supported in Viva Glint emails and can cause email delivery issues. Viva Glint Admins can add plain text links. For example: `www.microsoft.com`. [Learn more about email customization](email-content-customization.md).
 
 ## Fields
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Rater Category name | 30 |
 | Reporting Name/Label | 128 |
@@ -77,28 +80,28 @@ The character limits for each open text area in your survey setup are given in t
 
 ## Overview content
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Headers | 50 |
 | Action Buttons | 24 |
 
 ## Rater Selection Content
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Greetings | 100 |
 | Subtext | 400 |
 
 ## Competencies
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Competency Name | 80 |
 | Competency Description | 400 |
 
 ## Content Resources
 
-| **Field** | **Character limit** |
+| Field | Character limit |
 | --- | --- |
 | Name | 100 (no spaces) |
 | Title | 2048 |

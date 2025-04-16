@@ -5,14 +5,13 @@ title: Differential privacy in Viva Insights
 description: Learn about how Microsoft Viva Insights uses Differential Privacy technology for data analysis
 author: madehmer
 ms.author: helayne
-ms.topic: conceptual
+ms.topic: concept-article
 ms.localizationpriority: medium 
 ms.collection: 
 - viva-insights-advanced
 - viva-insights-leader
 - viva-insights-manager 
-ms.service: viva 
-ms.subservice: viva-insights 
+ms.service: viva-insights
 search.appverid: 
 - MET150 
 manager: scott.ruble

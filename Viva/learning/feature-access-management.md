@@ -2,26 +2,25 @@
 title: Feature Access Management
 ms.author: bhaswatic
 author: bhaswatic
-manager: pamgreen
+manager: elizapo
 ms.reviewer: chrisarnoldmsft
-ms.date: 08/16/2023
+ms.date: 11/25/2024
 audience: admin
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-learning
+ms.topic: how-to
+ms.service: viva-learning
 search.appverid: MET150
 ms.collection:
   - enabler-strategic
   - m365initiative-viva-learning
-  - Tier1
-localization_priority: high
+  - essentials-manage
+ms.localizationpriority: high
 description: Learn how to provide access to nonadmins so they can manage features in Viva Learning.
 ---
 
 # Manage feature-level access in Viva Learning
 
 
-Global admins and knowledge admins can now give access to non-admin users for managing features on Viva Learning admin tab.
+Global admins and knowledge admins can now give access to nonadmin users for managing features on Viva Learning admin tab.
 
 This action can be done using Microsoft 365 groups. Any user who is part of Microsoft 365 group assigned to a specific feature gets the feature access in their Viva Learning admin tab.
 

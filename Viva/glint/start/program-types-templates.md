@@ -1,132 +1,88 @@
 ---
-title: Viva Glint program types and associated templates 
+title: Viva Glint programs, survey types, and templates  
 description: Viva Glint offers Engagement, special topic, Employee Lifecycle, and 360 feedback programs to surface insights and actions to improve businesses. 
 ms.author: JudithWeiner
 author: JudyWeiner
-manager: pamgreen
+manager: MelissaBarry
 audience: admin
 f1.keywords: NOCSH
-keywords: organizational survey, business unit survey, recurring survey, engagement survey, quarterly engagement, diversity, inclusion and belonging survey, culture survey, manager effectiveness survey, patient safety survey, team effectiveness survey, ad hoc surveys, always on feedback, employee lifecycle, lifecycle surveys, exit survey, onboarding survey 360 feedback 
+keywords: organizational survey, business unit survey, recurring survey, engagement survey, quarterly engagement, diversity, inclusion and belonging survey, culture survey, manager effectiveness survey, patient safety survey, team effectiveness survey, ad hoc surveys, always on feedback, employee lifecycle surveys, exit survey, onboarding survey, survey frequency, discovery workbook, vision strategy, People Success elements, surveys for hiring managers, surveys for managers, surveys for admins, surveys for Uwer Roles
 ms.collection: 
  - m365initiative-viva
  - selfserve
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: concept-article
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 03/24/2023
+ms.date: 3/19/2025
 ---
 
-# Viva Glint program types and associated templates
+# Viva Glint programs, survey types, and templates 
 
-Viva Glint believes that ongoing, frequent communications to solicit and collect employee feedback is crucial to an organization's success. Viva Glint offers engagement programs as a way for customers to send short, targeted surveys to their employees which will deliver rich insights that translate into actionable opportunities to improve business.
+Microsoft Viva Glint believes ongoing, frequent communications to solicit and collect employee feedback is crucial to an organization's success. Feedback insights translate into actionable
+opportunities to improve business. In today’s changing business environment, effective employee listening is critical. It equips us to navigate challenges, adapt to changes, and address uncertainty. By gathering employee feedback, we gain visibility into knowledge gaps, avoid speculation, and make informed decisions that impact both our workforce and overall business success. 
 
-Engagement is the degree to which employees invest their cognitive, emotional, and behavioral energies toward positive organizational outcomes. Engagement correlates with job satisfaction, commitment, involvement, motivation, and attrition.
+## Engagement programs
 
-In addition to **Engagement survey programs** , Viva Glint customers can opt into **Employee Lifecycle survey programs, and 360 Feedback programs.**
+Viva Glint offers engagement programs as a way for customers to send short, targeted surveys to their employees to generate rich insights. Engagement is the degree to which employees invest their cognitive, emotional, and behavioral energies toward positive organizational outcomes. Engagement correlates with job satisfaction, commitment, involvement, motivation, and attrition. Viva People Science research teams continually update survey items and develops templates to provide meaningful insights into the current world of work.
 
-Our People Science team continually updates survey items and develops templates that will provide meaningful insights into the current world of work.
+Engagement surveys aren't just about collecting data. They're about starting conversations and taking action to improve the work environment and culture. They can be broad assessments or prompts for focused, high-quality conversations and collaborative action. The goal is to understand and enhance the employee experience, leading to a more engaged and productive workforce. If you’re looking to implement an engagement survey, consider the goals, the design of the survey, and how the results can drive change. 
 
-## Two categories of surveys to consider
+Viva Glint’s approach to employee engagement provides a flexible framework using strong theoretical foundations and analyzing robust, real-time experience. Rather than a one-size-fits-all formula for engagement, Viva Glint developed an adaptable framework and technology that suits each organization’s needs. 
 
-Within our survey programs, there are two overarching types to consider:
+## The People Success Elements
 
-- Organizational surveys – Often administered by a global HR (Human Resources) team and sent to all employees on a recurring cadence
-- Business unit survey – Often administered by a core business team, HR team, or a local business leader with the goal of obtaining more specific information for a particular business unit
+The experiences that drive engagement look different from one company to another. Microsoft Viva People Science research identified six core elements which capture people's needs and expectations for an exceptional employee experience. These People Success Elements help you assess and foster the experiences that matter most to your people. They help build thriving cultures, develop people-centric leaders, and engaged employees. The framework provides a modern, accurate way to measure people’s evolving need for engagement and success in their work. 
 
-## Survey frequency to consider when choosing a Viva Glint program
+:::image type="content" source="../../media/glint/start/six-elements.png" alt-text="Screenshot of the People Success Elements." lightbox="../../media/glint/start/six-elements.png":::
 
-Viva Glint programs available for different cadences and can run simultaneously, when appropriate.
+## Two categories of surveys 
 
-### Recurring surveys
+There are two overarching types to consider:
 
-Viva Glint offers recurring Engagement and special topic-type survey templates, in addition to a blank template from which you can create your own survey. Surveys should be *recurring* so that data can be compared from between cycles and *trend* can be established. Recurring surveys are set to go live at a scheduled cadence.
+|Survey type|Description|
+|-----------|-----------|
+|**Organizational survey**| Often sent by a global HR (Human Resources) team. Sent to all employees on a recurring cadence|
+|**Business unit survey**|Often sent by a core business team, HR team, or a local business leader. The goal is to capture specific information for a specific business unit.|
 
-### Ad Hoc surveys
+## Types of surveys
 
-Viva Glint uses Ad Hoc surveys to measure something out of the ordinary at an impactful time. A blank template is available if you choose to create your own Ad Hoc survey.
+Use Viva Glint programs to create feedback habits and support continuous employee and organizational development. 
 
-### Always-On feedback
+|Survey type|Description|Who should use them?|
+|---------|---------|-----|
+|[**Recurring or special topic**](/viva/glint/setup/template-research)|Surveys should be *recurring* so that data can be compared between cycles and *trend* can be established. Recurring surveys are set to go live at a scheduled cadence. Special topic templates include culture, manager effectiveness, and more.|Any leader|
+|[**Employee Lifecycle**](/viva/glint/setup/program-summary-setup-lifecycle)|Measure the employee experience during key moments in the employee journey. These surveys are considered *trigger events* because they automatically send by the hire or end date.|HR, Hiring Managers|
+|[**Ad Hoc**](/../../viva/glint/setup/ad-hoc-survey)|Measure something out of the ordinary, at an impactful time.|Any leader|
+|[**Always-On**](/viva/glint/setup/always-on-surveys)|Provide feedback and suggestions anytime it feels relevant. |Any leader|
 
-Use Always-On feedback to provide feedback and suggestions anytime it feels relevant. A blank survey can be created for Always-On feedback, as well.
+### Survey frequency 
 
-## Survey types
+Viva Glint programs are available at cadences set by admins. Surveys can run simultaneously when appropriate. [Always consider the reality of survey fatigue](/../../viva/glint/setup/customize-program#viva-glint-program-and-cycle-cadence).
 
-Leverage Viva Glint programs to create feedback habits and support continuous employee and organizational development. Viva Glint offers prescribed templates and a blank template option for each type of program.
+## Viva Glint templates
 
-### Engagement survey template
+Viva Glint offers prescribed survey templates and a blank template option for each type of program.
 
-- **Purpose** -  - Engagement surveys measures key drivers of engagement from Glint's research-based People Success Elements, which are critical for employees being happy and successful at work.
-- **Recommended frequency** - Recurring: Recommended quarterly as this includes all core engagement items, creating a solid engagement baseline for your organization. This program is recommended as a first introduction to Viva Glint programs within your organization and can be set to a customized cadence.
-- **Target groups for results** - Managers and teams
-- **Feedback providers** - All eligible employees
+|Template name|Type|Purpose|Recommended frequency|Target groups for results|Feedback providers|
+|---------|---------|-----|-----------|----------|------------------|
+|[**Engagement**](/../../viva/glint/setup/quarterly-engagement-template)|Recurring|Measure key drivers of engagement from research-based Viva People Success Elements, which are critical for employees being happy and successful at work.|Recurring: Recommended quarterly, creating a solid engagement baseline. Recommended as a first introduction to Viva Glint programs within your organization and can be set to a customized cadence.|Managers and teams|All eligible employees
+|[**Onboarding**](/../../viva/glint/setup/create-onboarding-exit-surveys)|Employee Lifecycle|Provides an opportunity to check in with newcomers and understand what is going well and any challenges with their onboarding experience|Automatically triggered at a key moment. Recommend having at least two onboarding surveys at specific points in time (for example, 30 days, 45 days, 60 days, and/or 90 days)|Human Resource leaders and managers|New hires|
+|[**Exit**](/../../viva/glint/setup/exit.survey)|Employee Lifecycle|Provides data for why people leave and their perceptions of the organization as they transition|Automatically triggered at a key moment|Human Resource leaders and managers|Departing employees|
+|[**Microsoft Copilot Impact Survey**](/../../viva/glint/setup/copilot-impact-template)|Special topic|Measures the impact of Microsoft Copilot through sentiment data. These surveys enable IT and business leaders to plan their AI readiness, drive adoption, and measure their Return On Investment (ROI)|Recurring|All roles|All roles|
+|[**Culture**](/../../en-us/viva/glint/setup/culture-template)|Special topic|Uses Viva People Science team's measurable elements of current culture that are important to driving people and organizational success.|Recurring survey every few years, depending on how quickly the organization is changing|Senior leadership|All eligible employees|
+|[**Diversity and Inclusion**](/viva/glint/setup/diversity-inclusion)|Special topic|Provides an understanding of employee sentiment related to various elements necessary for building a powerful sense of belonging among employees|Recurring|Managers and teams|All eligible employees|
+|[**Patient Safety**](/viva/glint/setup/patient-safety-survey)|Special topic|Assesses the culture of patient safety in a valid, reliable, concise, and straightforward way. Leapfrog-approved.|Recurring|Healthcare managers and teams|All eligible employees|
+|[**Manager Effectiveness**](/../../viva/glint/setup/manager-effectiveness-survey)|Special topic|Assesses employee perceptions of how their direct managers demonstrate key behaviors related to their effectiveness|Recurring|Managers and teams|All eligible employees|
+|[**Team Effectiveness**](/../../viva/glint/setup/team-effectiveness-survey)|Special topic|Identifies a team's unique dynamics and opportunities for improvement|Recurring|Managers and teams|All eligible employees|
+|[**Microsoft Viva Glint RN Excellence**](/../../viva/glint/setup/magnet-rn-excellence)|Special topic|Meet the Registered Nurse (RN) Satisfaction requirements for the Magnet® Recognition program.|Recurring|Healthcare teams|All eligible employees| 
+|[**Distress**](/../../viva/glint/setup/distress-survey)|Special topic|For times when societal or global events introduce instability into our natural patterns in work and personal lives|Recurring|All roles|All eligible employees|
+|[**Productivity**](/../../viva/glint/setup/create-productivity-survey)|Special topic|Look beyond engagement to create an employee experience that also helps people be more productive and higher performing.|Recurring or Ad Hoc|All roles|All eligible employees|
 
-## Special topic survey templates
+> [!NOTE]
+> If you use a Blank template, plan accordingly as it doesn't support adding cycles.
 
-### Culture survey
+## Align your organization to make the most of Viva Glint programs
 
-- **Purpose** - Provides a deep understanding of the strengths and opportunities of an organization's culture based upon Viva Glint's research-based culture mode
-- **Recommended frequency** - Recommended as a recurring survey launching every few years or so depending on how quickly the organization is changing
-- **Target groups for results** - Senior leadership and above
-- **Feedback providers** - All eligible employees
+[**Use the Viva Holistic Listening Vision & Strategy Discovery Workbook**](https://go.microsoft.com/fwlink/?linkid=2283226)
 
-### Diversity, Inclusion, & Belonging
-
-- **Purpose** - Provides an understanding of employee sentiment related to various elements necessary for building a powerful sense of belonging among employees
-- **Recommended frequency** - Recurring
-- **Target groups for results** - Managers and teams
-- **Feedback providers** - All eligible employees
-
-### Patient Safety
-
-- **Purpose** - Assesses the culture of patient safety in a valid, reliable, concise, and straightforward way. Leapfrog-approved.
-- **Recommended frequency** - Recurring
-- **Target groups for results** - Healthcare managers and teams
-- **Feedback providers** - All eligible employees
-
-### Manager Effectiveness
-
-- **Purpose** - Assesses employee perceptions of how their direct managers demonstrate key behaviors related to their effectiveness
-- **Recommended frequency** - Recurring
-- **Target groups for results** - Managers and teams
-- **Feedback providers** - All eligible employees
-
-### Team Effectiveness
-
-- **Purpose** - Identifies a team's unique dynamics and opportunities for improvement
-- **Recommended frequency** - Recurring
-- **Target groups for results** - Managers and teams
-- **Feedback providers** - All eligible employees
-
-### Change Management
-
-- **Purpose** - Assesses employee sentiment related to a specific large-scale change within the organization (e.g., M&A, major technology implementation, organizational restructuring)
-- **Recommended frequency** - Recurring or Ad Hoc
-- **Target groups for results** - Leaders of change and change management team
-- **Feedback providers** - All eligible employees
-
-## Employee Lifecycle survey templates
-
-### Onboarding
-
-- **Purpose** - Provides an opportunity to check in with newcomers and understand what is going well and any challenges with their onboarding experience
-- **Recommended frequency** - Automatically triggered at a key moment
-   > [!TIP]
-   > Recommend having at least two onboarding surveys at specific points in time (e.g. - 45 days, 60 days or 30 days, 60 days, and 90 days)
-- **Target groups for results** - Human Resource leaders and managers
-- **Feedback providers** - New hires
-
-### Exit
-
-- **Purpose** - Provides data for why people leave and their perceptions of the organization as they transition from the organization
-- **Recommended frequency** - Automatically triggered at a key moment
-- **Target groups for results** - Human Resource leaders and managers 
-- **Feedback providers** - Departing employees
-
-## Manager 360 Feedback template
-
-- **Purpose** - Supports the development of managers by allowing them to get feedback from their leaders, peers, and direct reports on key behaviors related to their effectiveness
-- **Recommended frequency** - Ad Hoc: Recommend timing be relevant to the person receiving the feedback (e.g. - send 360 when manager is new to role, or participating in a development program)
-- **Target groups for results** - Managers (Subjects)
-- **Feedback providers** - Leaders, peers, direct reports

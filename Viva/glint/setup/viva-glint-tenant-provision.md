@@ -3,30 +3,36 @@ title: Set up a Microsoft Viva Glint tenant
 description: When a new customer purchases Viva Glint or Viva Suite, they're entitled to the Viva Glint product, and tenant provisioning should occur within days. 
 ms.author: SarahBerg
 author: SarahAnneBerg
-manager: pamgreen
+manager: elizapo
 audience: admin
 f1.keywords: NOCSH
 keywords: tenant, viva glint tenant
 ms.collection: 
  - m365initiative-viva
  - selfserve
+ - essentials-get-started
 search-appverid: MET150
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-glint
+ms.topic: install-set-up-deploy
+ms.service: viva-glint
 ms.localizationpriority: high
-ms.date: 07/17/2023
+ms.date: 07/23/2024
 ---
 
 # Set up a Microsoft Viva Glint tenant
 
-To deploy apps that use the Microsoft platform for identity and access management, you first need access to an Azure Active Directory (Azure AD) *tenant*. In the Azure AD tenant, you'll register and manage your Viva Glint apps, configure their access to data and other web APIs, and enable features like Conditional Access. 
+To deploy apps that use the Microsoft platform for identity and access management, you first need access to a Microsoft Entra ID *tenant*. In the Microsoft Entra tenant, register and manage your Viva Glint apps, configure access to data and other web APIs, and enable features like Conditional Access. 
 
-A tenant represents an organization. It's a dedicated instance of the Azure AD tenant that an organization or app developer receives at the beginning of a relationship with Microsoft. 
+A tenant represents an organization. It's a dedicated instance of the Microsoft Entra tenant that an organization or app developer receives at the beginning of a relationship with Microsoft. 
 
-Each Azure AD tenant is distinct and separate from other Azure AD tenants. It has its own representation of work and school identities, consumer identities (if it's an Azure AD B2C tenant), and app registrations. An app registration inside your tenant can allow authentications only from accounts within your tenant or all tenants. 
+Each Microsoft Entra tenant is distinct and separate from other Microsoft Entra tenants. It has its own representation of work and school identities, consumer identities (if it's an Azure AD B2C tenant), and app registrations. An app registration inside your tenant can allow authentications only from accounts within your tenant or all tenants. 
 
 When a new customer purchases Viva Glint, they're entitled to the Viva Glint product, and tenant provisioning should occur within days of the purchase. Customer instances can be hosted on Viva Glint’s US or EU server. 
+
+> [!NOTE]
+> If you don't already have a Microsoft Entra user account, you can [create one for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+
+> [!IMPORTANT]
+> If you’re migrating from LinkedIn Glint, don’t provision a new Viva Glint tenant. This step is completed for you as part of your technical migration to Microsoft Viva Glint.
 
 ## Customers entitled for Viva Glint provisioning 
 
@@ -38,32 +44,37 @@ When a new customer purchases Viva Glint, they're entitled to the Viva Glint pro
 > [!NOTE]
 >
 > - A Viva Glint tenant is not available for GCC/GCC H entities as it is intended for commercial services only.
-> - A minimum number of 100 active user licenses are required for tenant provisioning. Licenses requested below 100 will prompt a screen message and email to inform you to contact your Microsoft Account Manager or adjust the number of licenses purchased in the Microsoft Admin Center, if you purchased via our self-serve checkout flow. 
+> - A minimum number of 50 active user licenses are required for tenant provisioning. Licenses requested below 50 will prompt a screen message and email to inform you to contact your Microsoft Account Manager or adjust the number of licenses purchased in the Microsoft Admin Center, if you purchased via our self-serve checkout flow. 
 
 ## Begin your Viva Glint provisioning experience
 
-Choose either the US or EU URL for Azure login to begin:
+Choose the US or EU URL for Azure login to begin, based on the region of your tenant. The data region for Viva Glint is determined by the default geography of the tenant, not individual users, and is stored in US or EU data centers based on central tenant location. If the central tenant location is outside the US or EU, the data for Viva Glint is stored in the US data center. **[Multi-Geo capabilities](/sharepoint/dev/scenario-guidance/multi-geo-capabilities) aren't currently supported for Viva Glint.**
+
+> [!IMPORTANT]
+> Organizations who use [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to manage access to resources must ensure that the PIM enabled account used to provision Glint has Global Admin privileges with [Direct assignment](https://go.microsoft.com/fwlink/?linkid=2281307) access rights.
 
 - US - [http://app.us1.glint.cloud.microsoft](http://app.us1.glint.cloud.microsoft)
 - EU - [http://app.eu1.glint.cloud.microsoft](http://app.eu1.glint.cloud.microsoft)
 
+On the sign-in page that appears, enter your User Principal Name (UPN) and password:
+
+:::image type="content" source="../../media/glint/start/glint-provision-signin.png" alt-text="Screenshot of Viva Glint provisioning sign-in page.":::
+
 >[!TIP]
 > If you are unsure which URL to choose, begin with the US URL.
 
-## Microsoft Viva Professional Services
-
-If you are eligible to receive Microsoft Viva Glint professional services, please have your HR administrator (or other desired contact) complete the [Microsoft Viva Glint Professional Services Request for Assistance form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR8T1UE_ImtJJnIECppPzUA9UNEhTSkY4VENCS1MxVE5QMkxCNVBDMzk1VS4u) so a kickoff conversation can be initiated. If you are not eligible for Microsoft Viva Glint professional services, check out the online and phone support available via [Microsoft Admin Support](/microsoft-365/admin/get-help-support).  
-
-If you’ve submitted the [Microsoft Viva Glint Professional Services Request for Assistance form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR8T1UE_ImtJJnIECppPzUA9UNEhTSkY4VENCS1MxVE5QMkxCNVBDMzk1VS4u) and would like to request a data deletion or data export of your response, please submit a ticket with [Microsoft Support](/microsoft-365/admin/get-help-support) for assistance. Form submissions are retained for 10 days.  
-
 ## Complete the Welcome to Viva Glint page
 
-After logging into your preferred URL, the Welcome to Viva Glint page displays. Check the box for notification to be sent if you would like to receive email notification once your tenant provisioning is complete. Select **Continue** to begin tenant provisioning.
+After logging into your preferred URL, the Welcome to Viva Glint page displays: 
+
+:::image type="content" source="../../media/glint/start/glint-provision-welcome.png" alt-text="Screenshot of Viva Glint tenant provisioning welcome page.":::
+
+Check the box for notification to be sent and enter an email address if you would like to receive an email notification once your tenant provisioning is complete. Select **Continue** to begin tenant provisioning.
 
 >[!NOTE]
 > Tenant provisioning can only be initiated by the Tenant Global Administrator. 
 
-Dependent upon whether you have chosen to receive notification, one of the following screens will open: 
+Depending on whether you choose to receive a notification, one of the following screens appears: 
 
 - With notification requested, these messages display: 
     - We’ll notify you when it’s ready.  
@@ -77,28 +88,40 @@ Dependent upon whether you have chosen to receive notification, one of the follo
 
 ### What if I run into an error?
 
-If your tenant can't be provided, you'll receive this message. Select **Request support** and a tab will open for Microsoft 365 support.
+If your tenant can't be provisioned, this message appears. Select **Request support** and a tab opens for Microsoft 365 support.
 
 :::image type="content" source="../../media/glint/start/tenant-issue.png" alt-text="Screenshot that displays Microsoft Viva Glint tenant facing an issue.":::
 
 ## Your view as your tenant is being readied
 
-Dependent upon whether you’ve requested notification to be sent, you’ll receive one of the following messages: 
+Depending on whether you requested notifications to be sent, you receive one of the following messages: 
 
 :::image type="content" source="../../media/glint/start/tenant-ready.png" alt-text="Screenshot that displays Viva Glint's tenant getting ready.":::
 
+> [!NOTE]
+> It can take up to five (5) days for a tenant to be ready.
+
 ## Proceed to post-provisioning once your tenant is ready
 
-Once you receive the email notification below (if you requested notification in the earlier step), select **Get Started**. You'll automatically be taken to the Viva Glint Learn page for post-provisioning, where you'll proceed with setting up your Viva Glint program. 
+Once you receive the email notification (if you requested notification in the earlier step), select **Get Started**. You're automatically taken to the Viva Glint Learn page for post-provisioning to proceed with setting up your Viva Glint program. 
 
 You can also choose to **Open Viva Glint** from this page:
 
 :::image type="content" source="../../media/glint/start/viva-glint-tenant.png" alt-text="Screenshot that displays Viva Glint tenant ready to use.":::
 
-## Use Microsoft FastTrack for more support 
+## Manage Microsoft in-app feedback
 
-Microsoft FastTrack can provide help with Microsoft Viva foundational products and capabilities - at no extra cost for the life of your eligible subscription. 
+Control whether users in your organization can submit in-product feedback for Viva Glint:
 
-If you’ve already registered for FastTrack and need support, [use this link](https://www.microsoft.com/fasttrack/microsoft-viva).
+- [Manage Microsoft feedback for your organization](/microsoft-365/admin/manage/manage-feedback-ms-org)
+- [Overview of Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy)
+  
+## Use Microsoft FastTrack for deployment support 
 
-To register for Microsoft FastTrack, [use this link](https://fasttrack.microsoft.com/v2/register).
+Microsoft FastTrack can provide help with deployment of Microsoft Viva foundational products and capabilities - at no extra cost for the life of your eligible subscription. 
+
+- [Check your eligibility](/microsoft-365/fasttrack/eligibility) for Microsoft FastTrack support.
+- If you’re already registered for Microsoft FastTrack and need support, [use this link](https://www.microsoft.com/fasttrack/microsoft-viva).
+- If you're not registered, [use this link](https://www.microsoft.com/fasttrack/microsoft-viva) and select **Sign In** to complete the registration process and submit a request for assistance.
+
+

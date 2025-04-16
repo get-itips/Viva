@@ -1,17 +1,17 @@
 ---
+ms.date: 01/07/2025
 title: "Deep linking into Viva Engage"
 description: "Create deep links into Viva Engage"
-ms.reviewer: ethli
-ms.author: mamiejohnson
-author: mamiepjohnson
-manager: dmillerdyson
+ms.reviewer: vfurlong
+ms.author: donnabouldin
+author: v-rgrace
+manager: elizapo
 audience: Admin
 f1.keywords:
 - NOCSH
-ms.topic: article
-ms.service: viva
-ms.subservice: viva-engage
-localization_priority: Priority
+ms.topic: how-to
+ms.service: viva-engage
+ms.localizationpriority: high
 ms.collection:  
 - M365initiative-viva
 - highpri
@@ -20,54 +20,74 @@ search.appverid:
 ---
 # Deep linking into Viva Engage
 
-Often, you'll want to create a deep link to the Viva Engage app in Microsoft Teams or an entity within Viva Engage, such as a community. For example, you want to include a link to a conversation a leader shared, a community that you're launching, or a campaign you're emailing about.
+You can create a deep link to the Viva Engage app in Microsoft Teams or to any entity within Viva Engage, such as a community or a campaign. For example, create and forward a link to a conversation that a leader shared, a community that you're launching, or a campaign you're emailing about.
 
-This article will discuss how you can manually construct different deep links into the Viva Engage app.
+This article discusses how to manually construct different deep links into the Viva Engage app.
 
 > [!TIP]
-> While the `https://aka.ms/...` link is shorter, use the longer `https://teams.microsoft.com...` link if you're sharing the deep link in Teams. This way, it will link directly to the Viva Engage tab without opening a new browser window first.
+> While the `https://aka.ms/...` link is shorter, we recommend the longer `https://teams.microsoft.com...` link if you're sharing the deep link in Teams. This way, you link directly to the Viva Engage tab without opening a new browser window.
 
 ## Deep link to the Viva Engage store entry
+
 The following links open the Viva Engage store page in Microsoft Teams:
-- https://aka.ms/VivaEngage/Install
-- https://teams.microsoft.com/l/app/db5e5970-212f-477f-a3fc-2227dc7782bf
+
+- <https://aka.ms/VivaEngage/Install>
+
+- <https://teams.microsoft.com/l/app/db5e5970-212f-477f-a3fc-2227dc7782bf>
 
 ## Deep link to Viva Engage directly
-The following links currently open Yammer.com and will open Viva Engage in the browser [when the rebrand occurs](https://techcommunity.microsoft.com/t5/yammer-blog/yammer-is-evolving-to-viva-engage/ba-p/3738825). If the user has the Viva Engage mobile app installed, the links will open the Viva Engage app.
-- https://aka.ms/VivaEngage/Web
-- https://aka.ms/VivaEngage/Yammer
 
-The following links directly open Viva Engage in Microsoft Teams. If the app isn't installed, the user will be prompted to do so.
-- https://aka.ms/VivaEngage/Launch
-- https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage
+The following links open Viva Engage in a browser and engage.cloud.microsoft, respectively. If the user has the Viva Engage mobile app installed, the links open the Viva Engage app.
+
+- <https://aka.ms/VivaEngage/Web>
+
+- <https://aka.ms/VivaEngage/Yammer>
+
+The following links directly open Viva Engage in Microsoft Teams. If the app isn't installed, the link action prompts the user to do so.
+
+- <https://aka.ms/VivaEngage/Launch>
+
+- <https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage>
 
 The following link directly opens Viva Engage in Outlook, if available:
-- https://aka.ms/VivaEngage/Outlook
+
+- <https://aka.ms/VivaEngage/Outlook>
 
 ## Deep link to Answers in Viva
-The following link directly opens Viva Engage in Teams, in the Answers in Viva page.
-- https://aka.ms/AnswersInViva
-- https://aka.ms/VivaEngage/Answers
-- https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage?context=%7B%22subEntityId%22%3A%22type%3Dcustom%2Cdata%3Dquestionspage%3A_%22%7D
+
+To directly open Viva Engage in Teams to the Answers in Viva page, use one of the following links:
+
+- <https://aka.ms/AnswersInViva>
+
+- <https://aka.ms/VivaEngage/Answers>
+
+- <https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage?context=%7B%22subEntityId%22%3A%22type%3Dcustom%2Cdata%3Dquestionspage%3A_%22%7D>
 
 
 ## Deep link to Leadership corner
-In the browser (Yammer.com) or the mobile app: 
-- https://aka.ms/LeadershipCorner
-- https://web.yammer.com/main/leadership-corner
+
+In the browser (engage.cloud.microsoft) or the mobile app:
+
+- <https://aka.ms/LeadershipCorner>
+
+- <https://engage.cloud.microsoft/main/leadership-corner>
 
 In Teams:
-- https://aka.ms/VivaEngage/LeadershipCorner
-- https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage?context=%7B%22subEntityId%22:%22type=custom,data=leadershipcorner:null%22%7D 
+
+- <https://aka.ms/VivaEngage/LeadershipCorner>
+
+- <https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage?context=%7B%22subEntityId%22:%22type=custom,data=leadershipcorner:null%22%7D> 
 
 ## Deep link to a Viva Engage entity
-Links in these formats will open the entity in Viva Engage in Teams. 
+
+Links in these formats open the entity in Viva Engage in Teams.
 
 - `https://aka.ms/VivaEngage/Launch?context=%7B%22subEntityId%22:%22type=custom,data=<EntityType>:<EntityId>%22%7D`
 - `https://teams.microsoft.com/l/entity/db5e5970-212f-477f-a3fc-2227dc7782bf/vivaengage?context=%7B%22subEntityId%22:%22type=custom,data=<EntityType>:<EntityId>%22%7D`
 
-However, you will need to:
-1. Replace _`<EntityType>`_ with one of the following values: 
+To complete the deep link, define the following values:
+
+1. Replace _`<EntityType>`_ with one of the following entity types: 
    
    | Type      | Replace _`<EntityType>`_ with... |
    | --------- | ------------- |
@@ -76,7 +96,10 @@ However, you will need to:
    | Storyline | `user`  |
    | Campaign  | `campaign`  |
 
-2. Fill in the  _`<EntityId>`_. The easiest way is by going to the corresponding page on Yammer.com, and then pasting the last part of the URL. For example, for the storyline of `https://web.yammer.com/main/users/eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjUwMzIxMDg3kyOCJ9`, replace _`<EntityId>`_  with `eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjUwMzIxMDg3kyOCJ9`.
+2. Fill in the  _`<EntityId>`_. The easiest way is to go to the corresponding page on **engage.cloud.microsoft** and paste the last part of the URL. 
+
+For example, for the storyline of `https://engage.cloud.microsoft/main/users/eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjUwMzIxMDg3kyOCJ9`, 
+replace _`<EntityId>`_  with `eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjUwMzIxMDg3kyOCJ9`.
 
 > [!IMPORTANT] 
 > Don't omit the `%22%7D` at the end of the URLs.
